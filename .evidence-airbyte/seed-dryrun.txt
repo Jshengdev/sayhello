@@ -1,0 +1,9 @@
+[seed] normalized 6 grounded stories from data/leads/*.json:
+  • Lindy                                    [gtm       ] angle=agentic_notifications grounding=0.50 fab=6 src=replay-tape
+  • MK-1 — experiential/event-marketing agen [marketing ] angle=brand_gap        grounding=— fab=1 src=fixture-brief
+  • MK-2 — boutique branding/creative studio [marketing ] angle=positioning      grounding=— fab=1 src=fixture-brief
+  • RE-1 — boutique off-market acquisitions  [realestate] angle=forced_sale      grounding=— fab=1 src=fixture-brief
+  • RE-2 — 'we buy houses cash' wholesaling  [realestate] angle=inheritance      grounding=— fab=1 src=fixture-brief
+  • Retell AI                                [gtm       ] angle=revenue_share    grounding=— fab=1 src=fixture-brief
+
+[seed] --dry-run: not writing to Notion. Set NOTION_API_KEY + NOTION_DATABASE_ID (or NOTION_PARENT_PAGE_ID) and re-run without --dry-run.

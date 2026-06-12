@@ -19,11 +19,17 @@ import { WebSocketServer, WebSocket } from "ws";
 import { assertHeldOutCritic } from "./llm/models.js";
 import { hasReplay, replayStory } from "./orchestrator/replay.js";
 import { approveGate, runStory } from "./orchestrator/runStory.js";
+// Airbyte recall ADD-ON (worktree feat/airbyte-recall) — additive routes, never on the core demo path.
+import { airbyteConfigured } from "./recall/airbyte.js";
+import { notionConfigured } from "./recall/notion.js";
+import { recall, recallFromCache } from "./recall/recall.js";
 import { zRunInput } from "./schemas.js";
 import { store } from "./store/memory.js";
 import type { WsEvent } from "./types.js";
 
-const PORT = 8787;
+// PORT is env-overridable so the Airbyte recall worktree can run a second backend (e.g. PORT=8788)
+// alongside the main demo's :8787 without a port clash. Defaults to 8787 (unchanged for the core).
+const PORT = Number(process.env.PORT) || 8787;
 
 // ── boot env readiness (docs/VALIDATION.md gap #1) — presence ONLY, never values ──────────
 const BOOT_KEYS = [
@@ -84,6 +90,49 @@ function broadcast(e: WsEvent): void {
 // ── routes ────────────────────────────────────────────────────────────────────
 app.get("/health", (_req, res) => {
   res.status(200).json({ ok: true });
+});
+
+// ── Airbyte recall ADD-ON routes (worktree feat/airbyte-recall) ─────────────────
+// GET /recall?q=…  — the GTM-memory query. Walks Airbyte Context Store -> Notion direct ->
+//   local grounded corpus, caching each answer to data/recall/*.json. ?cache=1 replays the last
+//   cached answer (offline demo safety). NOT on the core demo path — the main demo never calls this.
+// GET /recall/status — which recall tiers are configured (for the panel's honest provenance badge).
+app.get("/recall/status", (_req, res) => {
+  res.status(200).json({
+    airbyte: airbyteConfigured(),
+    notion: notionConfigured(),
+    notionDatabase: Boolean(process.env.NOTION_DATABASE_ID),
+    offline: true, // local corpus always available
+  });
+});
+
+app.get("/recall", (req, res) => {
+  const q = typeof req.query.q === "string" ? req.query.q.trim() : "";
+  if (!q) {
+    console.error("[seam] recall -> missing q -> 400 -> FAIL");
+    res.status(400).json({ error: "missing query — GET /recall?q=which real-estate leads have we storied?" });
+    return;
+  }
+  // Offline replay path: ?cache=1 -> serve the last cached answer if present (demo safety net).
+  if (req.query.cache === "1") {
+    const cached = recallFromCache(q);
+    if (cached) {
+      console.log(`[seam] recall (cache) -> "${q}" -> ${cached.count} via ${cached.via} -> ok`);
+      res.status(200).json(cached);
+      return;
+    }
+    console.log(`[seam] recall (cache) -> "${q}" -> no cache, running live`);
+  }
+  void recall(q)
+    .then((resp) => {
+      console.log(`[seam] recall -> "${q}" -> ${resp.count} via ${resp.via} -> ok`);
+      res.status(200).json(resp);
+    })
+    .catch((err) => {
+      const error = err instanceof Error ? err.message : String(err);
+      console.error(`[seam] recall -> "${q}" -> ${error} -> FAIL`);
+      res.status(500).json({ error });
+    });
 });
 
 app.post("/story/run", (req, res) => {

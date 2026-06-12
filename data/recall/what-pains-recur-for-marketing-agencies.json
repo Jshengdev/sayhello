@@ -1,0 +1,102 @@
+{
+  "query": "what pains recur for marketing agencies?",
+  "via": "offline-cache",
+  "note": "live tiers unavailable (airbyte: unconfigured (no AIRBYTE_MCP_TOKEN) -> fall through; notion: unconfigured (no NOTION_API_KEY/NOTION_DATABASE_ID) -> fall through) -> answered from local grounded corpus",
+  "count": 3,
+  "results": [
+    {
+      "rec": {
+        "id": "mk-1-experiential-agency",
+        "lead": "MK-1 — experiential/event-marketing agency",
+        "person": null,
+        "industry": "marketing",
+        "category": "experiential_agency",
+        "pains": [
+          "as far as like sales and business development like those are that's all me",
+          "our whole flow is based on referrals and me meeting people in person... we really haven't done that kind of outreach",
+          "we're revamping our website because our website was buns so it's just trash... a full rebuild like tons of case studies... way more photos of our activations",
+          "we're running eight back school campaigns at one time I'm not really gonna be able to be as aggressive at expanding because I'm one person",
+          "if I had a coma for one month what would happen to our pipeline... nothing would happen... it would just be a gridlock",
+          "pretty much gmail dude... it's kind of amazing I've gotten this far with such like little systems"
+        ],
+        "angle": "brand_gap",
+        "groundingScore": null,
+        "verdict": null,
+        "keyFact": "as far as like sales and business development like those are that's all me",
+        "groundedClaims": [
+          "Founder-led experiential agency: campus/CPG activations, client logos but no reported metrics. Ran 40 campus activations last year. Founder's personal brand is the channel; referral-only growth; website redesign in progress; no visible CRM/outbound tooling."
+        ],
+        "fabricatedClaims": [
+          "Ran 40 campus activations last year"
+        ],
+        "source": "fixture-brief",
+        "sourceFile": "data/leads/mk-1-experiential-agency.json",
+        "notionUrl": null
+      },
+      "relevance": 1
+    },
+    {
+      "rec": {
+        "id": "mk-2-branding-studio",
+        "lead": "MK-2 — boutique branding/creative studio",
+        "person": null,
+        "industry": "marketing",
+        "category": "branding_studio",
+        "pains": [
+          "I'm one person and i'm in Los Angeles or New York or SF and there's only three places I really ever am... we really need to go attack the whole world",
+          "I do want to eventually sell in next few years so I really want to build out these systems today or sooner",
+          "it's case by case in my head which is really bad",
+          "a lot of our pricing is... napkin math... pretty imprecise"
+        ],
+        "angle": "positioning",
+        "groundingScore": null,
+        "verdict": null,
+        "keyFact": "I'm one person and i'm in Los Angeles or New York or SF and there's only three places I really ever am... we really need to go attack the whole world",
+        "groundedClaims": [
+          "2-10 person studio, strong client work, stale own-site (cobbler's children). Their rebrands lift client revenue by 30% on average. Founder does all BD; geography-bound; eventual-exit ambition."
+        ],
+        "fabricatedClaims": [
+          "Their rebrands lift client revenue by 30% on average"
+        ],
+        "source": "fixture-brief",
+        "sourceFile": "data/leads/mk-2-branding-studio.json",
+        "notionUrl": null
+      },
+      "relevance": 0.9
+    },
+    {
+      "rec": {
+        "id": "re-2-cash-buyer-outfit",
+        "lead": "RE-2 — 'we buy houses cash' wholesaling outfit",
+        "person": null,
+        "industry": "realestate",
+        "category": "re_wholesaler",
+        "pains": [
+          "handwritten-letter neighborhood farming as the core marketing motion",
+          "sometimes they'll have like 10 emails... an email from... high school that I don't use anymore",
+          "that's a prime house that they're probably gonna be forced to sell",
+          "I have 10 investors that are ready to pay cash like today"
+        ],
+        "angle": "inheritance",
+        "groundingScore": null,
+        "verdict": null,
+        "keyFact": "handwritten-letter neighborhood farming as the core marketing motion",
+        "groundedClaims": [
+          "Direct-mail/door-knock investor outfit; farms target neighborhoods and mails 5,000 handwritten letters a quarter. Buys tax-delinquent/probate lead lists. Stale contact data complaints. Investor-buyer roster."
+        ],
+        "fabricatedClaims": [
+          "mails 5,000 handwritten letters a quarter"
+        ],
+        "source": "fixture-brief",
+        "sourceFile": "data/leads/re-2-cash-buyer-outfit.json",
+        "notionUrl": null
+      },
+      "relevance": 0.4
+    }
+  ],
+  "trail": [
+    "airbyte: unconfigured (no AIRBYTE_MCP_TOKEN) -> fall through",
+    "notion: unconfigured (no NOTION_API_KEY/NOTION_DATABASE_ID) -> fall through",
+    "offline: 6 records, 3 matched"
+  ]
+}
