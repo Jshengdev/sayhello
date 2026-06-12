@@ -88,6 +88,19 @@ sayhello: the drafter proves with cited data, the held-out critic is the second 
 Reward-hacking, confident hallucination, self-grading, context rot — the named failure modes of agents in
 2026 — all get solved here at once, for a real job.
 
+## Why now — sayhello sits at two industry inflections
+Two shifts make this the moment. **One: verification, not model size, is the binding constraint on agents.**
+Bessemer's 2026 AI Infrastructure Roadmap names eval/observability a core frontier — ~78% of AI failures are
+*invisible* and persist across 93% of cases even with bigger models, because they come from interaction
+dynamics, not capability. Anthropic says the grader must be held out and human-calibrated; LangChain notes an
+agent "can have 99% uptime but still confidently provide incorrect information." A bigger model writes a more
+convincing lie; only a verification layer catches it. **Two: GTM has flipped from volume to signal.** Stricter
+inbox enforcement killed spray-and-pray in 2025 (Google now rejects senders past a 0.3% spam-complaint rate;
+B2B reply rates fell to ~4–6%); the agencies still hitting 10–15% "are not sending more emails — they're
+sending smarter." Clay built a $3.1B company on signal-and-enrichment-first outreach. sayhello is the
+intersection: a held-out-verified, signal-and-story-based GTM harness. (Sources: Bessemer AI Infra Roadmap;
+Anthropic "Demystifying Evals"; LangChain observability; Apollo Signal-Based Selling; Instantly; Clay.)
+
 ## The underlying value — why a story, not a data dump
 The information is never the problem, and the information is never the solution. **The story is.** A story
 carries far more, far more densely, than a giant blurb of data — and understanding someone's story is *the*
