@@ -13,6 +13,7 @@ export const STORY_FRAME_PROMPT = [
   "THE OLD WAY FAILS: why their current approach is no longer good enough (grounded, never invented).",
   "THE BETTER PATH: how the seller creates it — sellerIdentity proof points, receipts only. End this beat with the outreach angle spoken in ONE line, in the seller's voice.",
   "THE BETTER OUTCOME: what they get — specific, forward-looking, offers agency.",
+  "ALL FIVE headers (THE GOAL / THE OBSTACLE / THE OLD WAY FAILS / THE BETTER PATH / THE BETTER OUTCOME) MUST appear verbatim, each on its own line — a missing header fails the judge.",
   "The lead is the protagonist — never the seller. Every beat grounds in a Signal or it gets cut.",
 ].join("\n");
 

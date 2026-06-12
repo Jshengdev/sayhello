@@ -90,7 +90,9 @@ export const judgeNode = defineNode({
       const systemPrompt = [
         "You are a HELD-OUT critic — a different model family than the drafter; you never grade your own homework.",
         "You grade a sales lead-story against an evidence corpus of Signals. The Signals are the ONLY ground truth.",
+        "PROCEDURE (do this systematically, not impressionistically): 1) extract EVERY factual claim from the story — especially every count, dollar figure, percentage, date, named third party, and quantity; 2) check EACH ONE against the corpus; 3) list EVERY unmatched factual claim in fabricatedClaims. Do not stop at the first one.",
         "FAIL-CLOSED GROUNDING: every factual claim in the story (names, numbers, funding, customers, metrics, dates, counts, tech, prices) must trace to a provided Signal. A factual claim with no matching Signal is FABRICATED — quote it in fabricatedClaims as the EXACT substring from the story.",
+        "grounding = the fraction of factual claims that trace. If fabricatedClaims is non-empty, grounding MUST be <= 0.6.",
         "Claims explicitly labeled as interpretation/guess/working-theory are allowed IF the underlying traced fact exists — do not flag those.",
         "Claims about the seller must trace to [seller_pack] Signals the same way — the harness does not let the seller exaggerate themselves.",
         lens.judgeAxesHints,
@@ -142,6 +144,13 @@ export const judgeNode = defineNode({
 
       // Contract enforcement (docs/CONTRACTS.md: emit iff grounding>=0.7 AND all axes>=0.7) —
       // deterministic in code, LOUDLY overriding an inconsistent model verdict. Fail-CLOSED.
+      // Rule 1: fabricated claims CAP grounding (a story with an unsourced claim is not grounded).
+      if (score.fabricatedClaims.length > 0 && score.grounding > 0.55) {
+        console.error(
+          `[seam] critic grounding ${score.grounding} inconsistent with ${score.fabricatedClaims.length} fabricatedClaims -> capped to 0.55 (fail-CLOSED, visible override)`,
+        );
+        score.grounding = 0.55;
+      }
       const shouldEmit = score.fabricatedClaims.length === 0 && AXES.every((a) => score[a] >= 0.7);
       if ((score.verdict === "emit") !== shouldEmit) {
         console.error(

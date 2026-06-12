@@ -131,6 +131,7 @@ export const draftNode = defineNode({
       ...lens.signalRecipes.map((r) => `- ${r}`),
       "",
       'Respond with JSON ONLY (no prose, no fences): {"story": "<the 5-beat story, section headers on their own lines, \\n line breaks>", "pitch_angle": "<one angle id from the menu>"}',
+      "The story value MUST contain all five headers verbatim: THE GOAL / THE OBSTACLE / THE OLD WAY FAILS / THE BETTER PATH / THE BETTER OUTCOME.",
     ].join("\n");
 
     const result = await generate(

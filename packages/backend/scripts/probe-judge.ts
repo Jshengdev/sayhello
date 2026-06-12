@@ -26,7 +26,8 @@ const { draftNode } = await import("../src/nodes/draft.js");
 const { judgeNode } = await import("../src/nodes/judge.js");
 
 const PLANT = "closed 14 properties in the last 12 months";
-const PLANT_NEEDLE = "14 properties";
+// The drafter may spell the count out ("Fourteen properties") — match either form.
+const PLANT_RE = /\b(14|fourteen)\b[^.\n]*propert|propert[^.\n]*\b(14|fourteen)\b/i;
 const fixtureRaw = JSON.parse(readFileSync(resolve(repoRoot, "data/leads/re-1-offmarket-team.json"), "utf8"));
 const brief = zCompanyBrief.parse(fixtureRaw); // strips _planted markers at the boundary, like the pipe does
 console.log(`[probe] fixture RE-1 parsed -> ${brief.signals.length} signals, plant lives in prose only`);
@@ -48,7 +49,7 @@ console.log(`[probe] drafter -> story ${story.length} chars, pitch_angle=${pitch
 const beatsPresent = BEATS.filter((b) => story.toUpperCase().includes(b));
 check(`drafter 5-beat structure (${beatsPresent.length}/5: ${beatsPresent.join(", ")})`, beatsPresent.length === 5);
 check(`drafter pitch_angle in realestate menu (${pitch_angle})`, ["forced_sale", "inheritance", "relocation", "absentee_fatigue"].includes(pitch_angle));
-const drafterUsedPlant = story.includes(PLANT_NEEDLE);
+const drafterUsedPlant = PLANT_RE.test(story);
 console.log(`[probe] drafter ${drafterUsedPlant ? "USED the planted claim (live catch path)" : "omitted the plant (deterministic backstop will judge it)"}`);
 
 // ── 2. judge LIVE — the planted catch must fire ─────────────────────────────
@@ -63,8 +64,8 @@ const { score } = await judgeNode.run(
 );
 console.log(`[probe] judge -> grounding=${score.grounding} verdict=${score.verdict} fabricatedClaims=${JSON.stringify(score.fabricatedClaims)}`);
 check(
-  `planted claim lands in fabricatedClaims ("${PLANT_NEEDLE}")`,
-  score.fabricatedClaims.some((c) => c.toLowerCase().includes(PLANT_NEEDLE.toLowerCase())),
+  `planted claim lands in fabricatedClaims (14/fourteen properties)`,
+  score.fabricatedClaims.some((c) => PLANT_RE.test(c)),
 );
 check(`grounding low (< 0.7): ${score.grounding}`, score.grounding < 0.7);
 check(`verdict regen`, score.verdict === "regen");
