@@ -32,6 +32,17 @@ on a SaaS company, a property, and a brand.
 
 We build the story. You make the call. The AI never sends anything on its own — that part stays human.
 
+## Why us (founder-fit)
+This isn't a tool we imagined — it's the one we use. I'm an independent AI-automations marketer who lands
+agency and real-estate clients, and this demo is literally my own go-to-market: I point sayhello at a real
+real-estate agency and a marketing agency and let it build the story I'd use to reach out. It's deliberately
+**not** a mass-send tool — those blast templated slop and you lose your brand. sayhello automates the
+*expensive* part instead: crafting a true story about a specific person from public data, the way a great
+closer does. More cost per lead, on purpose — because it's for high-touch sellers and agencies where the
+brand and the relationship are the whole game. The positioning angles are grounded in real founder-fit calls
+(a real-estate closer, agency founders), not invented. Real estate is the proof case: the highest-trust,
+most story-dependent sale there is — get that right and you've shown the thesis.
+
 ## How we built it (and how each sponsor plays its part)
 A TypeScript harness of typed nodes, each leaning on a sponsor:
 **Firecrawl** is the eyes — it turns the URL into facts. **ClickHouse** is the truth source — we query its
