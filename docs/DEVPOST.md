@@ -78,13 +78,25 @@ We didn't bolt sponsors on for prizes — each one answers a specific, named fai
   whole harness live; the agent's work runs where it's deployed.
 
 ## The deeper idea (where this comes from)
-This is the productization of a problem I've studied directly: **AI's faithfulness gap** — the distance between
-what a model *says* it did and what's actually true. In my own research lab (SOTARE) I built a faithfulness
-probe and watched a self-scoring loop report it was improving (58.8 → 58.9) while a held-out judge measured it
-*collapsing* to 45.0. The lesson — **machines should prove, humans should mean; never let a model be its own
-judge** — is the entire architecture of sayhello. Reward-hacking, context rot, confident hallucination,
-self-grading: these are the named failure modes of agents in 2026, and sayhello is one place they all get
-solved at once, for a real job.
+This productizes a problem I've studied directly in my own research lab (SOTARE): **AI's faithfulness gap** —
+the distance between what a model *says* it did and what's actually true. SOTARE's core law is
+**"machines PROVE, humans MEAN"** and **Two-Eyes-Testing**: never let a model be its own judge — use a second,
+independent eye, because a system that persists a claim without verifying it is just LARPing. I built
+detectors for exactly this (a faithfulness probe; an "LLM-larp" detector) after watching self-scoring loops
+report progress that an independent judge showed wasn't real. That lesson is the entire architecture of
+sayhello: the drafter proves with cited data, the held-out critic is the second eye, and the human means.
+Reward-hacking, confident hallucination, self-grading, context rot — the named failure modes of agents in
+2026 — all get solved here at once, for a real job.
+
+## The underlying value — why a story, not a data dump
+The information is never the problem, and the information is never the solution. **The story is.** A story
+carries far more, far more densely, than a giant blurb of data — and understanding someone's story is *the*
+thing that makes a great GTM person great. Not the tools, not the automation, not the personalized agents:
+how well you understand a person, and sell them a pain out of it. sayhello is a GTM-CRM-style scraping layer
+that lets an agent live as a harness on the open web, distills a person's true *story* from public data, and
+hands it to your sales team — a tag-team duo of you and a co-founder-grade agent. The future of GTM isn't
+more volume and more slop; it's deeper, verified *understanding*, at the speed of an agent, with a human
+making the call.
 
 ## Challenges
 Grounding is **fail-closed**: no source means fabricated, not "probably fine." The hard part was a critic
