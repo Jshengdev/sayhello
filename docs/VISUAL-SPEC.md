@@ -76,3 +76,7 @@ border: none;
 ENFORCEMENT (P1 lane + closer audit): grep the frontend for `border: 1px`, `border:1px`, and gray border
 colors (`#ccc #ddd #e5e7eb #d1d5db gray- slate- neutral-`) — every hit converts to the ring recipe.
 Recessed surfaces invert: white drop-shadow below, dark inset above (see said-built `.bar-track`).
+
+## P1 ENTRY POINTER (3:00 PM): before implementing ANY P1 visual, read docs/LAB-PORT.md — it has the exact
+## lab interactions (tab fade, radial graph, detail card, process display) + the tuned "iteration river"
+## spiral preset. LAB-PORT.md overrides earlier spiral guidance where they conflict.
