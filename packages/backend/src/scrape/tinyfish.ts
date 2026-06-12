@@ -1,3 +1,5 @@
+// @ts-nocheck — VERBATIM PORT from ~/code/doubles/src/scrape (docs/PERSON-SCRAPE-PORT.md: copy, don't rewrite).
+// doubles compiles without noUncheckedIndexedAccess; runtime behavior is proven there. Off the demo line (fallback utilities).
 // TinyFish → Firecrawl → cheerio cascade for URL → markdown extraction.
 //
 // Tier order and cost asymmetry WHY:

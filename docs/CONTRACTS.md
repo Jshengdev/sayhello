@@ -34,7 +34,10 @@ export interface CompanyBrief {            // 26-field research record (gtm-tool
 export interface Signal { signal_type: string; source: string; source_url: string; detail: string; strength: number; }
 export type PitchAngle =
   | "resilience" | "upgrade_from_sms" | "multi_channel"
-  | "build_vs_buy" | "speed_to_market" | "revenue_share" | "agentic_notifications";
+  | "build_vs_buy" | "speed_to_market" | "revenue_share" | "agentic_notifications"
+  // V2 contract add (2026-06-12): realestate + marketing lens angles (docs/LENSES-CONTENT.md)
+  | "forced_sale" | "inheritance" | "relocation" | "absentee_fatigue"
+  | "brand_gap" | "channel" | "positioning";
 
 export interface StoryScore {              // the held-out Critic verdict (numbers, not booleans)
   grounding: number;          // 0..1 — every claim traceable to a Signal; fail-CLOSED
@@ -90,17 +93,32 @@ Trajectory query (the sponsor demo line): `SELECT generation, avg(grounding), av
 
 ## Input (crystal — see docs/DECISIONS.md §2)
 ```ts
-type RunInput = { industry: "gtm" | "realestate" | "marketing"; handle: string };
+type RunInput = {
+  industry: "gtm" | "realestate" | "marketing"; handle: string;
+  mode?: "live" | "replay";                                          // V2: replay a recorded LIVE tape
+  person?: { name?: string; linkedinUrl?: string; xHandle?: string }; // V2: parallel person-scrape inputs
+  positioning?: string;                                              // V2 contract add: seller positioning line
+};
 // handle = company URL (gtm/marketing) OR property address/owner (realestate)
 // industry selects the LENS PACK (signal recipes + grounding sources + narrative angles). Same engine.
 ```
 `CompanyBrief` generalizes to a `LeadBrief`: gtm fields stay; realestate adds `{owner_age?, sale_date?,
 transfer_history?, life_stage?}`; marketing adds `{recent_campaigns?, channels?}`. Keep the union loose —
 the Critic grounds whatever fields the lens populated.
+**V2 contract adds (2026-06-12, implemented in types.ts/schemas.ts + frontend mirror):** `domain` is
+nullable (RE/MK discovery-call fixtures carry no domain); optional `industry`/`provenance`/`person?`
+(PersonBrief) + the realestate/marketing optional fields above; `Lens.sellerIdentity {who, offer,
+proofPoints[]}` (lens-pack data — proofPoints become `seller_pack` Signals concat'd into the ONE judge
+corpus, zero judge changes); `Lens.angles` is now the `{angle, trigger, line}` menu; render node output
+is `{slides, openuiLang: string|null}` with the receipt served by `GET /story/:leadId/receipt`.
+**The planted-catch boundary (LOCKED):** the judge's evidence corpus = `signals[]` (+ seller_pack) ONLY —
+never the brief summary prose. Fixture plants live in the prose; widening the corpus kills the catch.
 
 ## API
 - `POST /story/run {industry, handle}` → starts a run, returns `{leadId}`
 - `GET /story/:leadId` → rehydrate StoryRun (survives refresh)
+- `GET /story/:leadId/receipt` → `{openuiLang: string|null, slides: Slide[]}` (V2 contract add — OpenUI receipt; null = visible fallback)
+- `POST /story/:leadId/approve` → resolves the human gate (200; 409 if no pending gate)
 - `WS /ws` → streams `WsEvent[]` per the union above
 
 ## Lane ownership

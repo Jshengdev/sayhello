@@ -4,9 +4,16 @@
 //   POST /story/:leadId/approve        -> resolves the human gate
 //   GET  /health · WS /ws              -> WsEvent stream broadcast to all clients
 // Seam 1 (run received -> validated -> leadId issued) and seam 4 (every WsEvent emitted) logged here.
-import "dotenv/config";
+// .env lives at the REPO ROOT (copied from doubles) — `pnpm --filter backend dev` runs with
+// cwd packages/backend, so bare "dotenv/config" finds nothing. Resolve the root path explicitly.
+// dotenv parses line-by-line (the file is NOT shell-sourceable — values contain raw `&`).
+import dotenv from "dotenv";
 import { randomUUID } from "node:crypto";
 import http from "node:http";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+dotenv.config({ path: path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../../.env") });
 import express from "express";
 import { WebSocketServer, WebSocket } from "ws";
 import { assertHeldOutCritic } from "./llm/models.js";

@@ -2,7 +2,8 @@
 // handle = property address / owner / team fixture. Grounding = discovery-call corpus + public records.
 // V2 contract add: sellerIdentity + LensAngle menu (forced_sale/inheritance/relocation/absentee_fatigue
 // — PitchAngle union widened in lockstep) + openingLineShapes + STORY-FRAME 5-beat fold.
-import { NARRATIVE_ARC_CALIBRATION, STORY_FRAME_PROMPT, type Lens } from "./index.js";
+import { NARRATIVE_ARC_CALIBRATION, STORY_FRAME_PROMPT } from "./story-frame.js";
+import type { Lens } from "./index.js";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // EDITABLE — Johnny tunes voice + recipes. Every quote VERBATIM from the Carlos

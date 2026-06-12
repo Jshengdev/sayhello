@@ -31,10 +31,22 @@ no silent stubs (visible FAILED), critic ≠ drafter. Exact porting per `docs/PE
 its sponsor (scrape=Firecrawl · person=HeyReach+X+SixtyFour · ground=ClickHouse · enrich=Composio ·
 draft+judge=OpenRouter · trace=Langfuse · render=Thesys C1/OpenUI · deploy=Render).
 
+## P1 — THE LAB VISUALS (after P0 live wiring holds — port per `docs/LAB-PORT.md`)
+Johnny watched `~/code/work/apps/said-built` /lab and wants its exact interactions ported into sayhello's
+paper-light + cofounder-color scheme. Port these (sources in `said-built/components/lab/`):
+1. **Tabs + fade** — soft-key tabs with button gaps; switch = fade-out→fade-in (~220ms, `cubic-bezier(0.16,1,0.3,1)`,
+   NO slide); selected = solid ink fill / paper text (cofounder active-chip inversion). sayhello tabs: Story · Person · Claims · Trajectory.
+2. **Radial node graph** — the "general intelligence" circle: nodes as soft keys around a center, button gaps, thin dashed connectors, good box offset (`OrgCanvas.tsx`).
+3. **Detail/report card** — the email-campaign-report layout (label/value rows + one big numeral + green bar, minimal words) as the OpenUI/C1 outreach-report shape (`EmailReportPair.tsx`).
+4. **Process display** — the stage-4 "step 1 / step 2 / step 3" enrichment view = our live person-scrape pipeline (scraping company → verifying LinkedIn → reading X → enriching → grounding → drafting → judging) as numbered steps with Ready/Running/Completed/Blocked status pills (`StatusGroupCard.tsx`).
+5. **THE SPIRAL — "iteration river"** — copy `components/lab/spiral/*` wholesale and add the new preset from `docs/LAB-PORT.md` §5 (radius 540, pitch 460, itemsPerTurn 4.5, cameraTilt 26, cameraDist 880, focusScale 1.28, theme "paper"). Top→bottom, each generation card spirals down and distills to a single point (the final grounded story). This is the hero entry after "say hello".
+Keep ≤1 whimsy per surface; everything in paper-light + cofounder color. Image generators = video only, never app UI.
+
 ## STOP
 Both outreach targets (real-estate + marketing) run live + cached, each producing a grounded story + outreach
-approach with a REAL fabrication caught, on the cofounder-styled dashboard with the spiral entry, every node
-sponsor-captioned. Re-capture `.evidence/` + update `.evidence/journey.html`. Write `docs/STATUS.md` (what
-runs live, what's cached/stubbed, top 3 next iterations, any key still needed).
+approach with a REAL fabrication caught, on the cofounder-styled dashboard with the **say-hello→"iteration
+river" spiral entry** and the **lab tab-fade interactions** (per `docs/LAB-PORT.md`), every node sponsor-
+captioned. Re-capture `.evidence/` + update `.evidence/journey.html`. Write `docs/STATUS.md` (what runs live,
+what's cached/stubbed, top 3 next iterations, any key still needed).
 
 Begin with STEP 1. Show me your inventory + gap table + plan, then execute.

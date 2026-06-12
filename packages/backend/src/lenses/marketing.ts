@@ -2,7 +2,8 @@
 // different pain (docs/LENSES-CONTENT.md §3, verbatim). handle = agency/brand URL or fixture.
 // V2 contract add: sellerIdentity + LensAngle menu (brand_gap/channel/positioning — PitchAngle union
 // widened in lockstep) + openingLineShapes + STORY-FRAME 5-beat fold.
-import { NARRATIVE_ARC_CALIBRATION, STORY_FRAME_PROMPT, type Lens } from "./index.js";
+import { NARRATIVE_ARC_CALIBRATION, STORY_FRAME_PROMPT } from "./story-frame.js";
+import type { Lens } from "./index.js";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // EDITABLE — Johnny tunes voice + recipes. Every quote VERBATIM from the Aiden

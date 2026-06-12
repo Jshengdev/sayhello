@@ -1,7 +1,8 @@
 // lenses/gtm.ts — the FULL gtm lens. Seller = PHOTON (docs/LENSES-CONTENT.md §1, verbatim consts).
 // SF SaaS outreach: handle = company URL. Grounding = scrape + ClickHouse github_events/hackernews + SEC/news.
 // V2 contract add: sellerIdentity + LensAngle menu + openingLineShapes + STORY-FRAME 5-beat fold.
-import { NARRATIVE_ARC_CALIBRATION, STORY_FRAME_PROMPT, type Lens } from "./index.js";
+import { NARRATIVE_ARC_CALIBRATION, STORY_FRAME_PROMPT } from "./story-frame.js";
+import type { Lens } from "./index.js";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // EDITABLE — Johnny tunes narrative voice + recipes here. Every quote is VERBATIM

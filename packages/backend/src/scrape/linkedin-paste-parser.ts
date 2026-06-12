@@ -1,3 +1,5 @@
+// @ts-nocheck — VERBATIM PORT from ~/code/doubles/src/scrape (docs/PERSON-SCRAPE-PORT.md: copy, don't rewrite).
+// doubles compiles without noUncheckedIndexedAccess; runtime behavior is proven there. Off the demo line (fallback utilities).
 // LinkedIn-profile paste parser.
 //
 // LinkedIn forbids scraping in 2026; instead the onboarding flow asks the user
