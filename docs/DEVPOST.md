@@ -4,7 +4,11 @@
 sayhello  ·  (tagline) **Before you say hello, know their story.**
 
 ## Elevator pitch (≤200 chars)
-A self-improving GTM harness that builds a *grounded* story around any lead — and catches the AI the moment it invents a fact. It refuses to ship a story it can't prove.
+Your AI is lying about your leads. sayhello is the harness that catches it — it builds a grounded story around any lead and refuses to ship a single claim it can't prove.
+
+### Alt pitches (pick the punchiest on the day)
+- A self-improving sales harness with a held-out judge that catches its own model hallucinating — and won't ship a lead-story it can't prove. Same idea as Resolve does for SRE, for GTM.
+- Every tool gives you more data on a lead. sayhello gives you the one true reason they'd buy — and shows you the lie it caught getting there.
 
 ## The problem (Inspiration)
 Throw an AI agent at sales research and it hallucinates — invents a funding round, a customer, a tech stack — and you send outreach built on a lie. It's the same failure as trusting an autonomous SRE agent on an incident blindly: unverified agent autonomy does damage. And the #1 lesson in sales (from a real-estate closer we interviewed) is that people buy from people who know their story — the marker of a real connection is "they felt understood." Every tool gives you *more data*. None give you the *grounded working theory of the lead's pain*, with the guesses rejected.

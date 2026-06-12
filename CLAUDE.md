@@ -39,6 +39,10 @@ Each stage is a **JAM-style typed node**: `defineNode({ inputSchema: zod, output
 5. `docs/PORT-MANIFEST.md` — which doubles/said-built/gtm file copies where (the literal copy list).
 6. `docs/SPONSORS.md` — each sponsor's seam + minimal integration + where it shows on screen.
 
+7. `docs/reference/INSPIRATION-MAP.md` — **the distilled port guide (synthesized 6-12): JAM-spine spec, gtm-lens prompt ingredients, doubles port map + model shortlist, UI port tables (LoopCanvas/SlipStrip/spiral paper-mode), SOTARE critic rules R1–R10, live-verified sponsor API shapes. Builders/fixers: read the section for your lane before coding.**
+8. `docs/PRIZE-PLAN.md` — prize targeting (Johnny override 6-12): Render Workflows mandatory, Guild ship-gate, Airbyte conditional; S3 sharpening chips.
+9. `docs/reference/RENDER-WORKFLOWS.md` — the verbatim Render Workflows onboarding + our task() mapping.
+
 Deep reference (only when needed): `docs/reference/` — full PRD, FRONTEND-SPEC, DESIGN-BRIEF, WIN-ASSESSMENT, BUILD-SCOPE, PORT-INVENTORY, IDEA.
 
 ## Repo map

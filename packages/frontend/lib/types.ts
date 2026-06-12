@@ -51,7 +51,7 @@ export interface StoryGeneration {
 
 export type WsEvent =                      // frontend switches on `type`
   | { type: "run_started";   leadId: string; url: string }
-  | { type: "node_enter";    leadId: string; node: "scrape"|"draft"|"judge"|"reenrich"|"archive"|"render" }  // NEW: lights the node
+  | { type: "node_enter";    leadId: string; node: "scrape"|"enrich"|"ground"|"draft"|"judge"|"reenrich"|"archive"|"render" }  // NEW: lights the node
   | { type: "scrape_done";   leadId: string; brief: CompanyBrief }
   | { type: "draft_done";    leadId: string; generation: number; story: string; pitch_angle: PitchAngle }
   | { type: "score_done";    leadId: string; generation: number; score: StoryScore }

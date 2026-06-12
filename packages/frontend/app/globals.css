@@ -212,15 +212,6 @@ body {
     inset 0 1px 0 rgba(255, 255, 255, 0.65),
     0 0 6px color-mix(in srgb, currentColor 18%, transparent);
 }
-/* the dotted connector stub that hangs below a node card */
-.wire-stub {
-  width: 1px;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    rgba(32, 32, 32, 0.35) 0 2px,
-    transparent 2px 6px
-  );
-}
 /* dashed divider between status groups inside a card */
 .divider-dashed {
   border-top: 1px dashed rgba(32, 32, 32, 0.18);
@@ -269,6 +260,182 @@ body {
     0 1px 2px rgba(0, 0, 0, 0.12);
 }
 
+/* ——— the loop canvas — node chips, the live shimmer, the regen wire ——— */
+/* a node card on the graph — the lab-chip recipe, paper-toned */
+.node-chip {
+  background: var(--page);
+  box-shadow:
+    inset 0 0 0 1px #fff,
+    0 0 0 1px rgba(0, 0, 0, 0.08),
+    0 2px 6px rgba(0, 0, 0, 0.05);
+  transition:
+    box-shadow 0.3s var(--ease-signature),
+    background-color 0.3s var(--ease-signature);
+}
+/* ONLY the executing node earns white + --live (docs/DESIGN.md law) */
+.node-chip[data-live="true"] {
+  background: var(--white);
+  box-shadow:
+    inset 0 0 0 1px #fff,
+    0 0 0 1px color-mix(in srgb, var(--live) 50%, transparent),
+    0 0 0 3px var(--live-soft),
+    0 6px 16px rgba(0, 0, 0, 0.08);
+}
+/* shimmer — a light sweeping the executing node (signature gesture; depicts execution) */
+.node-shimmer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.node-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  transform: translateX(-110%) skewX(-12deg);
+  background: color-mix(in srgb, var(--live) 7%, transparent);
+  width: 45%;
+  animation: shimmer-sweep 1.5s var(--ease-signature) infinite;
+}
+@keyframes shimmer-sweep {
+  to {
+    transform: translateX(320%) skewX(-12deg);
+  }
+}
+/* the regen back-edge — violet dashes marching back toward enrich */
+@keyframes wire-march {
+  to {
+    stroke-dashoffset: -16;
+  }
+}
+.wire-march {
+  stroke: var(--live);
+  stroke-dasharray: 4 4;
+  animation: wire-march 0.9s linear infinite;
+}
+
+/* ——— the fabrication catch — THE demo heart (renders the instant it lands) ——— */
+.claim-bad {
+  color: var(--bad);
+  background: color-mix(in srgb, var(--bad) 7%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--bad) 35%, transparent);
+  border-radius: 3px;
+  padding: 0 3px;
+  text-decoration: none;
+  animation: dash-pop 0.45s var(--ease-signature) both;
+}
+
+/* blur-up swap between generations (signature gesture) */
+@keyframes blur-up {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+.blur-up {
+  animation: blur-up 0.6s var(--ease-signature) both;
+}
+
+/* gate-stamp on approve (signature gesture — the ONE whimsy on the gate surface) */
+@keyframes stamp-in {
+  0% {
+    opacity: 0;
+    transform: rotate(-8deg) scale(1.7);
+  }
+  60% {
+    opacity: 1;
+    transform: rotate(-8deg) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-8deg) scale(1);
+  }
+}
+.gate-stamp {
+  display: inline-block;
+  transform: rotate(-8deg);
+  color: var(--good);
+  box-shadow:
+    0 0 0 1.5px color-mix(in srgb, var(--good) 65%, transparent),
+    inset 0 0 0 1px color-mix(in srgb, var(--good) 25%, transparent);
+  border-radius: 6px;
+  animation: stamp-in 0.5s var(--ease-signature) both;
+}
+
+/* ——— the generation spiral (Element B, the hero) — said-built sp-* retyped
+       to StoryGeneration, paper-light. A fixed stage; wheel/drag scrubs focus. ——— */
+.gsp-stage {
+  position: relative;
+  height: 460px;
+  overflow: hidden;
+  border-radius: 16px;
+  touch-action: pan-y;
+}
+.gsp-scene {
+  position: absolute;
+  inset: 0;
+  perspective: 1100px;
+}
+.gsp-group {
+  position: absolute;
+  left: 50%;
+  top: 57%; /* the 12° camera tilt lifts the focus card — recenter it in the stage */
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+}
+.gsp-card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--raised);
+  box-shadow:
+    inset 0 0 0 1px #fff,
+    0 0 0 1px rgba(0, 0, 0, 0.08),
+    0 30px 60px -30px rgba(32, 32, 32, 0.35);
+  cursor: pointer;
+  text-align: left;
+  will-change: transform, filter, opacity;
+}
+.gsp-card[data-grounded="false"] {
+  box-shadow:
+    inset 0 0 0 1px #fff,
+    0 0 0 1px color-mix(in srgb, var(--bad) 40%, transparent),
+    0 30px 60px -30px rgba(32, 32, 32, 0.35);
+}
+.gsp-card[data-grounded="true"] {
+  box-shadow:
+    inset 0 0 0 1px #fff,
+    0 0 0 1px color-mix(in srgb, var(--good) 45%, transparent),
+    0 30px 60px -30px rgba(32, 32, 32, 0.35);
+}
+/* faint ground — concentric rings squashed into a floor ellipse (spiral world) */
+.gsp-ground {
+  position: absolute;
+  left: 50%;
+  top: 66%;
+  width: 1100px;
+  height: 1100px;
+  transform: translate(-50%, -50%) scaleY(0.36);
+  pointer-events: none;
+  background-image: repeating-radial-gradient(
+    circle at 50% 50%,
+    rgba(38, 35, 35, 0.07) 0 1px,
+    transparent 1px 72px
+  );
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 20%, transparent 62%);
+  mask-image: radial-gradient(circle at 50% 50%, #000 20%, transparent 62%);
+}
+
 /* in-frame micro-motion — state changes pop in, counts tick */
 @keyframes dash-pop {
   from {
@@ -278,15 +445,6 @@ body {
 }
 .dash-pop {
   animation: dash-pop 0.45s var(--ease-signature) both;
-}
-@keyframes dash-tick {
-  35% {
-    transform: scale(1.22);
-  }
-}
-.dash-tick {
-  display: inline-block;
-  animation: dash-tick 0.3s var(--ease-signature);
 }
 @keyframes dash-pulse {
   50% {
