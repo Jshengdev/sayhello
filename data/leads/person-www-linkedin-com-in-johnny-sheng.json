@@ -1,0 +1,45 @@
+{
+  "fetchedAt": "2026-06-12T21:39:54.815Z",
+  "inputs": {
+    "name": "Johnny Sheng",
+    "linkedinUrl": "https://www.linkedin.com/in/johnny--sheng/"
+  },
+  "person": {
+    "name": "Johnny Sheng",
+    "linkedinUrl": "https://www.linkedin.com/in/johnny--sheng/",
+    "xHandle": null,
+    "headline": null,
+    "company": null,
+    "title": null,
+    "location": "Arcadia, California, United States",
+    "summary": "ai @ Photon | arts tech biz @ Iovine and Young Academy",
+    "provenance": "live"
+  },
+  "signals": [
+    {
+      "signal_type": "person_identity",
+      "source": "heyreach",
+      "source_url": "https://www.linkedin.com/in/johnny--sheng",
+      "detail": "LinkedIn profile: Johnny Sheng",
+      "strength": 0.8
+    },
+    {
+      "signal_type": "person_location",
+      "source": "heyreach",
+      "source_url": "https://www.linkedin.com/in/johnny--sheng",
+      "detail": "Based in Arcadia, California, United States",
+      "strength": 0.7
+    },
+    {
+      "signal_type": "person_about",
+      "source": "heyreach",
+      "source_url": "https://www.linkedin.com/in/johnny--sheng",
+      "detail": "LinkedIn About (verbatim): ai @ Photon | arts tech biz @ Iovine and Young Academy",
+      "strength": 0.75
+    }
+  ],
+  "degraded": [
+    "x: no xHandle on run input",
+    "sixtyfour: [sixtyfour] non-200 response: POST https://api.sixtyfour.ai/people-intelligence → 401 Unauthorized. body={\"detail\":\"Inva"
+  ]
+}

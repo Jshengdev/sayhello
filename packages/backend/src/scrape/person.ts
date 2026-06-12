@@ -125,6 +125,13 @@ export async function runPersonStage(personInput: RunInput["person"]): Promise<P
     console.warn(`[seam] person -> SKIPPED -> ${why} -> degraded (company-only run, visible notice)`);
     return { person: null, signals: [], degraded: [`person stage skipped: ${why}`] };
   }
+  if (process.env.STUB_MODE === "1") {
+    // The stub floor must stay key-free — person scrape is live-only (cache still allowed below? no:
+    // keep the floor deterministic, skip entirely and say so).
+    const why = "STUB_MODE=1 floor — person scrape is live-only, skipped";
+    console.warn(`[seam] person -> SKIPPED -> ${why} (visible notice)`);
+    return { person: null, signals: [], degraded: [`person stage skipped: ${why}`] };
+  }
 
   const slug = personSlug(personInput);
   const cacheFile = path.join(LEADS_DIR, `person-${slug}.json`);
