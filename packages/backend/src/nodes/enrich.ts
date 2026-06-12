@@ -265,14 +265,17 @@ export const reenrichNode = defineNode({
       try {
         const hits = await composioSearchNews(q);
         if (hits.length === 0) {
+          // PRECISION MATTERS: news-absence is NOT source-absence. A flat "no public source"
+          // here contradicts legitimately-grounded signals (e.g. seller_pack proof points) and
+          // poisons the judge corpus — observed live on ld_5963f9e9 (fail-CLOSED on a grounded claim).
           corrective.push({
             signal_type: "claim_check",
             source: "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
             source_url: `https://news.google.com/search?q=${encodeURIComponent(q)}`,
-            detail: `News search for "${claim}" returned ZERO results — no public source supports it. The claim must be CUT.`,
-            strength: 0.85,
+            detail: `Composio news search for "${claim}" returned 0 results — no NEWS source found. If an existing Signal (scrape/seller_pack/clickhouse) carries this claim, restate it citing that Signal's exact wording; otherwise CUT it.`,
+            strength: 0.6,
           });
-          noteParts.push(`"${claim}": no source found — CUT it.`);
+          noteParts.push(`"${claim}": no news source — keep ONLY if an existing Signal carries it (cite it verbatim), else CUT.`);
         } else {
           corrective.push(
             ...hits.slice(0, 3).map((h) => ({

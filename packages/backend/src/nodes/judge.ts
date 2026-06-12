@@ -14,12 +14,7 @@ import { assertHeldOutCritic, MODELS } from "../llm/models.js";
 import { generate, parseJsonLoose } from "../llm/openrouter.js";
 import { zCompanyBrief, zIndustry, zStoryScore } from "../schemas.js";
 import type { CompanyBrief, StoryScore } from "../types.js";
-import { defineNode } from "./defineNode.js";
-
-/** V2 polarity flip for draft/judge: LIVE default; STUB_MODE=1 explicitly opts back into canned. */
-function stubForced(): boolean {
-  return process.env.STUB_MODE === "1";
-}
+import { defineNode, stubExplicit } from "./defineNode.js";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // EDITABLE — canned critic verdicts (S1 rehearsal, STUB_MODE=1 only). The fabricated
@@ -70,6 +65,7 @@ export const judgeNode = defineNode({
   sponsor: "OpenRouter · held-out critic",
   wireNode: "judge",
   stubLatencyMs: 900, // the catch beat — let the held-out critic visibly "think"
+  stubWhen: stubExplicit, // V2: LIVE default; stub only when STUB_MODE=1
   inputSchema: z.object({
     brief: zCompanyBrief,
     story: z.string().min(1),
@@ -81,7 +77,7 @@ export const judgeNode = defineNode({
     const lens = getLens(industry);
     let score: StoryScore;
 
-    if (stubForced()) {
+    if (stubExplicit()) {
       console.log(`[stub] node:judge canned output (gen=${generation}, lens=${lens.industry}) — STUB_MODE=1 forced`);
       score = generation === 0 ? GEN0_SCORE : GEN1_SCORE;
     } else {

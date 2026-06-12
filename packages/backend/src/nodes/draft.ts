@@ -12,12 +12,7 @@ import { generate, parseJsonLoose } from "../llm/openrouter.js";
 import { MODELS } from "../llm/models.js";
 import { zCompanyBrief, zIndustry, zPitchAngle } from "../schemas.js";
 import type { CompanyBrief, PitchAngle } from "../types.js";
-import { defineNode } from "./defineNode.js";
-
-/** V2 polarity flip for draft/judge: LIVE default; STUB_MODE=1 explicitly opts back into canned. */
-function stubForced(): boolean {
-  return process.env.STUB_MODE === "1";
-}
+import { defineNode, stubExplicit } from "./defineNode.js";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // EDITABLE — canned story copy (S1 rehearsal, STUB_MODE=1 only). Johnny tunes voice.
@@ -83,6 +78,7 @@ export const draftNode = defineNode({
   sponsor: "OpenRouter · drafter",
   wireNode: "draft",
   stubLatencyMs: 800,
+  stubWhen: stubExplicit, // V2: LIVE default; stub only when STUB_MODE=1
   inputSchema: z.object({
     brief: zCompanyBrief,
     generation: z.number().int().min(0),
@@ -93,7 +89,7 @@ export const draftNode = defineNode({
   outputSchema: z.object({ story: z.string().min(1), pitch_angle: zPitchAngle }),
   async executor({ brief, generation, industry, retryNote, positioning }, ctx) {
     const lens = getLens(industry);
-    if (stubForced()) {
+    if (stubExplicit()) {
       console.log(
         `[stub] node:draft canned output (gen=${generation}, lens=${lens.industry}` +
           (retryNote ? `, retryNote present` : "") +

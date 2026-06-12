@@ -16,12 +16,7 @@ import { generate, type ChatMessage } from "../llm/openrouter.js";
 import { zStoryRun } from "../schemas.js";
 import type { StoryRun } from "../types.js";
 import type { Slide } from "../store/memory.js";
-import { defineNode } from "./defineNode.js";
-
-/** V2 polarity flip: LIVE default; STUB_MODE=1 explicitly opts back into carved-slides-only. */
-function stubForced(): boolean {
-  return process.env.STUB_MODE === "1";
-}
+import { defineNode, stubExplicit } from "./defineNode.js";
 
 const zSlide = z.object({ title: z.string().min(1), body: z.string() });
 
@@ -131,8 +126,9 @@ export const RECEIPT_PROMPT = {
     "You are given a StoryRun JSON. Render ONLY what the JSON supports — never invent claims, sources, scores, or numbers. " +
     "Order: ClaimsLedger, EvidenceAccordion, TrajectoryChart, GateBlock.",
   additionalRules: [
-    'Any claim the Critic ever flagged FABRICATED (any generation\'s fabricatedClaims) must render with status "FABRICATED" — the catch is the point — even if a later generation cut it.',
-    "Use every generation in generations[] as a TrajectoryChart point.",
+    'Any claim the input marks FABRICATED must render with status "FABRICATED" — the catch is the point — even if a later generation cut it.',
+    "Use EXACTLY the claims[] entries as ClaimRows — one row per entry, no more, no fewer, never invent or repeat rows.",
+    "Use every trajectory[] entry as a TrajectoryChart point.",
     'The GateBlock action must be exactly "approve_story".',
     "Respond with OpenUI Lang statements only — no prose, no markdown fences.",
   ],
@@ -157,21 +153,41 @@ function stripFences(text: string): string {
   return text.replace(/^```[a-z-]*\s*$/gim, "").trim();
 }
 
-/** Slim payload (~425 tokens probed) — never ship the whole brief. */
+/**
+ * Slim payload shaped like the PROVEN probe input: an EXPLICIT pre-derived claims list, not raw
+ * story text (probe gotcha learned live: handing the model the full story makes it derive the
+ * ledger open-endedly — gemini-2.5-flash at temp 0 looped to 600+ rows and token-truncated).
+ * FABRICATED rows = every claim any generation flagged; GROUNDED rows = the top signals. Hard caps.
+ */
 function slimRun(run: StoryRun): unknown {
+  const name = run.brief?.name ?? run.url;
+  const fabricated = [...new Set(run.generations.flatMap((g) => g.fabricatedClaims))].slice(0, 3);
+  const topSignals = (run.brief?.signals ?? [])
+    .filter((s) => s.detail && s.source_url)
+    .sort((a, b) => b.strength - a.strength)
+    .slice(0, 5);
   return {
+    company: name,
     url: run.url,
-    story: run.story,
-    score: run.score,
-    generations: run.generations.map((g) => ({
-      generation: g.generation,
-      score: { grounding: g.score.grounding, verdict: g.score.verdict },
-      fabricatedClaims: g.fabricatedClaims,
-    })),
-    brief: {
-      name: run.brief?.name ?? run.url,
-      signals: (run.brief?.signals ?? []).map((s) => ({ detail: s.detail, source_url: s.source_url })),
+    summary: {
+      generations: run.generations.length,
+      fabricatedCaught: fabricated.length,
+      finalGrounding: run.score?.grounding ?? null,
+      verdict: run.score?.verdict ?? null,
     },
+    claims: [
+      ...fabricated.map((claim) => ({ claim, status: "FABRICATED", source: null })),
+      ...topSignals.map((s) => ({ claim: s.detail.slice(0, 160), status: "GROUNDED", source: s.source_url })),
+    ],
+    evidence: [
+      ...fabricated.map((claim) => ({
+        claim,
+        excerpt: "NO SOURCE FOUND — the Critic flagged this claim FABRICATED and it was cut.",
+        url: null,
+      })),
+      ...topSignals.slice(0, 3).map((s) => ({ claim: s.detail.slice(0, 160), excerpt: `"${s.detail.slice(0, 220)}"`, url: s.source_url })),
+    ],
+    trajectory: run.generations.map((g) => ({ generation: g.generation, grounding: g.score.grounding })),
   };
 }
 
@@ -262,6 +278,7 @@ export const renderNode = defineNode({
   sponsor: "Thesys OpenUI",
   wireNode: "render",
   stubLatencyMs: 650,
+  stubWhen: stubExplicit, // V2: LIVE default; stub only when STUB_MODE=1
   inputSchema: z.object({ run: zStoryRun }),
   // V2 contract add (OPENUI-RENDER CONTRACT-ADD-1): openuiLang rides beside the typed slides;
   // null = OpenUI path failed (visible fallback), slides are ALWAYS present (never blocks).
@@ -271,7 +288,7 @@ export const renderNode = defineNode({
     const leadName = run.brief?.name ?? run.url;
     const slides = carveSlides(run.story, leadName);
 
-    if (stubForced()) {
+    if (stubExplicit()) {
       console.log("[stub] node:render carved typed slides only — STUB_MODE=1 forced");
       return { slides, openuiLang: null };
     }

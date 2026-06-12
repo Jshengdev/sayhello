@@ -11,6 +11,7 @@
 //   - Real cost attribution: per-generation costCents from the OpenRouter cost ledger.
 // score_done fires the MOMENT the judge returns — fabricatedClaims is the demo heart.
 // On any throw: {type:"failed", stage} (fail LOUD, no silent stubs).
+import { getLens, sellerSignals } from "../lenses/index.js";
 import { runCostCents } from "../llm/cost-ledger.js";
 import { archiveNode } from "../nodes/archive.js";
 import { NodeFailure, type NodeCtx } from "../nodes/defineNode.js";
@@ -100,6 +101,15 @@ export async function runStory(leadId: string, input: RunInput, emitRaw: (e: WsE
         strength: 0,
       };
       brief = { ...brief, signals: [...brief.signals, notice] };
+    }
+
+    // Seller-signal corpus merge (docs/SCENARIOS.md clock-triage: "one concat; judge untouched"):
+    // the lens sellerIdentity proofPoints ride brief.signals as seller_pack Signals so a drafter
+    // line about the SELLER must trace too — the harness won't even let the AI exaggerate its own user.
+    const sellerSigs = sellerSignals(getLens(input.industry));
+    if (sellerSigs.length > 0) {
+      brief = { ...brief, signals: [...brief.signals, ...sellerSigs] };
+      console.log(`[seam] seller merge -> ${sellerSigs.length} seller_pack signals onto brief.signals (ONE judge corpus) -> ok`);
     }
 
     run.brief = brief;
