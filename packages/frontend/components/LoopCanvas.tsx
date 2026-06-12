@@ -180,13 +180,14 @@ export default function LoopCanvas({
               strokeDasharray={reenriching ? undefined : "4.5 4.5"}
               fill="none"
             />
-            {/* back-edge label */}
+            {/* back-edge label — ink alphas ONLY (violet belongs to the node ring +
+                wire packet; strict-law fix, design-judge 2026-06-12) */}
             <text
               x={(xAt(1) + xAt(4)) / 2}
               y={BACK_Y + 14}
               textAnchor="middle"
               fontSize="9"
-              fill={reenriching ? "var(--live)" : "rgba(38,35,35,0.35)"}
+              fill={reenriching ? "rgba(38,35,35,0.45)" : "rgba(38,35,35,0.35)"}
               fontFamily="var(--font-mono)"
             >
               regen · max 2 retries

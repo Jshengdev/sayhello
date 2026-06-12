@@ -58,10 +58,7 @@ export default function Home() {
         <LoopCanvas run={run} activeNode={activeNode} />
 
         {/* Element B — THE HERO: the story shaped across generations */}
-        <GenerationSpiral
-          generations={run?.generations ?? []}
-          done={run?.status === "done"}
-        />
+        <GenerationSpiral generations={run?.generations ?? []} />
 
         {/* the story + the catch | the verdict + the gate */}
         <div className="grid gap-4 lg:grid-cols-[1.6fr_1fr]">

@@ -37,11 +37,8 @@ const threadTint = (g: StoryGeneration) =>
 
 export default function GenerationSpiral({
   generations,
-  done = false,
 }: {
   generations: StoryGeneration[];
-  /** run finished — --live violet belongs ONLY to an executing node, never after done */
-  done?: boolean;
 }) {
   const stageRef = useRef<HTMLDivElement>(null);
   const groupRef = useRef<HTMLDivElement>(null);
@@ -198,7 +195,9 @@ export default function GenerationSpiral({
         {n > 0 && focused && (
           <p className="font-mono text-[10px] text-mute">
             gen{" "}
-            <span className={`font-numeral ${done ? "text-good" : "text-live"}`}>
+            {/* ink alpha, never --live: violet belongs ONLY to the executing
+                node ring + wire packet (strict-law fix, design-judge 2026-06-12) */}
+            <span className="font-numeral" style={{ color: "rgba(38,35,35,0.45)" }}>
               {focused.generation}
             </span>{" "}
             /{" "}
@@ -261,7 +260,10 @@ export default function GenerationSpiral({
                       targetRef.current = i;
                     }}
                   >
-                    <span className="flex h-full flex-col p-3.5">
+                    {/* blur-up on the INNER content (signature gesture: a new
+                        generation's story blurs up as it lands) — kept off the
+                        button itself so it never fights the rAF 3D filter */}
+                    <span className="blur-up flex h-full flex-col p-3.5">
                       <span className="flex items-baseline justify-between">
                         <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-mute">
                           gen <b className="font-numeral text-[12px] text-ink">{g.generation}</b>
