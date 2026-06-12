@@ -42,3 +42,12 @@ route that calls the Airbyte MCP and renders results in the cofounder detail-car
   core demo NEVER depends on Airbyte.
 - **Only reselect the Airbyte Devpost track once the sync actually returns real results.** Don't claim it before.
 - Stretch priority: AFTER V2 P0 + P1 visuals. If time runs out, it's cut with zero impact on the core.
+
+## Devpost track blurb (paste into "Best Use of Airbyte's Agent Engine" — ONLY after sync returns real results)
+sayhello builds a grounded, source-verified story for every sales lead — and Airbyte's Agent Engine is its
+memory. Every story we generate (the person, their pains, the verified claims, the outreach angle) syncs from
+our Postgres into Airbyte's Context Store, so an agent can recall it later: "have we touched this person?",
+"what pains recur for real-estate agencies?", "which angles worked?". Airbyte turns a one-shot research agent
+into an institutional GTM memory — the CRM layer that makes every new story start smarter than the last. We
+use the Context Store the way it's meant to be used: unifying data we own into a decision-ready, agent-queryable
+surface, with every record traceable to the grounded story that produced it.
