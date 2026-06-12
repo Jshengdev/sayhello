@@ -1,0 +1,31 @@
+{
+  "_planted": "closed 14 properties in the last 12 months",
+  "_planted_note": "ONE plausible-but-unsourced claim in what_they_do prose, NO signal carries a transaction count (real corpus scale ≈ 4 properties / '$30 to 40 thousand' total commission). Judge corpus = signals[] ONLY.",
+  "industry": "realestate",
+  "provenance": "fixture · authored verbatim from the Carlos discovery-call corpus (guided, not faked)",
+  "domain": null,
+  "name": "RE-1 — boutique off-market acquisitions team (LA)  // JOHNNY-EDITABLE name/handle",
+  "url": "fixture://re-1-offmarket-team",
+  "what_they_do": "Founder-led team (2-5) doing off-market / distressed acquisitions in predetermined key areas of LA. Just completed a major project cycle and closed 14 properties in the last 12 months. Researches owners manually (title runs, BeenVerified-style lookups, driving-for-dollars). Holds a raw ~10k-row county data CSV. No CRM or automation tooling. Wants to expand to other cities.",
+  "founded_year": null,
+  "key_features": [],
+  "competitors": [],
+  "tech_stack": [],
+  "funding_stage": null,
+  "funding_amount": null,
+  "employee_count": null,
+  "category": "re_investor_brokerage",
+  "current_messaging_channels": [],
+  "github_url": null,
+  "partnership_potential": false,
+  "pitch_angle": "forced_sale",
+  "features": {},
+  "signals": [
+    { "signal_type": "pipeline_gap", "source": "discovery_call", "source_url": "call://carlos-kickoff-2026-06-10", "detail": "we finally sold everything on it. So right now I have like no houses", "strength": 9 },
+    { "signal_type": "manual_research", "source": "discovery_call", "source_url": "call://carlos-kickoff-2026-06-10#M10", "detail": "The way that we've typically found distressed properties is straight up just driving", "strength": 8 },
+    { "signal_type": "data_pain", "source": "discovery_call", "source_url": "call://carlos-kickoff-2026-06-10#M32", "detail": "Our email thing has been like consistently 30% wrong", "strength": 9 },
+    { "signal_type": "vendor_refusal", "source": "discovery_call", "source_url": "call://carlos-kickoff-2026-06-10#M18", "detail": "fifteen thousand dollars and it's like 40 enriched... this is just way too much so... we'll stick doing it manually", "strength": 8 },
+    { "signal_type": "expansion_intent", "source": "discovery_call", "source_url": "call://carlos-kickoff-2026-06-10#M19", "detail": "either we need to hire someone else on the team or i could get... like an assistant... the goal is is to start moving to other cities", "strength": 7 }
+  ],
+  "brief": "Carlos-shaped primary: pipeline gap + manual stack + 30%-wrong data + refused $15k vendor + city-expansion ambition. The system replaces the hire."
+}

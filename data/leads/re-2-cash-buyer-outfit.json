@@ -1,0 +1,30 @@
+{
+  "_planted": "mails 5,000 handwritten letters a quarter",
+  "_planted_note": "ONE plausible-but-unsourced claim in what_they_do prose — the farm_marketing signal confirms the motion but NO signal carries a letter count. Judge corpus = signals[] ONLY.",
+  "industry": "realestate",
+  "provenance": "fixture · authored verbatim from the Carlos discovery-call corpus (guided, not faked)",
+  "domain": null,
+  "name": "RE-2 — 'we buy houses cash' wholesaling outfit  // JOHNNY-EDITABLE",
+  "url": "fixture://re-2-cash-buyer-outfit",
+  "what_they_do": "Direct-mail/door-knock investor outfit; farms target neighborhoods and mails 5,000 handwritten letters a quarter. Buys tax-delinquent/probate lead lists. Stale contact data complaints. Investor-buyer roster.",
+  "founded_year": null,
+  "key_features": [],
+  "competitors": [],
+  "tech_stack": [],
+  "funding_stage": null,
+  "funding_amount": null,
+  "employee_count": null,
+  "category": "re_wholesaler",
+  "current_messaging_channels": [],
+  "github_url": null,
+  "partnership_potential": false,
+  "pitch_angle": "inheritance",
+  "features": {},
+  "signals": [
+    { "signal_type": "farm_marketing", "source": "discovery_call", "source_url": "call://carlos-kickoff-2026-06-10#M17", "detail": "handwritten-letter neighborhood farming as the core marketing motion", "strength": 7 },
+    { "signal_type": "stale_contacts", "source": "discovery_call", "source_url": "call://carlos-kickoff-2026-06-10#M16", "detail": "sometimes they'll have like 10 emails... an email from... high school that I don't use anymore", "strength": 8 },
+    { "signal_type": "forced_sale_targeting", "source": "discovery_call", "source_url": "call://carlos-kickoff-2026-06-10#M26", "detail": "that's a prime house that they're probably gonna be forced to sell", "strength": 7 },
+    { "signal_type": "cash_buyer_roster", "source": "discovery_call", "source_url": "call://carlos-kickoff-2026-06-10#M7", "detail": "I have 10 investors that are ready to pay cash like today", "strength": 7 }
+  ],
+  "brief": "Secondary: forced-sale + inheritance recipes ground directly against this profile; contact-liveness verification is the concrete deliverable."
+}

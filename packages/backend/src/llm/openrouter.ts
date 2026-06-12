@@ -34,6 +34,8 @@ export interface GenerateOptions {
   temperature?: number;
   maxTokens?: number;
   provider?: { order: string[]; allow_fallbacks?: boolean };
+  /** V2: OpenRouter reasoning control — the OpenUI renderer pins {enabled:false} (proven recipe). */
+  reasoning?: { enabled: boolean };
   /** Seam-log + cost attribution name (drafter / critic / extractor). */
   agentName: string;
   /** leadId — every paid call tallies into the run's cost ledger. */
@@ -59,6 +61,7 @@ export async function generate(messages: ChatMessage[], options: GenerateOptions
     ...(options.temperature !== undefined ? { temperature: options.temperature } : {}),
     max_tokens: options.maxTokens ?? 2000,
     ...(options.provider ? { provider: options.provider } : {}),
+    ...(options.reasoning ? { reasoning: options.reasoning } : {}),
     // OpenRouter accounting field — returns usage.cost (USD) on the response.
     usage: { include: true },
     // Extra fields ride the request body; cast keeps the non-streaming overload.

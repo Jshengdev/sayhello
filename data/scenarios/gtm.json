@@ -1,0 +1,17 @@
+{
+  "industry": "gtm",
+  "label": "Photon → AI startups (THE LIVE SPINE)",
+  "seller": {
+    "name": "Photon",
+    "chip": "seller: Photon — open-source iMessage infrastructure for AI agents"
+  },
+  "liveLead": { "handle": "https://lindy.ai", "fixture": "data/leads/lindy.ai.json" },
+  "entrySurface": {
+    "badge": "pre-computed 2026-04 · photon-gtm research",
+    "rows": [
+      { "name": "lindy.ai", "icpScore": 90, "topPick": true, "fixture": "data/leads/lindy.ai.json" },
+      { "name": "retell.ai", "icpScore": 88, "topPick": false, "fixture": "data/leads/retell.ai.json" },
+      { "name": "zo.computer", "icpScore": 71, "topPick": false, "fixture": null }
+    ]
+  }
+}

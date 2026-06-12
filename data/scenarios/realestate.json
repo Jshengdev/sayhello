@@ -1,0 +1,16 @@
+{
+  "industry": "realestate",
+  "label": "Johnny → real-estate agencies (Carlos-grounded)",
+  "seller": {
+    "name": "Johnny Sheng",
+    "chip": "seller: Johnny — independent AI-automations marketer, SF"
+  },
+  "liveLead": { "handle": "fixture://re-1-offmarket-team", "fixture": "data/leads/re-1-offmarket-team.json" },
+  "entrySurface": {
+    "badge": "pre-computed · discovery-call corpus",
+    "rows": [
+      { "name": "RE-1 boutique off-market/distressed team (LA)", "icpScore": null, "topPick": true, "fixture": "data/leads/re-1-offmarket-team.json" },
+      { "name": "RE-2 'we buy houses cash' wholesaling outfit", "icpScore": null, "topPick": false, "fixture": "data/leads/re-2-cash-buyer-outfit.json" }
+    ]
+  }
+}

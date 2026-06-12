@@ -19,12 +19,18 @@ export const MODELS = {
   // The STRONG drafter — writes the confident lead-story. Quality is the product.
   DRAFTER: { model: "anthropic/claude-sonnet-4.6" },
 
-  // The held-out critic — DIFFERENT family than DRAFTER (openai vs anthropic).
-  JUDGE: { model: "openai/gpt-5.4-mini" },
+  // The held-out critic — DIFFERENT family than DRAFTER (qwen vs anthropic).
+  // V2: aligned to the slug preflight live-verified today (scripts/preflight.mjs:154 +
+  // .evidence/preflight.txt: "200 model=qwen/qwen3-235b-a22b-07-25 · held-out: family qwen != anthropic").
+  JUDGE: { model: "qwen/qwen3-235b-a22b-2507" },
 
   // Cheap fast extraction — the 26-field CompanyBrief from scraped markdown
   // (the Pioneer parser FOLDED into one LLM call per docs/SCOPE-LOCK.md).
   EXTRACT: { model: "anthropic/claude-haiku-4.5" },
+
+  // V2: the OpenUI receipt renderer — PROVEN recipe (docs/reference/OPENUI-RENDER.md):
+  // gemini-2.5-flash, temp 0, reasoning OFF. gemini-3.5-flash forces reasoning on OpenRouter (18x cost).
+  RENDERER: { model: "google/gemini-2.5-flash" },
 } satisfies Record<string, ModelChoice>;
 
 export type ModelTier = keyof typeof MODELS;

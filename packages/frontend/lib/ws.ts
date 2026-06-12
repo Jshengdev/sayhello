@@ -23,15 +23,32 @@ export const API_URL =
 export const WS_URL =
   process.env.NEXT_PUBLIC_WS_URL ?? "ws://localhost:8787/ws";
 
-/** the 7 visual nodes of the loop (LoopCanvas renders these left→right) */
+/** the visual nodes of the loop (LoopCanvas renders these left→right;
+ *  `person` is a PARALLEL branch beside scrape — HeyReach + X + SixtyFour). */
 export type VisualNode =
   | "scrape"
+  | "person"
   | "enrich"
   | "ground"
   | "draft"
   | "judge"
   | "archive"
   | "render";
+
+/**
+ * The run request the form posts. The contract on the wire is {industry, handle}
+ * (lib/types.ts, lane-2 owned — untouched). V2 adds optional fields the backend
+ * consumes when present and ignores otherwise (person-scrape targets + Johnny's
+ * positioning prefill + the LIVE/REPLAY mode). No silent stub — every field is a
+ * real form input sent in the POST body.
+ */
+export type RunRequest = RunInput & {
+  linkedinUrl?: string;
+  xHandle?: string;
+  positioning?: string;
+  mode?: RunMode;
+};
+export type RunMode = "live" | "replay";
 
 export interface HarnessState {
   run: StoryRun | null;
@@ -42,6 +59,8 @@ export interface HarnessState {
   /** fail LOUD — a non-null failure renders the FAILED badge */
   failure: { stage: string; error: string } | null;
   approved: boolean;
+  /** the mode the current run was launched in — REPLAY runs are labeled visibly */
+  mode: RunMode | null;
   events: WsEvent[];
 }
 
@@ -51,6 +70,7 @@ const EMPTY: HarnessState = {
   gate: null,
   failure: null,
   approved: false,
+  mode: null,
   events: [],
 };
 
@@ -89,6 +109,7 @@ function toVisual(node: string): VisualNode | null {
   if (node === "reenrich") return "enrich";
   const known: VisualNode[] = [
     "scrape",
+    "person",
     "enrich",
     "ground",
     "draft",
@@ -132,6 +153,8 @@ export function reduceEvent(state: HarnessState, ev: WsEvent): HarnessState {
     case "run_started":
       return {
         ...EMPTY,
+        // preserve the mode the human launched this run in (REPLAY badge)
+        mode: state.mode,
         run: freshRun(ev.leadId, ev.url),
         activeNode: "scrape",
         events,
@@ -332,9 +355,12 @@ export function useStoryRun() {
       });
   }, []);
 
-  /* ——— POST /story/run {industry, handle} ——— */
-  const startRun = useCallback(async (input: RunInput) => {
+  /* ——— POST /story/run {industry, handle, ...person/positioning/mode} ——— */
+  const startRun = useCallback(async (input: RunRequest) => {
     const t0 = performance.now();
+    const mode: RunMode = input.mode ?? "live";
+    // arm the mode badge before the run streams back
+    setState((prev) => ({ ...prev, mode }));
     try {
       const res = await fetch(`${API_URL}/story/run`, {
         method: "POST",
@@ -347,7 +373,9 @@ export function useStoryRun() {
         sessionStorage.setItem(LEAD_KEY, leadId);
       } catch {}
       console.log(
-        `[seam] POST /story/run -> {industry:${input.industry},handle:${input.handle}} -> {leadId:${leadId}} -> ok (${(
+        `[seam] POST /story/run -> {industry:${input.industry},handle:${input.handle},mode:${mode}${
+          input.linkedinUrl ? `,linkedin:set` : ""
+        }${input.xHandle ? `,x:${input.xHandle}` : ""}} -> {leadId:${leadId}} -> ok (${(
           performance.now() - t0
         ).toFixed(0)}ms)`,
       );

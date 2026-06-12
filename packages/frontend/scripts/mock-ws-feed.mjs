@@ -69,6 +69,27 @@ const BRIEF = {
       detail: "Site mentions email notifications only — no SMS/WhatsApp channel story",
       strength: 0.6,
     },
+    {
+      signal_type: "person_role",
+      source: "heyreach",
+      source_url: "https://www.linkedin.com/in/founder-attio",
+      detail: "Founder & CEO, Attio — verified via HeyReach LinkedIn lookup (name, company, position confirmed)",
+      strength: 0.7,
+    },
+    {
+      signal_type: "x_post",
+      source: "x",
+      source_url: "https://x.com/founder/status/mock",
+      detail: "\"shipping season — 3 launches this month, infra has to just not break\" (X, 4d ago)",
+      strength: 0.6,
+    },
+    {
+      signal_type: "person_enrichment",
+      source: "sixtyfour",
+      source_url: "https://app.sixtyfour.ai/person/mock",
+      detail: "SixtyFour enrichment: prior YC founder, ex-Stripe infra; cares about reliability over features",
+      strength: 0.5,
+    },
   ],
   brief:
     "Fast-shipping CRM challenger with real launch momentum and a single-channel messaging story.",
@@ -131,6 +152,30 @@ const DONE_RUN = {
   totalLatencyMs: 11400,
   createdAt: new Date().toISOString(),
 };
+
+/* the render-node receipt — OpenUI Lang the model emits, served from
+   GET /story/:id/receipt (docs/reference/OPENUI-RENDER.md). 5-beat slides +
+   the claims ledger. Dev-only canned copy; the live render node emits the real one. */
+const RECEIPT_LANG = `root = Receipt("Attio", "2 fabricated claims caught and cut", [ledger, evidence, chart, slides, gate])
+ledger = ClaimsLedger([r1, r2, r3, r4])
+r1 = ClaimRow("just closed a $40M Series B led by Sequoia", "FABRICATED")
+r2 = ClaimRow("powering notifications for over 5,000 teams including Notion", "FABRICATED")
+r3 = ClaimRow("14 public releases in the last 90 days", "GROUNDED", "github.com/attio")
+r4 = ClaimRow("Show HN launch hit the front page — 240 points", "GROUNDED", "news.ycombinator.com")
+evidence = EvidenceAccordion([e1, e2, e3])
+e1 = EvidenceItem("just closed a $40M Series B led by Sequoia", "NO SOURCE FOUND in 12 scraped pages. Critic flagged FABRICATED in gen 0; cut in gen 1.", null)
+e2 = EvidenceItem("14 public releases in the last 90 days", "\\"14 public releases in the last 90 days — fast shipping cadence\\"", "github.com/attio")
+e3 = EvidenceItem("Founder cares about reliability over features", "\\"shipping season — 3 launches this month, infra has to just not break\\"", "x.com/founder")
+chart = TrajectoryChart([p1, p2])
+p1 = {generation: 0, grounding: 0.42}
+p2 = {generation: 1, grounding: 0.93}
+slides = StorySlides([s1, s2, s3, s4, s5])
+s1 = StorySlide("the goal", "Attio is building the CRM teams compose themselves — 14 releases in 90 days, a front-page Show HN.")
+s2 = StorySlide("the obstacle", "Every workflow their customers build still ends in one fragile channel: email.")
+s3 = StorySlide("the old way fails", "For a CRM whose whole pitch is composability, the messaging layer is the one piece teams can't compose.")
+s4 = StorySlide("the better path", "Photon's open-source iMessage SDK — 20K+ developers, 99.87% delivery — drops in as the multi-channel layer.")
+s5 = StorySlide("the better outcome", "Their users get the channel people actually open, composed the same way they build everything else.")
+gate = GateBlock("Approve story", "approve_story", "Grounding 0.93 — every claim traces. Ready for human review.")`;
 
 /* the full canned sequence — run_started … score_done gen-0 WITH fabricatedClaims
    … reenrich … score_done gen-1 emit … gate … done (docs/CONTRACTS.md WsEvent) */
@@ -214,6 +259,13 @@ const server = createServer((req, res) => {
       res.end(JSON.stringify({ leadId: LEAD_ID }));
       replay();
     });
+    return;
+  }
+
+  if (req.method === "GET" && /^\/story\/.+\/receipt$/.test(url)) {
+    console.log(`[mock-feed] GET ${url} -> openuiLang ${RECEIPT_LANG.length} chars -> ok`);
+    res.writeHead(200, { "Content-Type": "application/json", ...cors });
+    res.end(JSON.stringify({ openuiLang: RECEIPT_LANG, slides: [] }));
     return;
   }
 

@@ -1,0 +1,16 @@
+{
+  "industry": "marketing",
+  "label": "Johnny → marketing agencies (Aiden-grounded)",
+  "seller": {
+    "name": "Johnny Sheng",
+    "chip": "seller: Johnny — same seller, different pain (fixes the coma test)"
+  },
+  "liveLead": { "handle": "fixture://mk-1-experiential-agency", "fixture": "data/leads/mk-1-experiential-agency.json" },
+  "entrySurface": {
+    "badge": "pre-computed · discovery-call corpus",
+    "rows": [
+      { "name": "MK-1 experiential/event agency (Vortex-shaped)", "icpScore": null, "topPick": true, "fixture": "data/leads/mk-1-experiential-agency.json" },
+      { "name": "MK-2 boutique branding studio", "icpScore": null, "topPick": false, "fixture": "data/leads/mk-2-branding-studio.json" }
+    ]
+  }
+}

@@ -9,9 +9,11 @@
 
 import ApproveGate from "@/components/ApproveGate";
 import EventTicker from "@/components/EventTicker";
+import EvidencePanel from "@/components/EvidencePanel";
 import FailedBadge from "@/components/FailedBadge";
 import GenerationSpiral from "@/components/GenerationSpiral";
 import LoopCanvas from "@/components/LoopCanvas";
+import ReceiptPanel from "@/components/ReceiptPanel";
 import RunInput from "@/components/RunInput";
 import ScorePanel from "@/components/ScorePanel";
 import StoryCanvas from "@/components/StoryCanvas";
@@ -20,7 +22,7 @@ import { useStoryRun } from "@/lib/ws";
 const IN_FLIGHT = ["scraping", "drafting", "judging", "reenriching"];
 
 export default function Home() {
-  const { run, activeNode, gate, failure, approved, events, connected, startRun, approve } =
+  const { run, activeNode, gate, failure, approved, mode, events, connected, startRun, approve } =
     useStoryRun();
   const busy = !!run && IN_FLIGHT.includes(run.status);
 
@@ -38,6 +40,11 @@ export default function Home() {
             </p>
           </div>
           <p className="flex items-center gap-2 font-mono text-[10px] text-mute">
+            {mode === "replay" && (
+              <span className="pill-emboss rounded-full bg-page px-2 py-[2px] text-[9px] uppercase tracking-[0.1em] text-warn">
+                ◧ replay
+              </span>
+            )}
             <span
               aria-hidden
               className={`dot-glow h-2 w-2 rounded-full bg-current ${
@@ -54,8 +61,8 @@ export default function Home() {
         {/* the crystal input — {industry, handle} */}
         <RunInput busy={busy} onRun={(input) => void startRun(input)} />
 
-        {/* the watchable typed-node graph */}
-        <LoopCanvas run={run} activeNode={activeNode} />
+        {/* the watchable typed-node graph (+ parallel person branch) */}
+        <LoopCanvas run={run} activeNode={activeNode} mode={mode} />
 
         {/* Element B — THE HERO: the story shaped across generations */}
         <GenerationSpiral generations={run?.generations ?? []} />
@@ -69,14 +76,21 @@ export default function Home() {
           </div>
         </div>
 
+        {/* the grounding corpus — company + person signals as evidence rows */}
+        <EvidencePanel run={run} mode={mode} />
+
+        {/* the generated verification receipt — OpenUI / Thesys C1 */}
+        <ReceiptPanel run={run} gate={gate} approved={approved} onApprove={approve} />
+
         {/* the system voice — the live event stream */}
         <EventTicker events={events} />
 
         <footer className="px-1 pb-2">
           <p className="font-mono text-[9.5px] leading-relaxed text-faint">
-            scrape Firecrawl · enrich Composio · ground ClickHouse · draft OpenRouter ·
-            judge OpenRouter (held-out) · archive ClickHouse · render Thesys C1 · trace
-            Langfuse · deployed on Render
+            scrape Firecrawl · person HeyReach + X + SixtyFour · enrich Composio · ground
+            ClickHouse · draft OpenRouter (claude-sonnet-4.6) · judge OpenRouter
+            (gpt-5.4-mini, held-out) · archive ClickHouse · render Thesys C1 / OpenUI ·
+            trace Langfuse · deployed on Render
           </p>
         </footer>
       </div>

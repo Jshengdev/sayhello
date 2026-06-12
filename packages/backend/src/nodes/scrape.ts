@@ -1,7 +1,10 @@
-// nodes/scrape.ts — [scrape]: handle/url -> rawMarkdown. Sponsor: Firecrawl (live at S2).
-// S1: STUB_MODE (default ON) returns canned-but-realistic markdown. Live path fails LOUD until S2.
+// nodes/scrape.ts — [scrape]: handle/url -> rawMarkdown. Sponsor: Firecrawl.
+// V2: LIVE by DEFAULT (Firecrawl /v2/scrape with the data/leads/<domain>.json failover built into
+// enrich/firecrawl.ts). Stub ONLY when STUB_MODE=1 (the floor). No silent stubs — the cached-fallback
+// path logs LOUDLY and surfaces a provenance note.
 import { z } from "zod";
-import { defineNode, stubMode } from "./defineNode.js";
+import { scrapeUrl } from "../enrich/firecrawl.js";
+import { defineNode, stubExplicit } from "./defineNode.js";
 
 export function displayNameFromHandle(handle: string): { domain: string; name: string } {
   let domain = handle;
@@ -45,15 +48,22 @@ export const scrapeNode = defineNode({
   sponsor: "Firecrawl",
   wireNode: "scrape",
   stubLatencyMs: 700,
+  stubWhen: stubExplicit, // V2: LIVE default; stub only when STUB_MODE=1
   inputSchema: z.object({ url: z.string().min(1) }),
-  outputSchema: z.object({ rawMarkdown: z.string().min(1) }),
+  outputSchema: z.object({ rawMarkdown: z.string().min(1), provenance: z.string() }),
   async executor({ url }) {
-    if (stubMode()) {
-      console.log("[stub] node:scrape canned output");
+    if (stubExplicit()) {
+      console.log("[stub] node:scrape canned output (STUB_MODE=1 floor)");
       const { name } = displayNameFromHandle(url);
-      return { rawMarkdown: cannedMarkdown(name, url) };
+      return { rawMarkdown: cannedMarkdown(name, url), provenance: "stub (STUB_MODE=1)" };
     }
-    // S2: Firecrawl POST https://api.firecrawl.dev/v2/scrape {url, formats:["markdown"]}
-    throw new Error("scrape live mode lands at S2 — run with STUB_MODE unset/1 (no silent stubs)");
+    // LIVE: Firecrawl POST /v2/scrape — scrapeUrl logs the seam (status + markdown length),
+    // refreshes data/leads/<domain>.json on success, and falls back to that cache LOUDLY on failure.
+    const target = url.startsWith("http") ? url : `https://${url}`;
+    const result = await scrapeUrl(target);
+    console.log(
+      `[seam] node:scrape -> POST api.firecrawl.dev/v2/scrape -> ${result.cached ? "CACHE FALLBACK" : "HTTP 200"} markdown.length=${result.markdown.length} -> ok (${result.note})`,
+    );
+    return { rawMarkdown: result.markdown, provenance: result.note };
   },
 });

@@ -2,34 +2,49 @@
 
 /**
  * LoopCanvas — the harness as a watchable typed-node graph (Element A centerpiece).
- * 7 nodes wired left→right with the regen back-edge drawn judge→enrich.
- * ONLY the executing node gets --live + shimmer; packet dots travel the wires
- * on transitions; every node is captioned with its sponsor (graded — on screen).
- * Ported from said-built components/mvp/today/LoopCanvas.tsx, retyped to StoryRun.
+ * The 7 main-line nodes are wired left→right with the regen back-edge drawn
+ * judge→enrich. A PARALLEL `person` branch forks above scrape (HeyReach + X +
+ * SixtyFour run concurrently with the company scrape — Promise.all). ONLY the
+ * executing node gets --live + shimmer; packet dots travel the wires on
+ * transitions; EVERY node is captioned with its sponsor (graded — Tool Use 20%,
+ * names ON screen). Ported from said-built components/mvp/today/LoopCanvas.tsx.
  */
 
 import { useEffect, useRef, useState } from "react";
 import type { StoryRun } from "@/lib/types";
 import type { VisualNode } from "@/lib/ws";
 
+/* sponsor captions per FINAL-PROMPT. Model ids are display strings (the held-out
+   pair the judge sees on screen) — keep in sync with backend llm/models.ts. */
+const DRAFTER_ID = "claude-sonnet-4.6";
+const JUDGE_ID = "gpt-5.4-mini";
+
 const NODES: Array<{ id: VisualNode; name: string; sponsor: string }> = [
   { id: "scrape", name: "scrape", sponsor: "Firecrawl" },
   { id: "enrich", name: "enrich", sponsor: "Composio" },
   { id: "ground", name: "ground", sponsor: "ClickHouse" },
-  { id: "draft", name: "draft", sponsor: "OpenRouter · drafter" },
-  { id: "judge", name: "judge", sponsor: "OpenRouter · held-out critic" },
+  { id: "draft", name: "draft", sponsor: `OpenRouter · ${DRAFTER_ID}` },
+  { id: "judge", name: "judge", sponsor: `OpenRouter · ${JUDGE_ID} · held-out` },
   { id: "archive", name: "archive", sponsor: "ClickHouse · archive" },
-  { id: "render", name: "render", sponsor: "Thesys C1" },
+  { id: "render", name: "render", sponsor: "Thesys C1 / OpenUI" },
 ];
 
-/* geometry — a 1000×190 viewBox; nodes sit on the main line at y=72 */
+/* the parallel person branch — forks above scrape, runs concurrently */
+const PERSON = {
+  id: "person" as VisualNode,
+  name: "person",
+  sponsor: "HeyReach · X · SixtyFour",
+};
+
+/* geometry — a 1000×214 viewBox; main line at y=104, person forks up to y=34 */
 const W = 1000;
-const H = 190;
-const Y = 72;
+const H = 214;
+const Y = 104;
+const PERSON_Y = 34;
 const X0 = 72;
 const XSTEP = (W - 2 * X0) / (NODES.length - 1);
 const xAt = (i: number) => X0 + i * XSTEP;
-const IDX: Record<VisualNode, number> = {
+const IDX: Record<string, number> = {
   scrape: 0,
   enrich: 1,
   ground: 2,
@@ -40,8 +55,11 @@ const IDX: Record<VisualNode, number> = {
 };
 
 /* the regen back-edge: judge (4) curving below back to enrich (1) */
-const BACK_Y = Y + 76;
+const BACK_Y = Y + 70;
 const backPath = `M ${xAt(4)} ${Y + 24} C ${xAt(4)} ${BACK_Y}, ${xAt(1)} ${BACK_Y}, ${xAt(1)} ${Y + 24}`;
+
+/* the person fork — scrape top → person bottom (a short bowed riser) */
+const forkPath = `M ${xAt(0)} ${Y - 24} C ${xAt(0) - 26} ${Y - 44}, ${xAt(0) - 26} ${PERSON_Y + 30}, ${xAt(0)} ${PERSON_Y + 18}`;
 
 /** point along the back edge (cubic bezier, t in 0..1, from judge → enrich) */
 function backPoint(t: number) {
@@ -69,20 +87,24 @@ interface Transit {
 export default function LoopCanvas({
   run,
   activeNode,
+  mode,
 }: {
   run: StoryRun | null;
   activeNode: VisualNode | null;
+  mode?: "live" | "replay" | null;
 }) {
   const [transit, setTransit] = useState<Transit | null>(null);
   const prevRef = useRef<VisualNode | null>(null);
   const dotRef = useRef<HTMLDivElement>(null);
   const rafRef = useRef(0);
 
-  /* packet dot — fires on every node transition, travels the actual wire */
+  /* packet dot — fires on every MAIN-LINE node transition, travels the wire.
+     person is a parallel branch (no horizontal packet). */
   useEffect(() => {
     const prev = prevRef.current;
     prevRef.current = activeNode;
     if (!prev || !activeNode || prev === activeNode) return;
+    if (!(prev in IDX) || !(activeNode in IDX)) return; // person fork — skip packet
     const from = IDX[prev];
     const to = IDX[activeNode];
     setTransit({ from, to, regen: to < from, key: Date.now() });
@@ -99,7 +121,6 @@ export default function LoopCanvas({
       const e = easeInOut(p);
       let x: number, y: number;
       if (transit.regen) {
-        // the regen packet rides the back edge judge→enrich
         const pt = backPoint(e);
         x = pt.x;
         y = pt.y;
@@ -118,12 +139,15 @@ export default function LoopCanvas({
   }, [transit]);
 
   const reenriching = run?.status === "reenriching";
+  const gathering = run?.status === "scraping";
   const visited = new Set<VisualNode>();
   if (run) {
     // honest trail: a node is "visited" only if its evidence exists on the run.
-    // brief lands via scrape_done, emitted AFTER the whole gather phase (scrape→enrich→ground).
+    // brief lands via scrape_done, emitted AFTER the whole gather phase
+    // (scrape ∥ person → enrich → ground).
     if (run.brief) {
       visited.add("scrape");
+      visited.add("person");
       visited.add("enrich");
       visited.add("ground");
     }
@@ -134,6 +158,8 @@ export default function LoopCanvas({
       visited.add("render");
     }
   }
+  // person runs in parallel with the company scrape
+  const personLive = activeNode === "person" || (gathering && activeNode === "scrape");
 
   return (
     <section aria-label="The harness loop" className="ring-panel rounded-2xl bg-raised px-5 pb-2 pt-4">
@@ -141,7 +167,12 @@ export default function LoopCanvas({
         <p className="font-mono text-[10.5px] uppercase tracking-[0.14em] text-mute">
           the harness · typed-node graph
         </p>
-        <p className="font-mono text-[10px] text-faint">
+        <p className="flex items-center gap-2 font-mono text-[10px] text-faint">
+          {mode === "replay" && (
+            <span className="pill-emboss rounded-full bg-page px-2 py-[2px] text-[9px] uppercase tracking-[0.1em] text-warn">
+              ◧ replay · cached
+            </span>
+          )}
           {run ? (
             <>
               <span className="text-mute">{run.leadId}</span>
@@ -153,7 +184,7 @@ export default function LoopCanvas({
               <span className="font-numeral text-ink-2">{run.generation}</span>
             </>
           ) : (
-            "idle — waiting for a lead"
+            <span>idle — waiting for a lead</span>
           )}
         </p>
       </header>
@@ -171,6 +202,25 @@ export default function LoopCanvas({
               strokeWidth="1"
               strokeDasharray="4.5 4.5"
             />
+            {/* the person fork — scrape ↑ person (marches violet while gathering) */}
+            <path
+              d={forkPath}
+              className={personLive ? "wire-march" : ""}
+              stroke={personLive ? undefined : "rgba(32,32,32,0.12)"}
+              strokeWidth="1"
+              strokeDasharray={personLive ? undefined : "4.5 4.5"}
+              fill="none"
+            />
+            <text
+              x={xAt(0) - 38}
+              y={(Y + PERSON_Y) / 2 + 4}
+              textAnchor="middle"
+              fontSize="8.5"
+              fill="rgba(38,35,35,0.4)"
+              fontFamily="var(--font-mono)"
+            >
+              ∥
+            </text>
             {/* the regen back-edge judge→enrich (marches violet while reenriching) */}
             <path
               d={backPath}
@@ -180,8 +230,6 @@ export default function LoopCanvas({
               strokeDasharray={reenriching ? undefined : "4.5 4.5"}
               fill="none"
             />
-            {/* back-edge label — ink alphas ONLY (violet belongs to the node ring +
-                wire packet; strict-law fix, design-judge 2026-06-12) */}
             <text
               x={(xAt(1) + xAt(4)) / 2}
               y={BACK_Y + 14}
@@ -203,7 +251,7 @@ export default function LoopCanvas({
             >
               emit
             </text>
-            {/* ringed endpoints at each node */}
+            {/* ringed endpoints at each main-line node */}
             {NODES.map((n, i) => (
               <circle
                 key={n.id}
@@ -231,43 +279,72 @@ export default function LoopCanvas({
             }}
           />
 
-          {/* node chips */}
-          {NODES.map((n, i) => {
-            const isLive = activeNode === n.id;
-            const wasVisited = visited.has(n.id);
-            return (
-              <div
-                key={n.id}
-                className="absolute -translate-x-1/2 -translate-y-1/2"
-                style={{ left: `${(xAt(i) / W) * 100}%`, top: `${(Y / H) * 100}%` }}
-              >
-                <div
-                  data-live={isLive ? "true" : undefined}
-                  className="node-chip relative w-[104px] rounded-[7px] px-1.5 py-[10px] text-center"
-                >
-                  {isLive && <span className="node-shimmer" aria-hidden />}
-                  <span className="flex items-center justify-center gap-1.5">
-                    {(isLive || wasVisited) && (
-                      <span
-                        aria-hidden
-                        className={`dot-glow h-[7px] w-[7px] flex-none rounded-full bg-current ${
-                          isLive ? "text-live" : "text-good"
-                        } ${isLive ? "dash-pulse" : ""}`}
-                      />
-                    )}
-                    <span className="whitespace-nowrap text-[11.5px] leading-[120%] text-ink-2">
-                      {n.name}
-                    </span>
-                  </span>
-                  <span className="mt-1 block whitespace-nowrap font-mono text-[7.5px] leading-tight text-mute">
-                    {n.sponsor}
-                  </span>
-                </div>
-              </div>
-            );
-          })}
+          {/* the parallel person chip */}
+          <NodeChip
+            node={PERSON}
+            x={xAt(0)}
+            y={PERSON_Y}
+            isLive={personLive}
+            wasVisited={visited.has("person")}
+          />
+
+          {/* main-line node chips */}
+          {NODES.map((n, i) => (
+            <NodeChip
+              key={n.id}
+              node={n}
+              x={xAt(i)}
+              y={Y}
+              isLive={activeNode === n.id}
+              wasVisited={visited.has(n.id)}
+            />
+          ))}
         </div>
       </div>
     </section>
+  );
+}
+
+function NodeChip({
+  node,
+  x,
+  y,
+  isLive,
+  wasVisited,
+}: {
+  node: { id: VisualNode; name: string; sponsor: string };
+  x: number;
+  y: number;
+  isLive: boolean;
+  wasVisited: boolean;
+}) {
+  return (
+    <div
+      className="absolute -translate-x-1/2 -translate-y-1/2"
+      style={{ left: `${(x / W) * 100}%`, top: `${(y / H) * 100}%` }}
+    >
+      <div
+        data-live={isLive ? "true" : undefined}
+        className="node-chip relative w-[112px] rounded-[7px] px-1.5 py-[10px] text-center"
+      >
+        {isLive && <span className="node-shimmer" aria-hidden />}
+        <span className="flex items-center justify-center gap-1.5">
+          {(isLive || wasVisited) && (
+            <span
+              aria-hidden
+              className={`dot-glow h-[7px] w-[7px] flex-none rounded-full bg-current ${
+                isLive ? "text-live" : "text-good"
+              } ${isLive ? "dash-pulse" : ""}`}
+            />
+          )}
+          <span className="whitespace-nowrap text-[11.5px] leading-[120%] text-ink-2">
+            {node.name}
+          </span>
+        </span>
+        <span className="mt-1 block font-mono text-[7.5px] leading-tight text-mute">
+          {node.sponsor}
+        </span>
+      </div>
+    </div>
   );
 }

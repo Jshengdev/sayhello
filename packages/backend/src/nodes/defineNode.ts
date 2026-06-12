@@ -43,6 +43,11 @@ export interface NodeDef<I extends z.ZodTypeAny, O extends z.ZodTypeAny> {
    * Applied ONLY when stubMode(); live executors at S2 have real latency. Logged [stub].
    */
   stubLatencyMs?: number;
+  /**
+   * Per-node stub predicate (V2). LIVE-flipped nodes pass stubExplicit (stub only when
+   * STUB_MODE=1); unset nodes keep the legacy global stubMode() polarity.
+   */
+  stubWhen?: () => boolean;
 }
 
 export interface RunnableNode<I extends z.ZodTypeAny, O extends z.ZodTypeAny> {
@@ -60,6 +65,15 @@ function keysOf(v: unknown): string {
 /** STUB_MODE default ON until S2 flips it (set STUB_MODE=0 for live executors). */
 export function stubMode(): boolean {
   return process.env.STUB_MODE !== "0";
+}
+
+/**
+ * V2 polarity for the LIVE-flipped nodes (scrape/enrich/ground/archive): LIVE is the
+ * default; stub ONLY when STUB_MODE=1 explicitly (the floor). draft/judge/render keep
+ * the legacy stubMode() polarity until their lane flips them.
+ */
+export function stubExplicit(): boolean {
+  return process.env.STUB_MODE === "1";
 }
 
 /** Default stub pace when a node doesn't set stubLatencyMs (demo-beat watchability). */
@@ -80,10 +94,13 @@ export function defineNode<I extends z.ZodTypeAny, O extends z.ZodTypeAny>(
     wireNode: def.wireNode,
     async run(rawInput, ctx) {
       const t0 = Date.now();
-      console.log(`[seam] node:${def.name} enter -> {${keysOf(rawInput)}} (sponsor: ${def.sponsor})`);
+      const isStub = def.stubWhen ? def.stubWhen() : stubMode();
+      console.log(
+        `[seam] node:${def.name} enter -> {${keysOf(rawInput)}} (sponsor: ${def.sponsor}, mode=${isStub ? "stub" : "live"})`,
+      );
       // Light the node on the frontend graph BEFORE executing.
       ctx.emit({ type: "node_enter", leadId: ctx.leadId, node: def.wireNode });
-      if (stubMode()) {
+      if (isStub) {
         const pace = stubPaceMs(def);
         if (pace > 0) {
           console.log(`[stub] node:${def.name} pacing ${pace}ms (demo-beat watchability, stub-mode only)`);
