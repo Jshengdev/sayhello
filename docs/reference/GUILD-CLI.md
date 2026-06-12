@@ -61,3 +61,9 @@ guild agent save --message "..." --wait --publish   # commit → validate → pu
 ## Bonus
 - `guild setup` installs Guild skills into `.claude/skills/` — run inside the agent project at wiring time.
 - `guild agent versions` / `guild agent code` — show the judge the published version history (audit story).
+
+## ✅ VERIFIED LIVE (1:26 PM) — the working seam
+`guild chat --agent jshengdev~sayhello-gatekeeper --once --no-splash '<StoryScore JSON>'` (stdin detached, timeout 20s).
+Published v1.0.5, installed via `guild workspace agent add jshengdev~sayhello-gatekeeper`. BLOCK 5.4s / ALLOW 17s.
+The message text arrives with a platform PREAMBLE — agent extracts first-{..last-} before JSON.parse (done in v1.0.5).
+Full evidence: .evidence/guild-verify.md. S4 upgrade path (shape B): add firecrawl service tools to THIS agent.
