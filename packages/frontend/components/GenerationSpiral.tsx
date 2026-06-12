@@ -29,14 +29,24 @@ const P = {
   cardH: 218,
 };
 
+/* one predicate for the gen's grounding color (cards + the climbed thread) */
+const isGrounded = (g: StoryGeneration) =>
+  g.score.grounding >= 0.7 && g.fabricatedClaims.length === 0;
+const threadTint = (g: StoryGeneration) =>
+  `color-mix(in srgb, var(${isGrounded(g) ? "--good" : "--bad"}) 70%, transparent)`;
+
 export default function GenerationSpiral({
   generations,
+  done = false,
 }: {
   generations: StoryGeneration[];
+  /** run finished — --live violet belongs ONLY to an executing node, never after done */
+  done?: boolean;
 }) {
   const stageRef = useRef<HTMLDivElement>(null);
   const groupRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const threadRefs = useRef<(HTMLDivElement | null)[]>([]);
   const focusRef = useRef(0); // displayed (lerped)
   const targetRef = useRef(0); // input-derived
   const [focusIdx, setFocusIdx] = useState(0);
@@ -103,6 +113,32 @@ export default function GenerationSpiral({
         }
       }
 
+      /* the climbed path — 1px chords between consecutive cards in group space,
+         tinted by each gen's grounding color (rendered behind the cards). */
+      for (let i = 0; i < n - 1; i++) {
+        const el = threadRefs.current[i];
+        if (!el) continue;
+        const aRel = i - f;
+        const bRel = i + 1 - f;
+        const a = (aRel * stepAngle * Math.PI) / 180;
+        const b = (bRel * stepAngle * Math.PI) / 180;
+        const p0x = P.radius * Math.sin(a);
+        const p0y = aRel * stepY;
+        const p0z = P.radius * Math.cos(a);
+        const vx = P.radius * Math.sin(b) - p0x;
+        const vy = bRel * stepY - p0y;
+        const vz = P.radius * Math.cos(b) - p0z;
+        const len = Math.hypot(vx, vy, vz);
+        const ry = (Math.atan2(-vz, vx) * 180) / Math.PI;
+        const rz = (Math.asin(vy / len) * 180) / Math.PI;
+        const depth = (Math.cos(a) + Math.cos(b)) / 2; // fade behind, like the cards
+        el.style.transform =
+          `translate3d(${p0x.toFixed(1)}px,${p0y.toFixed(1)}px,${p0z.toFixed(1)}px) ` +
+          `rotateY(${ry.toFixed(2)}deg) rotateZ(${rz.toFixed(2)}deg)`;
+        el.style.width = `${len.toFixed(1)}px`;
+        el.style.opacity = Math.max(0, 0.55 - 0.5 * Math.max(0, -depth)).toFixed(3);
+      }
+
       const fi = Math.max(0, Math.min(n - 1, Math.round(f)));
       if (fi !== lastFocusInt) {
         lastFocusInt = fi;
@@ -161,7 +197,11 @@ export default function GenerationSpiral({
         </p>
         {n > 0 && focused && (
           <p className="font-mono text-[10px] text-mute">
-            gen <span className="font-numeral text-live">{focused.generation}</span> /{" "}
+            gen{" "}
+            <span className={`font-numeral ${done ? "text-good" : "text-live"}`}>
+              {focused.generation}
+            </span>{" "}
+            /{" "}
             <span className="font-numeral">{n - 1}</span> · grounding{" "}
             <span
               className={`font-numeral ${focused.score.grounding >= 0.7 ? "text-good" : "text-bad"}`}
@@ -186,8 +226,24 @@ export default function GenerationSpiral({
           <div className="gsp-ground" aria-hidden />
           <div className="gsp-scene">
             <div ref={groupRef} className="gsp-group">
+              {generations.slice(0, -1).map((g, i) => (
+                <div
+                  key={`thread-${g.generation}`}
+                  ref={(el) => {
+                    threadRefs.current[i] = el;
+                  }}
+                  aria-hidden
+                  className="gsp-thread"
+                  style={{
+                    opacity: 0,
+                    background: `linear-gradient(90deg, ${threadTint(g)}, ${threadTint(
+                      generations[i + 1],
+                    )})`,
+                  }}
+                />
+              ))}
               {generations.map((g, i) => {
-                const grounded = g.score.grounding >= 0.7 && g.fabricatedClaims.length === 0;
+                const grounded = isGrounded(g);
                 return (
                   <button
                     key={g.generation}

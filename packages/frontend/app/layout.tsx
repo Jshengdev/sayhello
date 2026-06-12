@@ -1,20 +1,24 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Onest } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
-/* THE voice — Onest variable, used at in-between weights (340/430/450/480)
-   via the wght axis. Never 400/600 (docs/DESIGN.md). */
-const onest = Onest({
-  subsets: ["latin"],
+/* ALL three faces are SELF-HOSTED woff2 in app/fonts/ (network-proof — a
+   Google Fonts fetch failure at dev silently collapsed the whole page to
+   Times; never again). Onest variable, used at in-between weights
+   (340/430/450/480) via the wght axis. Never 400/600 (docs/DESIGN.md). */
+const onest = localFont({
+  src: "./fonts/Onest-Variable-latin.woff2",
+  weight: "100 900",
   variable: "--font-onest",
   display: "swap",
 });
 
 /* the system-label mono (cofounder DNA) */
-const plexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
+const plexMono = localFont({
+  src: [
+    { path: "./fonts/IBMPlexMono-Regular-latin.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/IBMPlexMono-Medium-latin.woff2", weight: "500", style: "normal" },
+  ],
   variable: "--font-plex-mono",
   display: "swap",
 });
@@ -34,12 +38,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body
-        className={`${onest.variable} ${plexMono.variable} ${departureMono.variable}`}
-      >
-        {children}
-      </body>
+    /* font variables MUST live on <html>: globals.css composes them into
+       --font-sans/--font-mono at :root — declared on <body> they are invisible
+       there, --font-sans goes guaranteed-invalid, and font-family collapses to
+       the UA default (Times). THE root cause of the serif page. */
+    <html
+      lang="en"
+      className={`${onest.variable} ${plexMono.variable} ${departureMono.variable}`}
+    >
+      <body>{children}</body>
     </html>
   );
 }
