@@ -48,3 +48,16 @@ cards = tasks tagged `Agent task` / `User approval`, each labeled with its SPONS
 - The living spiral + shader entry → **p5.js / WebGL** (borrow said-built lab/spiral + lab/textures).
 - The generated story/campaign report → **OpenUI / Thesys C1** from StoryRun JSON.
 - Image generators (Higgsfield) → ONLY the video intro, never the app UI.
+
+## AGENT FRAMING — recorded Johnny directive (2026-06-12 ~2:40 PM). P1 visual lane + closer: implement this.
+**Everything acts and looks like an AGENT — we built a harness AROUND it.** Two visually distinct actors:
+1. **THE AGENT (the worker)** — the thing doing real work on the open web. It speaks in first person in the
+   status pop-ups ("reading their site…", "pulling the founder's posts from X…", "drafting their story…").
+   Tool calls render as visible actions (chip: tool name + sponsor + what it fetched). The executing node
+   carries the agent presence (shimmer = the agent working THERE). The event ticker IS the agent activity feed.
+2. **THE HARNESS (the watcher)** — visually separate layer/voice: mono system voice, stamps and verdicts.
+   The judge/critic is NOT the agent — it's the harness catching the agent ("FABRICATED — no source. The agent
+   invented this."). Gate, badges, FAILED chips, Guild gate, score panel = harness surfaces.
+Rule: never blend the voices. The agent is confident and busy; the harness is terse and skeptical. The demo
+line: "watch an autonomous agent work — and watch the harness catch it lying." Devpost + DEMO-SCRIPT use the
+same split. This is the hackathon challenge framing verbatim (autonomous agent doing real work, harnessed).
