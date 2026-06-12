@@ -61,3 +61,18 @@ cards = tasks tagged `Agent task` / `User approval`, each labeled with its SPONS
 Rule: never blend the voices. The agent is confident and busy; the harness is terse and skeptical. The demo
 line: "watch an autonomous agent work — and watch the harness catch it lying." Devpost + DEMO-SCRIPT use the
 same split. This is the hackathon challenge framing verbatim (autonomous agent doing real work, harnessed).
+
+## THE RING RECIPE — no gray borders, ever (Johnny directive ~2:55 PM; refines DESIGN.md 8% → 4%)
+Every card/chip/panel edge = stacked shadows, never `border`:
+```css
+/* the dimensional ring */
+box-shadow:
+  inset 0 0 0 1px rgba(255,255,255,0.85),  /* 1px white inset — the light edge */
+  0 0 0 1px rgba(38,35,35,0.04),           /* 1px black 4% outer — the form edge */
+  0 1px 2px rgba(38,35,35,0.04),
+  0 2px 6px rgba(38,35,35,0.03);           /* soft depth, 1–6% only */
+border: none;
+```
+ENFORCEMENT (P1 lane + closer audit): grep the frontend for `border: 1px`, `border:1px`, and gray border
+colors (`#ccc #ddd #e5e7eb #d1d5db gray- slate- neutral-`) — every hit converts to the ring recipe.
+Recessed surfaces invert: white drop-shadow below, dark inset above (see said-built `.bar-track`).
