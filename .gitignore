@@ -22,6 +22,10 @@ build/
 # Editor / tooling
 .idea/
 *.log
+*.tsbuildinfo
+
+# Validation artifacts
+.evidence/
 
 # Claude Code local settings
 .claude/settings.local.json

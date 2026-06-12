@@ -1,0 +1,15 @@
+{
+  "name": "sayhello",
+  "version": "0.1.0",
+  "private": true,
+  "description": "sayhello — before you say hello, know their story. A self-improving GTM harness that catches the agent lying.",
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,magenta \"pnpm --filter backend dev\" \"pnpm --filter frontend dev\"",
+    "dev:backend": "pnpm --filter backend dev",
+    "dev:frontend": "pnpm --filter frontend dev",
+    "typecheck": "pnpm --filter backend exec tsc --noEmit && pnpm --filter frontend exec tsc --noEmit"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
