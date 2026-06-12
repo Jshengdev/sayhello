@@ -1,0 +1,203 @@
+{
+  "leadId": "ld_cebe3784",
+  "url": "https://www.compass.com",
+  "industry": "realestate",
+  "recordedAt": "2026-06-12T21:51:37.854Z",
+  "stubMode": "unset",
+  "events": [
+    {
+      "t": 0,
+      "event": {
+        "type": "run_started",
+        "leadId": "ld_cebe3784",
+        "url": "https://www.compass.com",
+        "mode": "live",
+        "label": "LIVE"
+      }
+    },
+    {
+      "t": 0,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_cebe3784",
+        "node": "scrape"
+      }
+    },
+    {
+      "t": 768,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_cebe3784",
+        "node": "enrich"
+      }
+    },
+    {
+      "t": 9848,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_cebe3784",
+        "node": "ground"
+      }
+    },
+    {
+      "t": 10047,
+      "event": {
+        "type": "scrape_done",
+        "leadId": "ld_cebe3784",
+        "brief": {
+          "domain": "www.compass.com",
+          "name": "Compass",
+          "url": "https://www.compass.com",
+          "what_they_do": "Compass is a real estate platform that helps users buy, rent, and sell properties with access to exclusive listings, neighborhood guides, and agent connections. They offer services including property search, mortgage preapproval through Rocket Mortgage, and a Concierge service for home improvements.",
+          "founded_year": null,
+          "key_features": [
+            "Exclusive listings before market release",
+            "Compass Concierge (home improvement services with deferred payment until closing)",
+            "Neighborhood guides and lifestyle matching",
+            "Mortgage preapproval integration with Rocket Mortgage",
+            "Multi-city coverage (NYC, LA, SF, Miami, Boston, DC, etc.)",
+            "Private online listings accessible to agents and buyers"
+          ],
+          "competitors": [
+            "Zillow",
+            "Redfin",
+            "Trulia",
+            "MLS platforms"
+          ],
+          "tech_stack": [],
+          "funding_stage": null,
+          "funding_amount": null,
+          "employee_count": null,
+          "category": "real-estate",
+          "current_messaging_channels": [
+            "website"
+          ],
+          "github_url": null,
+          "partnership_potential": true,
+          "pitch_angle": "forced_sale",
+          "features": {
+            "buy": true,
+            "rent": true,
+            "sell": true,
+            "exclusive_listings": true,
+            "agent_matching": true,
+            "neighborhood_guides": true,
+            "mortgage_integration": true,
+            "concierge_services": true,
+            "private_listings": true
+          },
+          "signals": [
+            {
+              "signal_type": "service_offering",
+              "source": "firecrawl:scrape",
+              "source_url": "https://www.compass.com",
+              "detail": "Compass Concierge helps users sell homes faster and for more money by covering home improvement service costs with zero due until closing",
+              "strength": 0.95
+            },
+            {
+              "signal_type": "exclusive_inventory",
+              "source": "firecrawl:scrape",
+              "source_url": "https://www.compass.com",
+              "detail": "Compass Exclusives feature allows users to browse exclusive listings before they hit the market, with 5,200+ homes not found anywhere else",
+              "strength": 0.9
+            },
+            {
+              "signal_type": "geographic_coverage",
+              "source": "firecrawl:scrape",
+              "source_url": "https://www.compass.com",
+              "detail": "Platform operates across major markets including NYC, The Hamptons, South Florida, Greater Boston, Southern California, and DC/Maryland/Virginia",
+              "strength": 0.95
+            },
+            {
+              "signal_type": "financial_partnership",
+              "source": "firecrawl:scrape",
+              "source_url": "https://www.compass.com",
+              "detail": "Integrated mortgage preapproval through Rocket Mortgage partnership offering custom rates in minutes",
+              "strength": 0.9
+            },
+            {
+              "signal_type": "news_mention",
+              "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+              "source_url": "https://www.nytimes.com/2026/06/06/realestate/zillow-compass-real-estate-consolidation.html",
+              "detail": "Real Estate Giants Compass and Zillow Fight Over the Future of the Market — Both companies face lawsuits and antitrust inquiries as they attempt to control the experience of home buying.",
+              "strength": 0.55
+            },
+            {
+              "signal_type": "news_mention",
+              "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+              "source_url": "https://www.realestatenews.com/2026/06/11/washingtons-new-private-listings-law-purposefully-vague",
+              "detail": "Washington’s new private listings law ‘purposefully vague’ — The real estate marketing law, which took effect June 11, would seem to prohibit Compass Private Exclusives — but the brokerage interprets...",
+              "strength": 0.55
+            },
+            {
+              "signal_type": "news_mention",
+              "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+              "source_url": "https://therealdeal.com/national/2026/06/09/what-happens-if-compass-quits-rebny/",
+              "detail": "Housing Notes: With an 80% Manhattan market share, what happens if Compass quits REBNY? — We are excited to announce that Jonathan Miller, who has long authored the most authoritative report on the residential real estate market,...",
+              "strength": 0.55
+            },
+            {
+              "signal_type": "hn_mentions_actual",
+              "source": "clickhouse:hackernews",
+              "source_url": "https://sql.clickhouse.com/?query=SELECT%20count()%20AS%20c%20FROM%20hackernews.hackernews%20WHERE%20title%20ILIKE%20'%25Compass%25'",
+              "detail": "Hacker News title mentions of \"Compass\": 863 (live count, hackernews.hackernews) — real public-builder attention exists.",
+              "strength": 0.7
+            },
+            {
+              "signal_type": "person_scrape_degraded",
+              "source": "harness",
+              "source_url": "",
+              "detail": "PERSON SCRAPE DEGRADED: person stage skipped: no person inputs on the run (linkedinUrl/xHandle/name all absent)",
+              "strength": 0
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "Real-estate investor client agreed $4-5k flat + 10-20% commission ('anywhere from 4 5 K would be sick')",
+              "strength": 8
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "Marketing agency signed fixed $5,040 / 2 months / 4 modules + ~$250/mo running costs",
+              "strength": 7
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "'name + linkedin' Google-search hack: ~85% hit rate where scrapers get accounts flagged",
+              "strength": 6
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "LinkedIn outreach ~40% reply rate vs cold email ~2% ('if you're doing like good')",
+              "strength": 5
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "The pricing anchor to beat: refused vendor at '$15,000 and it's like 40 enriched'",
+              "strength": 5
+            }
+          ],
+          "brief": "Compass is a multi-service real estate platform operating across major U.S. markets (NYC, LA, SF, Miami, Boston, DC) offering buy, rent, and sell services with exclusive pre-market listings and agent matching. The platform differentiates through Compass Concierge, which defers home improvement costs until closing, and integrated mortgage preapproval via Rocket Mortgage. With 5,200+ exclusive listings and neighborhood-focused guidance, Compass targets affluent buyers and sellers seeking premium service and market intelligence.",
+          "industry": "realestate"
+        }
+      }
+    },
+    {
+      "t": 10047,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_cebe3784",
+        "node": "draft"
+      }
+    }
+  ]
+}

@@ -20,19 +20,25 @@ remembers what it learned across every lead.
   recall panel "what patterns across all the agencies we've storied?" and it surfaces the cross-lead insight no
   single story has. "Every story becomes memory you can ask later — that's the CRM." A strong closing beat.
 
-## Architecture (uses what's already wired)
+## Architecture (REVISED — Airbyte Agents has NO Postgres connector; only SaaS apps)
+Available connectors are SaaS apps (GitHub, Notion, HubSpot, Salesforce, Slack, Gong...). So we route our
+stories THROUGH a SaaS app Airbyte can sync. **Use NOTION** (cleanest "records → recall"):
 ```
-sayhello story → Neon Postgres `stories` table (DATABASE_URL, already wired)
-   → Airbyte source connector (Postgres) → Context Store (indexed)
+sayhello story → write to a Notion database "sayhello stories" (Notion API; we have Notion access)
+   → Airbyte Notion connector → Context Store (indexed)
    → Airbyte Agent MCP (context_store_search) ← the Recall panel queries this
 ```
-Sync the EXISTING Postgres of stories — no new data plumbing. Recall panel = a frontend card + one backend
-route that calls the Airbyte MCP and renders results in the cofounder detail-card style.
+Each story = one Notion page/row (lead, person, pains, angle, grounded claims, verdict). Notion IS the
+team's memory surface; Airbyte makes it agent-queryable — exactly its purpose. Recall panel = a frontend card
++ a backend route calling the Airbyte MCP, rendered in cofounder detail-card style.
+ALT if Notion is slow to wire: **GitHub connector** — commit stories as markdown to the (public) sayhello repo,
+sync that repo. Notion is the better fit; GitHub is the fallback.
 
 ## Setup (start the signup + sync NOW so indexing has runway — it's slow)
 1. Free signup app.airbyte.ai (no card). Add to .env: `AIRBYTE_API_KEY` / MCP per docs.airbyte.com/ai-agents.
-2. Connect Neon Postgres as a source → sync the `stories` table → Context Store. **Start this immediately** —
-   indexing is minutes-to-days; it must be ready by demo. Seed it with the cached `data/leads/*.json` stories.
+2. Create a Notion database "sayhello stories"; backend writes each grounded story as a page (Notion API).
+   Add the **Notion** connector in Airbyte → sync → Context Store. **Start this immediately** — indexing is
+   slow; seed Notion now with the cached `data/leads/*.json` stories so it's ready by demo.
 3. Wire the Recall panel to the Agent MCP `context_store_search` (structured filter, not semantic).
 
 ## Scope guardrails (hard)
