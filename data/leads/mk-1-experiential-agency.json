@@ -1,0 +1,32 @@
+{
+  "_planted": "Ran 40 campus activations last year",
+  "_planted_note": "ONE plausible-but-unsourced claim in what_they_do prose — the ops_bottleneck signal says 'eight back school campaigns at one time' but NO signal carries an annual activation count. Judge corpus = signals[] ONLY.",
+  "industry": "marketing",
+  "provenance": "fixture · authored verbatim from the Aiden discovery-call corpus (guided, not faked) · Vortex-shaped",
+  "domain": null,
+  "name": "MK-1 — experiential/event-marketing agency  // JOHNNY-EDITABLE (Vortex-shaped)",
+  "url": "fixture://mk-1-experiential-agency",
+  "what_they_do": "Founder-led experiential agency: campus/CPG activations, client logos but no reported metrics. Ran 40 campus activations last year. Founder's personal brand is the channel; referral-only growth; website redesign in progress; no visible CRM/outbound tooling.",
+  "founded_year": null,
+  "key_features": [],
+  "competitors": [],
+  "tech_stack": [],
+  "funding_stage": null,
+  "funding_amount": null,
+  "employee_count": null,
+  "category": "experiential_agency",
+  "current_messaging_channels": [],
+  "github_url": null,
+  "partnership_potential": false,
+  "pitch_angle": "brand_gap",
+  "features": {},
+  "signals": [
+    { "signal_type": "founder_led_bd", "source": "discovery_call", "source_url": "call://aiden-call-2026-05-28", "detail": "as far as like sales and business development like those are that's all me", "strength": 9 },
+    { "signal_type": "referral_only", "source": "discovery_call", "source_url": "call://aiden-kickoff-2026-06-01#C21", "detail": "our whole flow is based on referrals and me meeting people in person... we really haven't done that kind of outreach", "strength": 9 },
+    { "signal_type": "brand_gap_in_motion", "source": "discovery_call", "source_url": "call://aiden-call-2026-05-28#seg1", "detail": "we're revamping our website because our website was buns so it's just trash... a full rebuild like tons of case studies... way more photos of our activations", "strength": 8 },
+    { "signal_type": "ops_bottleneck", "source": "discovery_call", "source_url": "call://aiden-call-2026-05-28", "detail": "we're running eight back school campaigns at one time I'm not really gonna be able to be as aggressive at expanding because I'm one person", "strength": 8 },
+    { "signal_type": "coma_test", "source": "discovery_call", "source_url": "call://aiden-call-2026-05-28#seg2", "detail": "if I had a coma for one month what would happen to our pipeline... nothing would happen... it would just be a gridlock", "strength": 9 },
+    { "signal_type": "systems_gap", "source": "discovery_call", "source_url": "call://aiden-call-2026-05-28", "detail": "pretty much gmail dude... it's kind of amazing I've gotten this far with such like little systems", "strength": 7 }
+  ],
+  "brief": "Vortex-shaped primary: the agency that sells brand image has a broken brand surface; fails the coma test; 8 campaigns at once on one founder."
+}

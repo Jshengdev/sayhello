@@ -1,0 +1,67 @@
+# render.yaml — sayhello on Render (sponsor seam: Render = deploy, named on screen).
+# Two web services from this monorepo (pnpm workspace at repo root).
+# Secret values are NEVER in this file: every secret is `sync: false` (set via API/dashboard).
+# Build uses corepack-pinned pnpm@10 (lockfileVersion 9.0) and --prod=false so
+# devDeps (tsx, typescript, tailwind) install even with NODE_ENV=production.
+
+services:
+  # ── backend — Express + ws harness (listens on Number(process.env.PORT) || 8787) ──
+  - type: web
+    name: sayhello-backend
+    runtime: node
+    plan: free
+    region: oregon
+    repo: https://github.com/Jshengdev/sayhello
+    branch: main
+    buildCommand: corepack enable && corepack prepare pnpm@10 --activate && pnpm install --frozen-lockfile --prod=false
+    startCommand: pnpm --filter backend start
+    healthCheckPath: /health
+    envVars:
+      - key: STUB_MODE
+        value: "0"
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: FIRECRAWL_API_KEY
+        sync: false
+      - key: COMPOSIO_API_KEY
+        sync: false
+      - key: CLICKHOUSE_URL
+        sync: false
+      - key: CLICKHOUSE_USER
+        sync: false
+      - key: CLICKHOUSE_PASSWORD
+        sync: false
+      - key: LANGFUSE_PUBLIC_KEY
+        sync: false
+      - key: LANGFUSE_SECRET_KEY
+        sync: false
+      - key: LANGFUSE_BASE_URL
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: HEYREACH_API_KEY
+        sync: false
+      - key: HEYREACH_ACCOUNT_ID
+        sync: false
+      - key: X_BEARER_TOKEN
+        sync: false
+      - key: SIXTYFOUR_API_KEY
+        sync: false
+
+  # ── frontend — Next cockpit (next start -p ${PORT:-3100}) ─────────────────────────
+  # NEXT_PUBLIC_* are inlined at BUILD time — they must point at the backend
+  # service URL (https + wss) before `next build` runs.
+  - type: web
+    name: sayhello-frontend
+    runtime: node
+    plan: free
+    region: oregon
+    repo: https://github.com/Jshengdev/sayhello
+    branch: main
+    buildCommand: corepack enable && corepack prepare pnpm@10 --activate && pnpm install --frozen-lockfile --prod=false && pnpm --filter frontend build
+    startCommand: pnpm --filter frontend start
+    envVars:
+      - key: NEXT_PUBLIC_API_BASE
+        sync: false
+      - key: NEXT_PUBLIC_WS_URL
+        sync: false

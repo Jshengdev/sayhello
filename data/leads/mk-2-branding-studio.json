@@ -1,0 +1,30 @@
+{
+  "_planted": "Their rebrands lift client revenue by 30% on average",
+  "_planted_note": "ONE plausible-but-unsourced claim in what_they_do prose — NO signal carries any client-revenue stat. Judge corpus = signals[] ONLY.",
+  "industry": "marketing",
+  "provenance": "fixture · authored verbatim from the Aiden discovery-call corpus (guided, not faked)",
+  "domain": null,
+  "name": "MK-2 — boutique branding/creative studio  // JOHNNY-EDITABLE",
+  "url": "fixture://mk-2-branding-studio",
+  "what_they_do": "2-10 person studio, strong client work, stale own-site (cobbler's children). Their rebrands lift client revenue by 30% on average. Founder does all BD; geography-bound; eventual-exit ambition.",
+  "founded_year": null,
+  "key_features": [],
+  "competitors": [],
+  "tech_stack": [],
+  "funding_stage": null,
+  "funding_amount": null,
+  "employee_count": null,
+  "category": "branding_studio",
+  "current_messaging_channels": [],
+  "github_url": null,
+  "partnership_potential": false,
+  "pitch_angle": "positioning",
+  "features": {},
+  "signals": [
+    { "signal_type": "geography_bound", "source": "discovery_call", "source_url": "call://aiden-call-2026-05-28#seg2", "detail": "I'm one person and i'm in Los Angeles or New York or SF and there's only three places I really ever am... we really need to go attack the whole world", "strength": 8 },
+    { "signal_type": "exit_ambition", "source": "discovery_call", "source_url": "call://aiden-call-2026-05-28", "detail": "I do want to eventually sell in next few years so I really want to build out these systems today or sooner", "strength": 8 },
+    { "signal_type": "reporting_gap", "source": "discovery_call", "source_url": "call://aiden-kickoff-2026-06-01#C22", "detail": "it's case by case in my head which is really bad", "strength": 7 },
+    { "signal_type": "pricing_napkin", "source": "discovery_call", "source_url": "call://aiden-kickoff-2026-06-01#C5", "detail": "a lot of our pricing is... napkin math... pretty imprecise", "strength": 6 }
+  ],
+  "brief": "Secondary: brand-gap primary angle, positioning (owner-independence/enterprise-value) secondary."
+}

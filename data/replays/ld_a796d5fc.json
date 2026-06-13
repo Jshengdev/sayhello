@@ -1,0 +1,290 @@
+{
+  "leadId": "ld_a796d5fc",
+  "url": "fixture://re-1-offmarket-team",
+  "industry": "realestate",
+  "recordedAt": "2026-06-12T22:46:58.643Z",
+  "stubMode": "0",
+  "events": [
+    {
+      "t": 0,
+      "event": {
+        "type": "run_started",
+        "leadId": "ld_a796d5fc",
+        "url": "fixture://re-1-offmarket-team",
+        "mode": "live",
+        "label": "LIVE"
+      }
+    },
+    {
+      "t": 1,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_a796d5fc",
+        "node": "scrape"
+      }
+    },
+    {
+      "t": 353,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_a796d5fc",
+        "node": "enrich"
+      }
+    },
+    {
+      "t": 705,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_a796d5fc",
+        "node": "ground"
+      }
+    },
+    {
+      "t": 1056,
+      "event": {
+        "type": "scrape_done",
+        "leadId": "ld_a796d5fc",
+        "brief": {
+          "domain": null,
+          "name": "RE-1 — boutique off-market acquisitions team (LA)  // JOHNNY-EDITABLE name/handle",
+          "url": "fixture://re-1-offmarket-team",
+          "what_they_do": "Founder-led team (2-5) doing off-market / distressed acquisitions in predetermined key areas of LA. Just completed a major project cycle and closed 14 properties in the last 12 months. Researches owners manually (title runs, BeenVerified-style lookups, driving-for-dollars). Holds a raw ~10k-row county data CSV. No CRM or automation tooling. Wants to expand to other cities.",
+          "founded_year": null,
+          "key_features": [],
+          "competitors": [],
+          "tech_stack": [],
+          "funding_stage": null,
+          "funding_amount": null,
+          "employee_count": null,
+          "category": "re_investor_brokerage",
+          "current_messaging_channels": [],
+          "github_url": null,
+          "partnership_potential": false,
+          "pitch_angle": "forced_sale",
+          "features": {},
+          "signals": [
+            {
+              "signal_type": "pipeline_gap",
+              "source": "discovery_call",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "we finally sold everything on it. So right now I have like no houses",
+              "strength": 9
+            },
+            {
+              "signal_type": "manual_research",
+              "source": "discovery_call",
+              "source_url": "call://carlos-kickoff-2026-06-10#M10",
+              "detail": "The way that we've typically found distressed properties is straight up just driving",
+              "strength": 8
+            },
+            {
+              "signal_type": "data_pain",
+              "source": "discovery_call",
+              "source_url": "call://carlos-kickoff-2026-06-10#M32",
+              "detail": "Our email thing has been like consistently 30% wrong",
+              "strength": 9
+            },
+            {
+              "signal_type": "vendor_refusal",
+              "source": "discovery_call",
+              "source_url": "call://carlos-kickoff-2026-06-10#M18",
+              "detail": "fifteen thousand dollars and it's like 40 enriched... this is just way too much so... we'll stick doing it manually",
+              "strength": 8
+            },
+            {
+              "signal_type": "expansion_intent",
+              "source": "discovery_call",
+              "source_url": "call://carlos-kickoff-2026-06-10#M19",
+              "detail": "either we need to hire someone else on the team or i could get... like an assistant... the goal is is to start moving to other cities",
+              "strength": 7
+            },
+            {
+              "signal_type": "seller_positioning",
+              "source": "positioning",
+              "source_url": "input://positioning",
+              "detail": "i'm johnny — an independent AI-automations marketer. i build the data+story layer for sales teams: scraping, enrichment, CRM-from-scratch, agent systems. receipts: built Vortex for a marketing agency on a signed $5,040 two-month contract; my LinkedIn outreach pulled ~40% reply rates vs 2% cold email. the system replaces the manual research hire.",
+              "strength": 8
+            },
+            {
+              "signal_type": "person_scrape_degraded",
+              "source": "harness",
+              "source_url": "",
+              "detail": "PERSON SCRAPE DEGRADED: person stage skipped: no person inputs on the run (linkedinUrl/xHandle/name all absent)",
+              "strength": 0
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "Real-estate investor client agreed $4-5k flat + 10-20% commission ('anywhere from 4 5 K would be sick')",
+              "strength": 8
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "Marketing agency signed fixed $5,040 / 2 months / 4 modules + ~$250/mo running costs",
+              "strength": 7
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "'name + linkedin' Google-search hack: ~85% hit rate where scrapers get accounts flagged",
+              "strength": 6
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "LinkedIn outreach ~40% reply rate vs cold email ~2% ('if you're doing like good')",
+              "strength": 5
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "The pricing anchor to beat: refused vendor at '$15,000 and it's like 40 enriched'",
+              "strength": 5
+            }
+          ],
+          "brief": "Carlos-shaped primary: pipeline gap + manual stack + 30%-wrong data + refused $15k vendor + city-expansion ambition. The system replaces the hire.",
+          "industry": "realestate",
+          "provenance": "fixture · authored verbatim from the Carlos discovery-call corpus (guided, not faked)"
+        }
+      }
+    },
+    {
+      "t": 1057,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_a796d5fc",
+        "node": "draft"
+      }
+    },
+    {
+      "t": 24265,
+      "event": {
+        "type": "draft_done",
+        "leadId": "ld_a796d5fc",
+        "generation": 0,
+        "story": "THE GOAL:\nCarlos's team closed 14 off-market properties in the last 12 months — a real run. The next move is bigger: stop being an LA-only operation and start replicating the model in other cities. In his own words, 'the goal is to start moving to other cities.' [expansion_intent]\n\nTHE OBSTACLE:\nThe pipeline that fueled those 14 deals is now empty — 'we finally sold everything on it. So right now I have like no houses.' [pipeline_gap] The team's sourcing engine is manual by design: driving-for-dollars, title runs, BeenVerified-style lookups. That works inside one known market where you can physically drive. It does not scale to a city you've never set foot in. And the data underneath it is already cracking — emails are 'consistently 30% wrong,' meaning roughly 3,000 rows of that 10k county CSV are misfires before a single outreach goes out. [data_pain, manual_research]\n\nTHE OLD WAY FAILS:\nCarlos already stress-tested the alternative: a vendor quoted $15,000 for 40 enriched records. His read was immediate — 'this is just way too much so we'll stick doing it manually.' [vendor_refusal] But 'doing it manually' in a new city means hiring someone who knows that market, or sending the team to drive streets they've never driven. The math on that — salary, ramp time, travel — lands north of $15k fast, and you still get 30%-wrong contact data on the back end. The manual stack was the right call for LA at the start; it's the ceiling now. [expansion_intent, data_pain]\n\nTHE BETTER PATH:\nJohnny builds the data-and-story layer that replaces the manual research hire — scraping, enrichment, CRM-from-scratch, rerunnable systems that don't need to be rebuilt every two months. [seller_positioning] The 10k-row county CSV Carlos already holds becomes the starting asset: run it through enrichment, cut the 30%-wrong contact problem at the source, and layer in the owner-story signals (absentee flags, distress proxies, life-stage reads) that turn a raw list into a prioritized pipeline. [seller_proof: name+linkedin Google-search hack at ~85% hit rate vs scraper flag rates] For city expansion, the same system spins up against a new county CSV — no new hire, no boots on new ground to start. Pricing is structured as flat base plus commission, anchored at $4–5k, a fraction of the $15k vendor quote for 40 records. [seller_proof: RE investor client agreed $4-5k flat + 10-20% commission; vendor_refusal anchor]\nOpening angle, in Johnny's voice: \"You've got 10,000 rows and a city-expansion plan — the only thing missing is a system that turns that CSV into a prioritized, contact-verified pipeline before you ever pick up the phone.\"\n\nTHE BETTER OUTCOME:\nCarlos's team enters the next market with a clean, enriched owner list — distress signals surfaced, contact data verified, outreach-ready — without adding a headcount or paying per-record vendor rates that don't pencil. The 10k LA CSV becomes a reusable proof-of-concept: run it, close deals, clone the system for city two. The pipeline gap that exists right now ('no houses') becomes a sourcing advantage — a durable data layer that compounds instead of resetting to zero after every project cycle. Carlos stays in the decision seat: he controls which markets, which criteria, which owners get touched first.",
+        "pitch_angle": "forced_sale"
+      }
+    },
+    {
+      "t": 24266,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_a796d5fc",
+        "node": "judge"
+      }
+    },
+    {
+      "t": 28727,
+      "event": {
+        "type": "score_done",
+        "leadId": "ld_a796d5fc",
+        "generation": 0,
+        "score": {
+          "grounding": 0.4,
+          "completeness": 0.8,
+          "narrative_arc": 0.5,
+          "feasibility": 0.7,
+          "competitive_diff": 0.7,
+          "metric_confidence": 0.5,
+          "verdict": "regen",
+          "failReason": "fabricatedClaims contains ungrounded factual claims including '14 off-market properties' and '10k county CSV'",
+          "fabricatedClaims": [
+            "14 off-market properties",
+            "10k county CSV",
+            "roughly 3,000 rows of that 10k county CSV",
+            "10k-row county CSV",
+            "10k LA CSV"
+          ]
+        }
+      }
+    },
+    {
+      "t": 28728,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_a796d5fc",
+        "node": "reenrich"
+      }
+    },
+    {
+      "t": 30787,
+      "event": {
+        "type": "reenrich",
+        "leadId": "ld_a796d5fc",
+        "generation": 0,
+        "reason": "fabricatedClaims contains ungrounded factual claims including '14 off-market properties' and '10k county CSV'"
+      }
+    },
+    {
+      "t": 30787,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_a796d5fc",
+        "node": "draft"
+      }
+    },
+    {
+      "t": 50697,
+      "event": {
+        "type": "draft_done",
+        "leadId": "ld_a796d5fc",
+        "generation": 1,
+        "story": "THE GOAL:\nCarlos's team is trying to scale off-market distressed acquisitions beyond LA — in his words, 'the goal is to start moving to other cities' [expansion_intent]. They want to keep doing what just worked — finding and closing distressed properties ahead of the market — but do it in new geographies without proportionally growing headcount.\n\nTHE OBSTACLE:\nRight now the pipeline is empty. Carlos said it plainly: 'we finally sold everything on it. So right now I have like no houses' [pipeline_gap]. The team that just finished a strong run is sitting idle, and the manual research stack that got them here — 'straight up just driving' for distressed properties [manual_research] — doesn't travel. You can't drive for dollars in a city you've never been to.\n\nTHE OLD WAY FAILS:\nThe manual approach has two compounding breaks. First, the contact data it produces is unreliable — 'our email thing has been like consistently 30% wrong' [data_pain]. You can't build outreach to new markets on a foundation that fails nearly one in three times. Second, the only vendor Carlos found to fix it quoted '$15,000 and it's like 40 enriched' — and he walked: 'this is just way too much so... we'll stick doing it manually' [vendor_refusal]. So the team is stuck: too expensive to buy a real system, too slow and geography-bound to build one by hand, and facing a live pipeline gap right now.\n\nTHE BETTER PATH:\nJohnny builds the data-and-story layer that replaces the manual research hire — scraping, enrichment, CRM-from-scratch, built to be rerunnable, not automation slop that needs to be rebuilt every two months [seller_positioning]. He already priced a comparable real-estate investor engagement at a flat base the client called 'anywhere from 4 5 K would be sick' plus 10-20% commission [seller_proof], and his Google name+LinkedIn search method hits ~85% where scrapers get accounts flagged [seller_proof] — directly attacking the 30%-wrong email problem. The pricing anchor Carlos already rejected ($15k for 40 enriched records) sets the floor; Johnny's model is structured to beat it on volume and accuracy. Carlos's raw county list becomes a working, city-portable lead system — not a one-time file.\nOpening angle: 'You just cleared your pipeline and you're ready to move to a new city — you're in a powerful position to build the data layer now, before you need it, instead of driving blind in a market you don't know yet.'\n\nTHE BETTER OUTCOME:\nCarlos's team stops being geography-locked. Their existing county data gets enriched with accurate contact information — fixing the ~30%-wrong problem [data_pain] — and the system is structured so it reruns when they enter the next city. They get the equivalent of a research hire without the headcount, at a price point that doesn't repeat the $15k walk-away [vendor_refusal]. The pipeline gap becomes a planning window: they move into a new market with a sorted, story-layered lead list ready before the first outreach goes out, not after six weeks of driving.",
+        "pitch_angle": "forced_sale"
+      }
+    },
+    {
+      "t": 50698,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_a796d5fc",
+        "node": "judge"
+      }
+    },
+    {
+      "t": 56987,
+      "event": {
+        "type": "score_done",
+        "leadId": "ld_a796d5fc",
+        "generation": 1,
+        "score": {
+          "grounding": 0.8,
+          "completeness": 0.85,
+          "narrative_arc": 0.8,
+          "feasibility": 0.8,
+          "competitive_diff": 0.8,
+          "metric_confidence": 0.8,
+          "verdict": "emit",
+          "failReason": null,
+          "fabricatedClaims": []
+        }
+      }
+    },
+    {
+      "t": 56988,
+      "event": {
+        "type": "gate",
+        "leadId": "ld_a796d5fc",
+        "story": "THE GOAL:\nCarlos's team is trying to scale off-market distressed acquisitions beyond LA — in his words, 'the goal is to start moving to other cities' [expansion_intent]. They want to keep doing what just worked — finding and closing distressed properties ahead of the market — but do it in new geographies without proportionally growing headcount.\n\nTHE OBSTACLE:\nRight now the pipeline is empty. Carlos said it plainly: 'we finally sold everything on it. So right now I have like no houses' [pipeline_gap]. The team that just finished a strong run is sitting idle, and the manual research stack that got them here — 'straight up just driving' for distressed properties [manual_research] — doesn't travel. You can't drive for dollars in a city you've never been to.\n\nTHE OLD WAY FAILS:\nThe manual approach has two compounding breaks. First, the contact data it produces is unreliable — 'our email thing has been like consistently 30% wrong' [data_pain]. You can't build outreach to new markets on a foundation that fails nearly one in three times. Second, the only vendor Carlos found to fix it quoted '$15,000 and it's like 40 enriched' — and he walked: 'this is just way too much so... we'll stick doing it manually' [vendor_refusal]. So the team is stuck: too expensive to buy a real system, too slow and geography-bound to build one by hand, and facing a live pipeline gap right now.\n\nTHE BETTER PATH:\nJohnny builds the data-and-story layer that replaces the manual research hire — scraping, enrichment, CRM-from-scratch, built to be rerunnable, not automation slop that needs to be rebuilt every two months [seller_positioning]. He already priced a comparable real-estate investor engagement at a flat base the client called 'anywhere from 4 5 K would be sick' plus 10-20% commission [seller_proof], and his Google name+LinkedIn search method hits ~85% where scrapers get accounts flagged [seller_proof] — directly attacking the 30%-wrong email problem. The pricing anchor Carlos already rejected ($15k for 40 enriched records) sets the floor; Johnny's model is structured to beat it on volume and accuracy. Carlos's raw county list becomes a working, city-portable lead system — not a one-time file.\nOpening angle: 'You just cleared your pipeline and you're ready to move to a new city — you're in a powerful position to build the data layer now, before you need it, instead of driving blind in a market you don't know yet.'\n\nTHE BETTER OUTCOME:\nCarlos's team stops being geography-locked. Their existing county data gets enriched with accurate contact information — fixing the ~30%-wrong problem [data_pain] — and the system is structured so it reruns when they enter the next city. They get the equivalent of a research hire without the headcount, at a price point that doesn't repeat the $15k walk-away [vendor_refusal]. The pipeline gap becomes a planning window: they move into a new market with a sorted, story-layered lead list ready before the first outreach goes out, not after six weeks of driving.",
+        "score": {
+          "grounding": 0.8,
+          "completeness": 0.85,
+          "narrative_arc": 0.8,
+          "feasibility": 0.8,
+          "competitive_diff": 0.8,
+          "metric_confidence": 0.8,
+          "verdict": "emit",
+          "failReason": null,
+          "fabricatedClaims": []
+        }
+      }
+    }
+  ]
+}

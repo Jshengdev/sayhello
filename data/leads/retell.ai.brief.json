@@ -1,0 +1,29 @@
+{
+  "_planted": "Customers send 10M+ SMS follow-ups monthly",
+  "_planted_note": "ONE plausible-but-unsourced claim lives in what_they_do prose with NO matching Signal (SOTARE R7). Judge corpus = signals[] ONLY.",
+  "industry": "gtm",
+  "provenance": "fixture · facts trace to data/leads/source/retell.ai.md (photon-gtm research) · failover for live Firecrawl scrape",
+  "domain": "retell.ai",
+  "name": "Retell AI",
+  "url": "https://www.retellai.com",
+  "what_they_do": "YC W24 voice-AI platform: AI phone agents for sales, support, scheduling. 50M+ real-time AI calls/month for 1,000+ business customers incl. PWC, Twilio. $40M+ ARR, ~25-person team. Customers send 10M+ SMS follow-ups monthly.",
+  "founded_year": 2023,
+  "key_features": ["AI phone agents", "real-time voice", "sales/support/scheduling automation"],
+  "competitors": [],
+  "tech_stack": ["TypeScript", "Python", "Node.js", "React", "Twilio"],
+  "funding_stage": "Seed",
+  "funding_amount": "$4.7M",
+  "employee_count": 25,
+  "category": "platform_integration",
+  "current_messaging_channels": ["voice", "sms", "chat", "email"],
+  "github_url": "https://github.com/RetellAI",
+  "partnership_potential": true,
+  "pitch_angle": "revenue_share",
+  "features": { "voice_agents": true, "imessage_support": false, "platform": true },
+  "signals": [
+    { "signal_type": "platform_opportunity", "source": "website", "source_url": "https://www.retellai.com", "detail": "1,000+ business customers deploying AI agents — one Photon integration unlocks iMessage for entire customer base", "strength": 7 },
+    { "signal_type": "cx_platform_gap", "source": "website", "source_url": "https://www.retellai.com/integrations", "detail": "Supports voice, SMS, chat, and email but has zero iMessage support. Jan 2026 press release explicitly lists all channels — iMessage absent.", "strength": 7 },
+    { "signal_type": "funding_event", "source": "news", "source_url": "https://www.retellai.com/blog/seed-announcement", "detail": "$4.7M seed led by Alt Capital and Y Combinator (Aug 2024). Now at $40M+ ARR, profitable.", "strength": 5 }
+  ],
+  "brief": "Near-perfect platform fit: multi-channel AI agents (voice/SMS/chat/email), iMessage completely absent. SDK-level integration, founder-to-founder at ~25 people."
+}

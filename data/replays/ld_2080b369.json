@@ -1,0 +1,315 @@
+{
+  "leadId": "ld_2080b369",
+  "url": "fixture://re-1-offmarket-team",
+  "industry": "realestate",
+  "recordedAt": "2026-06-12T22:20:55.090Z",
+  "stubMode": "unset",
+  "events": [
+    {
+      "t": 0,
+      "event": {
+        "type": "run_started",
+        "leadId": "ld_2080b369",
+        "url": "fixture://re-1-offmarket-team",
+        "mode": "live",
+        "label": "LIVE"
+      }
+    },
+    {
+      "t": 1,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_2080b369",
+        "node": "scrape"
+      }
+    },
+    {
+      "t": 354,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_2080b369",
+        "node": "enrich"
+      }
+    },
+    {
+      "t": 706,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_2080b369",
+        "node": "ground"
+      }
+    },
+    {
+      "t": 1060,
+      "event": {
+        "type": "scrape_done",
+        "leadId": "ld_2080b369",
+        "brief": {
+          "domain": null,
+          "name": "RE-1 — boutique off-market acquisitions team (LA)  // JOHNNY-EDITABLE name/handle",
+          "url": "fixture://re-1-offmarket-team",
+          "what_they_do": "Founder-led team (2-5) doing off-market / distressed acquisitions in predetermined key areas of LA. Just completed a major project cycle and closed 14 properties in the last 12 months. Researches owners manually (title runs, BeenVerified-style lookups, driving-for-dollars). Holds a raw ~10k-row county data CSV. No CRM or automation tooling. Wants to expand to other cities.",
+          "founded_year": null,
+          "key_features": [],
+          "competitors": [],
+          "tech_stack": [],
+          "funding_stage": null,
+          "funding_amount": null,
+          "employee_count": null,
+          "category": "re_investor_brokerage",
+          "current_messaging_channels": [],
+          "github_url": null,
+          "partnership_potential": false,
+          "pitch_angle": "forced_sale",
+          "features": {},
+          "signals": [
+            {
+              "signal_type": "pipeline_gap",
+              "source": "discovery_call",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "we finally sold everything on it. So right now I have like no houses",
+              "strength": 9
+            },
+            {
+              "signal_type": "manual_research",
+              "source": "discovery_call",
+              "source_url": "call://carlos-kickoff-2026-06-10#M10",
+              "detail": "The way that we've typically found distressed properties is straight up just driving",
+              "strength": 8
+            },
+            {
+              "signal_type": "data_pain",
+              "source": "discovery_call",
+              "source_url": "call://carlos-kickoff-2026-06-10#M32",
+              "detail": "Our email thing has been like consistently 30% wrong",
+              "strength": 9
+            },
+            {
+              "signal_type": "vendor_refusal",
+              "source": "discovery_call",
+              "source_url": "call://carlos-kickoff-2026-06-10#M18",
+              "detail": "fifteen thousand dollars and it's like 40 enriched... this is just way too much so... we'll stick doing it manually",
+              "strength": 8
+            },
+            {
+              "signal_type": "expansion_intent",
+              "source": "discovery_call",
+              "source_url": "call://carlos-kickoff-2026-06-10#M19",
+              "detail": "either we need to hire someone else on the team or i could get... like an assistant... the goal is is to start moving to other cities",
+              "strength": 7
+            },
+            {
+              "signal_type": "person_identity",
+              "source": "heyreach",
+              "source_url": "https://www.linkedin.com/in/johnny--sheng",
+              "detail": "LinkedIn profile: Johnny Sheng",
+              "strength": 0.8
+            },
+            {
+              "signal_type": "person_location",
+              "source": "heyreach",
+              "source_url": "https://www.linkedin.com/in/johnny--sheng",
+              "detail": "Based in Arcadia, California, United States",
+              "strength": 0.7
+            },
+            {
+              "signal_type": "person_about",
+              "source": "heyreach",
+              "source_url": "https://www.linkedin.com/in/johnny--sheng",
+              "detail": "LinkedIn About (verbatim): ai @ Photon | arts tech biz @ Iovine and Young Academy",
+              "strength": 0.75
+            },
+            {
+              "signal_type": "person_scrape_degraded",
+              "source": "harness",
+              "source_url": "",
+              "detail": "PERSON SCRAPE DEGRADED: x: no xHandle on run input · sixtyfour: [sixtyfour] non-200 response: POST https://api.sixtyfour.ai/people-intelligence → 401 Unauthorized. body={\"detail\":\"Inva",
+              "strength": 0
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "Real-estate investor client agreed $4-5k flat + 10-20% commission ('anywhere from 4 5 K would be sick')",
+              "strength": 8
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "Marketing agency signed fixed $5,040 / 2 months / 4 modules + ~$250/mo running costs",
+              "strength": 7
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "'name + linkedin' Google-search hack: ~85% hit rate where scrapers get accounts flagged",
+              "strength": 6
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "LinkedIn outreach ~40% reply rate vs cold email ~2% ('if you're doing like good')",
+              "strength": 5
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "The pricing anchor to beat: refused vendor at '$15,000 and it's like 40 enriched'",
+              "strength": 5
+            }
+          ],
+          "brief": "Carlos-shaped primary: pipeline gap + manual stack + 30%-wrong data + refused $15k vendor + city-expansion ambition. The system replaces the hire.",
+          "industry": "realestate",
+          "provenance": "fixture · authored verbatim from the Carlos discovery-call corpus (guided, not faked)",
+          "person": {
+            "name": "Johnny Sheng",
+            "linkedinUrl": "https://www.linkedin.com/in/johnny--sheng/",
+            "xHandle": null,
+            "headline": null,
+            "company": null,
+            "title": null,
+            "location": "Arcadia, California, United States",
+            "summary": "ai @ Photon | arts tech biz @ Iovine and Young Academy",
+            "provenance": "cache:data/leads/person-www-linkedin-com-in-johnny-sheng.json (2026-06-12T21:39:54.815Z)"
+          }
+        }
+      }
+    },
+    {
+      "t": 1061,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_2080b369",
+        "node": "draft"
+      }
+    },
+    {
+      "t": 25160,
+      "event": {
+        "type": "draft_done",
+        "leadId": "ld_2080b369",
+        "generation": 0,
+        "story": "THE GOAL:\nClose the next 14 properties — but faster, in new cities, without adding headcount. In Carlos's own words: 'the goal is to start moving to other cities.' He just proved the model works (14 closings in 12 months [pipeline_gap]); now he wants to scale it before the pipeline runs dry again.\n\nTHE OBSTACLE:\nThe pipeline is empty right now — 'we finally sold everything on it. So right now I have like no houses' [pipeline_gap] — and the raw fuel sitting in his lap is a ~10k-row county CSV he can't trust. Emails are 'consistently 30% wrong' [data_pain]. That 30% error rate doesn't just waste stamps; it means his team is pitching the wrong owner, at the wrong address, with the wrong story. Every bad record is a deal that never starts.\n\nTHE OLD WAY FAILS:\nDriving for dollars and manual BeenVerified-style lookups [manual_research] worked when the team was hunting one zip code. Scaling that motion to new cities means either hiring a researcher (a recurring salary, a ramp, a management tax) or paying a vendor — and Carlos already walked away from a vendor quoting '$15,000 and it's like 40 enriched' [vendor_refusal], calling it 'just way too much.' The manual stack that got him to 14 deals is the exact ceiling that stops him from reaching 28.\n\nTHE BETTER PATH:\nJohnny builds the data layer Carlos doesn't have time to build himself — turning that 10k-row CSV into a grounded, CRM-ready story file where every claim traces to a real record, not a scraper guess. The 'name + LinkedIn' Google-search method hits ~85% accuracy where scrapers get accounts flagged [seller_pack], which directly attacks the 30% email error rate [data_pain]. The output is rerunnable — not automation slop that needs to be rebuilt every two months — so when Carlos opens a new city, he re-runs the system on that county's data instead of hiring a city-specific researcher. Pricing anchors at $4–5k flat plus a commission slice tied to closed deals [seller_pack], a structure Carlos already called 'sick' in a parallel engagement — and it undercuts the $15k vendor by a factor of three on a per-enriched-record basis [seller_pack][vendor_refusal].\n\nOpening line (seller's voice): 'You've got 10,000 rows sitting there and a 30% wrong-email rate — before you hire anyone or open a new city, let me show you what those records actually say.'\n\nTHE BETTER OUTCOME:\nCarlos re-enters the market with a clean, prioritized lead list — forced-sale signals surfaced, absentee flags tagged, owner stories grounded — so his outreach lands on the right person with the right angle the first time. When he's ready to expand to city two or city three, he drops the new county CSV into the same system instead of rebuilding from scratch or writing another $15k check. The team stays lean; the pipeline doesn't go to zero again between project cycles. He's in a powerful position because he can plan the expansion on his timeline, not react to an empty funnel.",
+        "pitch_angle": "forced_sale"
+      }
+    },
+    {
+      "t": 25161,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_2080b369",
+        "node": "judge"
+      }
+    },
+    {
+      "t": 30897,
+      "event": {
+        "type": "score_done",
+        "leadId": "ld_2080b369",
+        "generation": 0,
+        "score": {
+          "grounding": 0.4,
+          "completeness": 0.8,
+          "narrative_arc": 0.5,
+          "feasibility": 0.6,
+          "competitive_diff": 0.7,
+          "metric_confidence": 0.5,
+          "verdict": "regen",
+          "failReason": "fabricatedClaims contains unmatched factual claims, including '14 closings in 12 months' and '10k-row county CSV'",
+          "fabricatedClaims": [
+            "14 closings in 12 months",
+            "10k-row county CSV",
+            "a recurring salary, a ramp, a management tax",
+            "a factor of three on a per-enriched-record basis",
+            "clean, prioritized lead list — forced-sale signals surfaced, absentee flags tagged, owner stories grounded",
+            "rebuilding from scratch or writing another $15k check",
+            "plan the expansion on his timeline, not react to an empty funnel"
+          ]
+        }
+      }
+    },
+    {
+      "t": 30898,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_2080b369",
+        "node": "reenrich"
+      }
+    },
+    {
+      "t": 32541,
+      "event": {
+        "type": "reenrich",
+        "leadId": "ld_2080b369",
+        "generation": 0,
+        "reason": "fabricatedClaims contains unmatched factual claims, including '14 closings in 12 months' and '10k-row county CSV'"
+      }
+    },
+    {
+      "t": 32542,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_2080b369",
+        "node": "draft"
+      }
+    },
+    {
+      "t": 52159,
+      "event": {
+        "type": "draft_done",
+        "leadId": "ld_2080b369",
+        "generation": 1,
+        "story": "THE GOAL:\nScale the off-market acquisitions machine beyond LA — find distressed owners faster, in more cities, without adding headcount. In Carlos's own words: 'the goal is to start moving to other cities.' [expansion_intent]\n\nTHE OBSTACLE:\nThe pipeline is empty right now. After closing out the last cycle, Carlos said it plainly: 'we finally sold everything on it. So right now I have like no houses.' [pipeline_gap] The bottleneck isn't deal-making skill — it's the front-of-funnel: finding the right owners before anyone else does, at volume, with accurate contact data. The current email data is 'consistently 30% wrong,' [data_pain] which means one in three outreach attempts is dead on arrival before a human even picks up the phone.\n\nTHE OLD WAY FAILS:\nThe team has been finding distressed properties by 'straight up just driving' — boots-on-ground, manual title runs, BeenVerified-style lookups. [manual_research] That works in one ZIP code. It does not scale to a second city. The obvious fix — hire an assistant or a data vendor — hit a wall fast: a vendor quoted $15,000 for roughly 40 enriched records. Carlos's read was immediate: 'this is just way too much so... we'll stick doing it manually.' [vendor_refusal] Doing it manually caps the geography. Hiring caps the margin. Neither solves the 30%-wrong data problem sitting underneath both options.\n\nTHE BETTER PATH:\nJohnny builds the patty: he takes a team's raw lead data and turns it into grounded owner stories — every claim traced to a real record, forced-sale signals surfaced, contact data validated — so the human closer walks in already knowing why this owner is likely to move. The 'name + LinkedIn' Google-search method hits ~85% where scrapers get accounts flagged. [seller_pack] LinkedIn outreach on enriched data runs ~40% reply rate versus ~2% on cold email. [seller_pack] The pricing structure that closed a comparable real-estate investor: $4–5k flat plus 10–20% commission — a fraction of the $15k-for-40-records anchor Carlos already rejected. [seller_pack] The system is built to rerun as the team moves city to city, not rebuilt from scratch each time.\n\nOpening line (seller's voice): 'You're in a powerful position right now — the pipeline's clear, the county data is sitting there, and before you hire anyone or pay $15k for 40 records, there's a way to know exactly which of those owners is about to be forced to move.'\n\nTHE BETTER OUTCOME:\nCarlos enters the next city with a prioritized, enriched owner list — forced-sale signals flagged, contact data verified, outreach-ready — before a single drive-for-dollars run happens there. The 30%-wrong email problem is gone. The $15k vendor is off the table. And when the team is ready for city three, the system reruns. The hire gets pushed back because the data is doing the prospecting work. Carlos is back in the room he's best in: closing.",
+        "pitch_angle": "forced_sale"
+      }
+    },
+    {
+      "t": 52159,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_2080b369",
+        "node": "judge"
+      }
+    },
+    {
+      "t": 59723,
+      "event": {
+        "type": "score_done",
+        "leadId": "ld_2080b369",
+        "generation": 1,
+        "score": {
+          "grounding": 0.4,
+          "completeness": 0.8,
+          "narrative_arc": 0.5,
+          "feasibility": 0.6,
+          "competitive_diff": 0.6,
+          "metric_confidence": 0.5,
+          "verdict": "regen",
+          "failReason": "fabricatedClaims contains unmatched factual claims: '14 closings in 12 months', '10k-row county CSV'",
+          "fabricatedClaims": []
+        }
+      }
+    },
+    {
+      "t": 59724,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_2080b369",
+        "node": "reenrich"
+      }
+    },
+    {
+      "t": 59725,
+      "event": {
+        "type": "failed",
+        "leadId": "ld_2080b369",
+        "stage": "reenrich",
+        "error": "[\n  {\n    \"code\": \"too_small\",\n    \"minimum\": 1,\n    \"type\": \"array\",\n    \"inclusive\": true,\n    \"exact\": false,\n    \"message\": \"Array must contain at least 1 element(s)\",\n    \"path\": [\n      \"fabricatedClaims\"\n    ]\n  }\n]"
+      }
+    }
+  ]
+}

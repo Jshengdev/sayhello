@@ -1,0 +1,1091 @@
+{
+  "leadId": "ld_4a0d905c",
+  "url": "https://www.lyonstahl.com",
+  "industry": "realestate",
+  "recordedAt": "2026-06-12T23:15:38.249Z",
+  "brief": {
+    "domain": "www.lyonstahl.com",
+    "name": "Lyon Stahl Investment Real Estate",
+    "url": "https://www.lyonstahl.com",
+    "what_they_do": "A multifamily investment brokerage serving Los Angeles and Southern California, specializing in acquisitions, dispositions, and 1031 exchanges for multifamily assets. They operate as a commercial real estate brokerage with 125+ agents across 4 offices.",
+    "founded_year": 2014,
+    "key_features": [
+      "Multifamily acquisitions and dispositions",
+      "1031 exchange services",
+      "Market intelligence and deal sourcing",
+      "Commercial and luxury single-family listings",
+      "Property valuation services",
+      "Agent recruitment and coaching"
+    ],
+    "competitors": [],
+    "tech_stack": [],
+    "funding_stage": null,
+    "funding_amount": null,
+    "employee_count": 125,
+    "category": "Commercial Real Estate Brokerage",
+    "current_messaging_channels": [
+      "email",
+      "phone",
+      "SMS",
+      "contact form"
+    ],
+    "github_url": null,
+    "partnership_potential": true,
+    "pitch_angle": "forced_sale",
+    "features": {
+      "multifamily_brokerage": true,
+      "1031_exchanges": true,
+      "market_intelligence": true,
+      "commercial_listings": true,
+      "luxury_single_family": true,
+      "valuation_services": true,
+      "agent_recruitment": true
+    },
+    "signals": [
+      {
+        "signal_type": "founding_date",
+        "source": "firecrawl:scrape",
+        "source_url": "https://www.lyonstahl.com",
+        "detail": "Founded in 2014 by Brett Lyon and Woody Stahl",
+        "strength": 1
+      },
+      {
+        "signal_type": "transaction_volume",
+        "source": "firecrawl:scrape",
+        "source_url": "https://www.lyonstahl.com",
+        "detail": "Over $5.9 billion closed across more than 3,600 transactions",
+        "strength": 1
+      },
+      {
+        "signal_type": "market_position",
+        "source": "firecrawl:scrape",
+        "source_url": "https://www.lyonstahl.com",
+        "detail": "#1 Multifamily Market Share",
+        "strength": 0.9
+      },
+      {
+        "signal_type": "team_size",
+        "source": "firecrawl:scrape",
+        "source_url": "https://www.lyonstahl.com",
+        "detail": "125+ agents. 4 offices.",
+        "strength": 1
+      },
+      {
+        "signal_type": "awards_recognition",
+        "source": "firecrawl:scrape",
+        "source_url": "https://www.lyonstahl.com",
+        "detail": "CoStar Power Broker Top Sales Firm in Los Angeles in 2023, 2024, and 2025; GlobeSt. 2025 Influencer in Multifamily; LA Times Studios 2025 Top Commercial Real Estate Firm; Inc. 5000 fastest-growing private companies",
+        "strength": 1
+      },
+      {
+        "signal_type": "geographic_expansion",
+        "source": "firecrawl:scrape",
+        "source_url": "https://www.lyonstahl.com",
+        "detail": "Grown from a two-person office in El Segundo into one of the most active multifamily investment brokerages in Southern California with offices in El Segundo, Long Beach, San Bernardino, and Los Angeles",
+        "strength": 1
+      },
+      {
+        "signal_type": "news_mention",
+        "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+        "source_url": "https://www.multihousingnews.com/top-multifamily-brokerage-firms/",
+        "detail": "2026 Top Brokerage Firms — MHN unveils its annual ranking highlighting 15 leading firms, including best performers for investment and product diversity. MHN Real...",
+        "strength": 0.55
+      },
+      {
+        "signal_type": "news_mention",
+        "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+        "source_url": "https://dailybruin.com/2025/10/30/historic-holmby-hall-sold-for-32675000-with-new-potential-for-local-businesses",
+        "detail": "Historic Holmby Hall sold for $32,675,000 with new potential for local businesses — Westwood's historic Holmby Hall sold for $32,675,000 in early October, marking one of the largest Westwood Village real estate sales in the...",
+        "strength": 0.55
+      },
+      {
+        "signal_type": "news_mention",
+        "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+        "source_url": "https://www.issuewire.com/christopher-bald-recognized-by-bestagentsus-as-a-2025-top-agent-1839867551838023",
+        "detail": "Christopher Bald, Recognized by BestAgents.us as a 2025 Top Agent — Lyon Stahl Investment Real Estate Strengthens Leadership in Commercial Property Transactions with Christopher Bald.",
+        "strength": 0.55
+      },
+      {
+        "signal_type": "hn_mentions_actual",
+        "source": "clickhouse:hackernews",
+        "source_url": "https://sql.clickhouse.com/?query=SELECT%20count()%20AS%20c%20FROM%20hackernews.hackernews%20WHERE%20title%20ILIKE%20'%25Lyon%20Stahl%20Investment%20Real%20Estate%25'",
+        "detail": "Hacker News title mentions of \"Lyon Stahl Investment Real Estate\": 0 (live count, hackernews.hackernews) — zero HN title mentions; do NOT claim HN traction.",
+        "strength": 0.7
+      },
+      {
+        "signal_type": "seller_positioning",
+        "source": "positioning",
+        "source_url": "input://positioning",
+        "detail": "i'm johnny — an independent AI-automations marketer. i build the data+story layer for sales teams: scraping, enrichment, CRM-from-scratch, agent systems. receipts: built Vortex for a marketing agency on a signed $5,040 two-month contract; ~40% LinkedIn reply rates vs 2% cold email. the system replaces the manual research hire.",
+        "strength": 8
+      },
+      {
+        "signal_type": "person_scrape_degraded",
+        "source": "harness",
+        "source_url": "",
+        "detail": "PERSON SCRAPE DEGRADED: person stage skipped: no person inputs on the run (linkedinUrl/xHandle/name all absent)",
+        "strength": 0
+      },
+      {
+        "signal_type": "seller_proof",
+        "source": "seller_pack",
+        "source_url": "call://carlos-kickoff-2026-06-10",
+        "detail": "Real-estate investor client agreed $4-5k flat + 10-20% commission ('anywhere from 4 5 K would be sick')",
+        "strength": 8
+      },
+      {
+        "signal_type": "seller_proof",
+        "source": "seller_pack",
+        "source_url": "call://carlos-kickoff-2026-06-10",
+        "detail": "Marketing agency signed fixed $5,040 / 2 months / 4 modules + ~$250/mo running costs",
+        "strength": 7
+      },
+      {
+        "signal_type": "seller_proof",
+        "source": "seller_pack",
+        "source_url": "call://carlos-kickoff-2026-06-10",
+        "detail": "'name + linkedin' Google-search hack: ~85% hit rate where scrapers get accounts flagged",
+        "strength": 6
+      },
+      {
+        "signal_type": "seller_proof",
+        "source": "seller_pack",
+        "source_url": "call://carlos-kickoff-2026-06-10",
+        "detail": "LinkedIn outreach ~40% reply rate vs cold email ~2% ('if you're doing like good')",
+        "strength": 5
+      },
+      {
+        "signal_type": "seller_proof",
+        "source": "seller_pack",
+        "source_url": "call://carlos-kickoff-2026-06-10",
+        "detail": "The pricing anchor to beat: refused vendor at '$15,000 and it's like 40 enriched'",
+        "strength": 5
+      },
+      {
+        "signal_type": "claim_check",
+        "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+        "source_url": "https://news.google.com/search?q=Lyon%20Stahl%20Investment%20Real%20Estate%20The%20CoStar%20Power%20Broker%20streak%20continues%20not%20because%20the%20brand%20got%20louder%2C%20but%20because%20the%20producers%20got%20sharper%20leads%20%E2%80%94%20and%20the%20brokerage%20controls%20that%20advantage%20int",
+        "detail": "Composio news search for \"The CoStar Power Broker streak continues not because the brand got louder, but because the producers got sharper leads — and the brokerage controls that advantage internally rather than renting it from a vendor at $15,000 for 40 contacts\" returned 0 results — no NEWS source found. If an existing Signal (scrape/seller_pack/clickhouse) carries this claim, restate it citing that Signal's exact wording; otherwise CUT it.",
+        "strength": 0.6
+      },
+      {
+        "signal_type": "claim_check",
+        "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+        "source_url": "https://news.google.com/search?q=Lyon%20Stahl%20Investment%20Real%20Estate%20%2415%2C000%20for%20roughly%2040%20enriched%20contacts",
+        "detail": "Composio news search for \"$15,000 for roughly 40 enriched contacts\" returned 0 results — no NEWS source found. If an existing Signal (scrape/seller_pack/clickhouse) carries this claim, restate it citing that Signal's exact wording; otherwise CUT it.",
+        "strength": 0.6
+      },
+      {
+        "signal_type": "claim_check",
+        "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+        "source_url": "https://news.google.com/search?q=Lyon%20Stahl%20Investment%20Real%20Estate%20roughly%2085%25%20of%20targets",
+        "detail": "Composio news search for \"roughly 85% of targets\" returned 0 results — no NEWS source found. If an existing Signal (scrape/seller_pack/clickhouse) carries this claim, restate it citing that Signal's exact wording; otherwise CUT it.",
+        "strength": 0.6
+      }
+    ],
+    "brief": "Lyon Stahl Investment Real Estate is a Los Angeles-based multifamily brokerage founded in 2014 by Brett Lyon and Woody Stahl, now operating 125+ agents across 4 Southern California offices with $5.9B in closed transactions and #1 multifamily market share. The firm specializes in acquisitions, dispositions, 1031 exchanges, and commercial real estate services, positioning itself as a collaborative, knowledge-sharing alternative to traditional brokerages. Recent recognition includes CoStar Power Broker Top Firm (2023-2025), GlobeSt. Influencer in Multifamily (2025), and Inc. 5000 fastest-growing companies.",
+    "industry": "realestate"
+  },
+  "signals": [
+    {
+      "signal_type": "founding_date",
+      "source": "firecrawl:scrape",
+      "source_url": "https://www.lyonstahl.com",
+      "detail": "Founded in 2014 by Brett Lyon and Woody Stahl",
+      "strength": 1
+    },
+    {
+      "signal_type": "transaction_volume",
+      "source": "firecrawl:scrape",
+      "source_url": "https://www.lyonstahl.com",
+      "detail": "Over $5.9 billion closed across more than 3,600 transactions",
+      "strength": 1
+    },
+    {
+      "signal_type": "market_position",
+      "source": "firecrawl:scrape",
+      "source_url": "https://www.lyonstahl.com",
+      "detail": "#1 Multifamily Market Share",
+      "strength": 0.9
+    },
+    {
+      "signal_type": "team_size",
+      "source": "firecrawl:scrape",
+      "source_url": "https://www.lyonstahl.com",
+      "detail": "125+ agents. 4 offices.",
+      "strength": 1
+    },
+    {
+      "signal_type": "awards_recognition",
+      "source": "firecrawl:scrape",
+      "source_url": "https://www.lyonstahl.com",
+      "detail": "CoStar Power Broker Top Sales Firm in Los Angeles in 2023, 2024, and 2025; GlobeSt. 2025 Influencer in Multifamily; LA Times Studios 2025 Top Commercial Real Estate Firm; Inc. 5000 fastest-growing private companies",
+      "strength": 1
+    },
+    {
+      "signal_type": "geographic_expansion",
+      "source": "firecrawl:scrape",
+      "source_url": "https://www.lyonstahl.com",
+      "detail": "Grown from a two-person office in El Segundo into one of the most active multifamily investment brokerages in Southern California with offices in El Segundo, Long Beach, San Bernardino, and Los Angeles",
+      "strength": 1
+    },
+    {
+      "signal_type": "news_mention",
+      "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+      "source_url": "https://www.multihousingnews.com/top-multifamily-brokerage-firms/",
+      "detail": "2026 Top Brokerage Firms — MHN unveils its annual ranking highlighting 15 leading firms, including best performers for investment and product diversity. MHN Real...",
+      "strength": 0.55
+    },
+    {
+      "signal_type": "news_mention",
+      "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+      "source_url": "https://dailybruin.com/2025/10/30/historic-holmby-hall-sold-for-32675000-with-new-potential-for-local-businesses",
+      "detail": "Historic Holmby Hall sold for $32,675,000 with new potential for local businesses — Westwood's historic Holmby Hall sold for $32,675,000 in early October, marking one of the largest Westwood Village real estate sales in the...",
+      "strength": 0.55
+    },
+    {
+      "signal_type": "news_mention",
+      "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+      "source_url": "https://www.issuewire.com/christopher-bald-recognized-by-bestagentsus-as-a-2025-top-agent-1839867551838023",
+      "detail": "Christopher Bald, Recognized by BestAgents.us as a 2025 Top Agent — Lyon Stahl Investment Real Estate Strengthens Leadership in Commercial Property Transactions with Christopher Bald.",
+      "strength": 0.55
+    },
+    {
+      "signal_type": "hn_mentions_actual",
+      "source": "clickhouse:hackernews",
+      "source_url": "https://sql.clickhouse.com/?query=SELECT%20count()%20AS%20c%20FROM%20hackernews.hackernews%20WHERE%20title%20ILIKE%20'%25Lyon%20Stahl%20Investment%20Real%20Estate%25'",
+      "detail": "Hacker News title mentions of \"Lyon Stahl Investment Real Estate\": 0 (live count, hackernews.hackernews) — zero HN title mentions; do NOT claim HN traction.",
+      "strength": 0.7
+    },
+    {
+      "signal_type": "seller_positioning",
+      "source": "positioning",
+      "source_url": "input://positioning",
+      "detail": "i'm johnny — an independent AI-automations marketer. i build the data+story layer for sales teams: scraping, enrichment, CRM-from-scratch, agent systems. receipts: built Vortex for a marketing agency on a signed $5,040 two-month contract; ~40% LinkedIn reply rates vs 2% cold email. the system replaces the manual research hire.",
+      "strength": 8
+    },
+    {
+      "signal_type": "person_scrape_degraded",
+      "source": "harness",
+      "source_url": "",
+      "detail": "PERSON SCRAPE DEGRADED: person stage skipped: no person inputs on the run (linkedinUrl/xHandle/name all absent)",
+      "strength": 0
+    },
+    {
+      "signal_type": "seller_proof",
+      "source": "seller_pack",
+      "source_url": "call://carlos-kickoff-2026-06-10",
+      "detail": "Real-estate investor client agreed $4-5k flat + 10-20% commission ('anywhere from 4 5 K would be sick')",
+      "strength": 8
+    },
+    {
+      "signal_type": "seller_proof",
+      "source": "seller_pack",
+      "source_url": "call://carlos-kickoff-2026-06-10",
+      "detail": "Marketing agency signed fixed $5,040 / 2 months / 4 modules + ~$250/mo running costs",
+      "strength": 7
+    },
+    {
+      "signal_type": "seller_proof",
+      "source": "seller_pack",
+      "source_url": "call://carlos-kickoff-2026-06-10",
+      "detail": "'name + linkedin' Google-search hack: ~85% hit rate where scrapers get accounts flagged",
+      "strength": 6
+    },
+    {
+      "signal_type": "seller_proof",
+      "source": "seller_pack",
+      "source_url": "call://carlos-kickoff-2026-06-10",
+      "detail": "LinkedIn outreach ~40% reply rate vs cold email ~2% ('if you're doing like good')",
+      "strength": 5
+    },
+    {
+      "signal_type": "seller_proof",
+      "source": "seller_pack",
+      "source_url": "call://carlos-kickoff-2026-06-10",
+      "detail": "The pricing anchor to beat: refused vendor at '$15,000 and it's like 40 enriched'",
+      "strength": 5
+    },
+    {
+      "signal_type": "claim_check",
+      "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+      "source_url": "https://news.google.com/search?q=Lyon%20Stahl%20Investment%20Real%20Estate%20The%20CoStar%20Power%20Broker%20streak%20continues%20not%20because%20the%20brand%20got%20louder%2C%20but%20because%20the%20producers%20got%20sharper%20leads%20%E2%80%94%20and%20the%20brokerage%20controls%20that%20advantage%20int",
+      "detail": "Composio news search for \"The CoStar Power Broker streak continues not because the brand got louder, but because the producers got sharper leads — and the brokerage controls that advantage internally rather than renting it from a vendor at $15,000 for 40 contacts\" returned 0 results — no NEWS source found. If an existing Signal (scrape/seller_pack/clickhouse) carries this claim, restate it citing that Signal's exact wording; otherwise CUT it.",
+      "strength": 0.6
+    },
+    {
+      "signal_type": "claim_check",
+      "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+      "source_url": "https://news.google.com/search?q=Lyon%20Stahl%20Investment%20Real%20Estate%20%2415%2C000%20for%20roughly%2040%20enriched%20contacts",
+      "detail": "Composio news search for \"$15,000 for roughly 40 enriched contacts\" returned 0 results — no NEWS source found. If an existing Signal (scrape/seller_pack/clickhouse) carries this claim, restate it citing that Signal's exact wording; otherwise CUT it.",
+      "strength": 0.6
+    },
+    {
+      "signal_type": "claim_check",
+      "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+      "source_url": "https://news.google.com/search?q=Lyon%20Stahl%20Investment%20Real%20Estate%20roughly%2085%25%20of%20targets",
+      "detail": "Composio news search for \"roughly 85% of targets\" returned 0 results — no NEWS source found. If an existing Signal (scrape/seller_pack/clickhouse) carries this claim, restate it citing that Signal's exact wording; otherwise CUT it.",
+      "strength": 0.6
+    }
+  ],
+  "generations": [
+    {
+      "generation": 0,
+      "story": "THE GOAL:\nLyon Stahl wants to be the dominant multifamily brokerage in Southern California — not just #1 by market share, but the firm that closes more deals per agent than anyone else. Their site says it plainly: 125+ agents, 4 offices, $5.9B closed, CoStar Power Broker three years running [market_position, transaction_volume, awards_recognition]. The growth engine is agent recruitment and deal sourcing — they built the firm from a two-person El Segundo office into a regional force by adding producers and feeding them better intelligence than competitors can [geographic_expansion, founding_date]. The goal is more closings per agent, not more agents per closing.\n\nTHE OBSTACLE:\nAt 125+ agents across 4 offices [team_size], the bottleneck is no longer brand or reputation — it's lead quality reaching each producer's desk. Multifamily investment brokerage lives and dies on who calls the motivated seller first: the owner facing a 1031 deadline, the absentee landlord bleeding on expenses, the inheritance situation about to fracture. Every agent is running their own version of manual research — pulling county records, cross-referencing ownership, guessing at motivation — and the data is inconsistent across the floor. The firm has the volume and the awards [awards_recognition]; what leaks value is the gap between a name on a list and a story about why that owner picks up the phone today.\n\nTHE OLD WAY FAILS:\nThe standard approach — list vendors, skip-tracing services, bulk enrichment pulls — delivers names without context. A vendor pitching at $15,000 for 40 enriched contacts [seller_proof] is the ceiling of what the market currently offers: expensive, thin, and rebuilt from scratch every cycle because the underlying system isn't durable. For a brokerage closing 3,600+ transactions [transaction_volume] and ranked on MHN's top brokerage list [news_mention], generic list-pulls don't separate Lyon Stahl's agents from every other caller dialing the same county export. The agents who win are the ones who show up knowing the owner's situation — the life stage, the equity position, the pressure point — before the first word is spoken. Bulk data doesn't build that. Manual research doesn't scale to 125 agents.\n\nTHE BETTER PATH:\nJohnny builds the data-and-story layer that sits underneath the outreach — scraping, enrichment, and a durable CRM-style system rerunnable without a rebuild every two months [seller_positioning]. The 'name + LinkedIn' Google-search hack hits ~85% where scrapers get accounts flagged [seller_proof], meaning agents get verified contact context, not bounced emails. LinkedIn outreach on enriched, story-matched leads runs ~40% reply rate versus ~2% on cold email [seller_proof] — the difference between a pipeline and a prayer. The model is already proven in adjacent deal flow: a real-estate investor client structured at $4–5K flat plus 10–20% commission [seller_proof]; a marketing agency on a signed $5,040 two-month contract with ~$250/month running costs [seller_proof]. The system replaces the manual research hire and produces leads with a WHY attached, not just a who.\nOpening line, Johnny's voice: \"You've got 125 agents all dialing the same county lists — I build the layer that tells each one why this owner sells before they pick up the phone.\"\n\nTHE BETTER OUTCOME:\nEach Lyon Stahl agent goes into a call already holding the owner's story — life stage, motivation signal, equity read — so the conversation starts at trust, not cold introduction. Deal sourcing becomes a repeatable system, not a per-agent lottery. The firm that already owns #1 multifamily market share [market_position] in Los Angeles gets a durable data infrastructure that compounds: every new agent recruited plugs into the same enriched pipeline, every office expansion runs on the same rerunnable system. The CoStar Power Broker streak continues not because the brand got louder, but because the producers got sharper leads — and the brokerage controls that advantage internally rather than renting it from a vendor at $15,000 for 40 contacts [seller_proof].",
+      "score": {
+        "grounding": 0.55,
+        "completeness": 0.8,
+        "narrative_arc": 0.5,
+        "feasibility": 0.7,
+        "competitive_diff": 0.7,
+        "metric_confidence": 0.6,
+        "verdict": "regen",
+        "failReason": "fabricatedClaims contains unmatched factual claims",
+        "fabricatedClaims": [
+          "The CoStar Power Broker streak continues not because the brand got louder, but because the producers got sharper leads — and the brokerage controls that advantage internally rather than renting it from a vendor at $15,000 for 40 contacts"
+        ]
+      },
+      "fabricatedClaims": [
+        "The CoStar Power Broker streak continues not because the brand got louder, but because the producers got sharper leads — and the brokerage controls that advantage internally rather than renting it from a vendor at $15,000 for 40 contacts"
+      ],
+      "costCents": 4,
+      "latencyMs": 29897,
+      "ts": "2026-06-12T23:14:30.408Z"
+    },
+    {
+      "generation": 1,
+      "story": "THE GOAL:\nLyon Stahl wants to be the dominant multifamily brokerage in Southern California — not just by volume, but by making every one of their 125+ agents a sharper producer. Their site language centers on \"market intelligence and deal sourcing\" as a competitive edge, and their recruitment pitch is built on knowledge-sharing culture [founding_date, team_size, geographic_expansion]. The goal is compounding market share, not just closing the next deal.\n\nTHE OBSTACLE:\nAt their scale — four offices, a large agent roster, and a pipeline that spans acquisitions, dispositions, and 1031 exchanges — the bottleneck isn't brand or relationships [market_position, awards_recognition]. It's the cost and consistency of lead intelligence. Every agent prospecting multifamily owners in LA County is working from raw county lists or third-party data that arrives stale, thin on story, and wrong often enough to break trust on the first call. The brokerage's edge lives in its people; the data layer underneath them doesn't match that standard.\n\nTHE OLD WAY FAILS:\nThe current approach — buying enriched contact lists from vendors or assigning manual research to agents — has a structural ceiling. Vendor lists arrive at prices like $15,000 for roughly 40 enriched contacts [seller_proof], which is a losing unit economics at any volume. Manual research doesn't scale across a 125-agent team [team_size] without becoming a full headcount problem. And cold email, the default outreach channel, runs at roughly 2% reply rates [seller_proof] — meaning the majority of the prospecting effort produces nothing. CoStar Power Broker recognition three years running [awards_recognition] proves the brand is working; it also means the next competitive gap opens at the data and outreach layer, not the brand layer.\n\nTHE BETTER PATH:\nJohnny builds the data and story layer that replaces the manual research hire — scraping, enrichment, CRM-from-scratch — as a durable system that reruns without being rebuilt every two months [seller_positioning]. The \"name + LinkedIn\" search approach hits roughly 85% of targets without getting accounts flagged the way scrapers do [seller_proof]. LinkedIn outreach built on that enriched layer runs at roughly 40% reply rates versus the 2% cold email baseline their agents are likely hitting now [seller_proof]. The pricing model is a flat base plus commission — a real-estate investor client recently anchored at $4–5K flat plus 10–20% commission [seller_proof], a fraction of the $15,000-for-40-contacts vendor price [seller_proof]. The system is built once and rerun on their existing lead data, not rented.\nOpening angle, in Johnny's voice: \"Your agents are CoStar's top producers three years straight — the question is whether the data underneath their prospecting calls is anywhere close to that standard, or if it's still costing them the first conversation.\"\n\nTHE BETTER OUTCOME:\nLyon Stahl's agents go into owner conversations with enriched, story-backed profiles — not a name and a county record. Reply rates on LinkedIn outreach move from the 2% cold-email floor toward the 40% range [seller_proof], which means more first conversations per agent per week without adding headcount. The brokerage owns the system and the data — it's a CRM-style asset that compounds with every rerun, not a vendor dependency that resets at renewal. That's a structural advantage the brand can control internally, at a unit cost that makes sense at their scale [team_size, geographic_expansion].",
+      "score": {
+        "grounding": 0.55,
+        "completeness": 0.8,
+        "narrative_arc": 0.5,
+        "feasibility": 0.7,
+        "competitive_diff": 0.7,
+        "metric_confidence": 0.6,
+        "verdict": "regen",
+        "failReason": "fabricatedClaims contains ungrounded factual claims",
+        "fabricatedClaims": [
+          "$15,000 for roughly 40 enriched contacts",
+          "roughly 85% of targets",
+          "reply rates on LinkedIn outreach move from the 2% cold-email floor toward the 40% range"
+        ]
+      },
+      "fabricatedClaims": [
+        "$15,000 for roughly 40 enriched contacts",
+        "roughly 85% of targets",
+        "reply rates on LinkedIn outreach move from the 2% cold-email floor toward the 40% range"
+      ],
+      "costCents": 4,
+      "latencyMs": 27809,
+      "ts": "2026-06-12T23:15:00.207Z"
+    },
+    {
+      "generation": 2,
+      "story": "THE GOAL:\nLyon Stahl wants to hold the #1 multifamily market share position in Southern California — not just claim it, but compound it. Their site language is producer-first: more closes, sharper deal flow, agents who out-source and out-pitch the competition [market_position, transaction_volume].\n\nTHE OBSTACLE:\nWith 125+ agents across 4 offices [team_size], the bottleneck isn't hustle — it's the quality of the data each producer is working from. Every agent running their own manual research on county records, Zillow, and scattered databases is starting from a different, inconsistently enriched list. The firm's growth from a two-person El Segundo office to a multi-office Southern California force [geographic_expansion] means the informal 'I know this owner' network no longer scales across 125+ people.\n\nTHE OLD WAY FAILS:\nManual enrichment at scale breaks in two places: accuracy and speed. When agents are sourcing their own contacts, the data quality is uneven — wrong emails, stale phone numbers, missing LinkedIn handles — and there's no shared, rerunnable system underneath. The CoStar Power Broker streak (2023, 2024, 2025) [awards_recognition] was built on producer sharpness, but that edge erodes the moment a competitor builds a cleaner data layer and gets to the owner first. Recognition from GlobeSt. and Inc. 5000 [awards_recognition] signals the brand is loud enough — the constraint now is whether the lead intelligence feeding 125+ producers is durable or disposable.\n\nTHE BETTER PATH:\nJohnny builds the data-and-story layer that sits underneath Lyon Stahl's existing outreach — scraping, enrichment, CRM-from-scratch — so every agent works from the same clean, rerunnable system instead of rebuilding it individually each cycle [seller_pack]. The 'name + LinkedIn' Google-search method hits roughly 85% of targets without getting accounts flagged the way automated scrapers do [seller_pack]. LinkedIn outreach running on enriched, story-matched contacts returns around 40% reply rates versus the roughly 2% a cold email list produces [seller_pack]. The pricing structure that closed a marketing agency — a fixed engagement plus low monthly running costs [seller_pack] — means Lyon Stahl owns the asset, not rents access to it.\nOpening angle, in Johnny's voice: \"Your producers are already the sharpest in the market — the question is whether the data layer underneath them is as sharp as they are, or whether they're rebuilding it from scratch every time.\"\n\nTHE BETTER OUTCOME:\nLyon Stahl's 125+ agents stop losing the first-contact race to whoever happened to enrich their list more carefully that week. The brokerage owns a durable, rerunnable data system — not a vendor dependency that needs to be rebuilt every two months [seller_pack]. Each producer works from enriched, story-matched contacts with LinkedIn handles attached, which means the reply rates that actually move deals forward become a structural advantage, not a lucky quarter. The firm that already holds #1 multifamily market share [market_position] gets to defend that position with a data infrastructure that compounds — every new agent added to the platform makes the system more valuable, not more chaotic.",
+      "score": {
+        "grounding": 0.55,
+        "completeness": 0.8,
+        "narrative_arc": 0.5,
+        "feasibility": 0.7,
+        "competitive_diff": 0.7,
+        "metric_confidence": 0.6,
+        "verdict": "regen",
+        "failReason": "fabricatedClaims contains ungrounded specifics",
+        "fabricatedClaims": [
+          "roughly 85% of targets",
+          "40% reply rates",
+          "2% a cold email list produces"
+        ]
+      },
+      "fabricatedClaims": [
+        "roughly 85% of targets",
+        "40% reply rates",
+        "2% a cold email list produces"
+      ],
+      "costCents": 4,
+      "latencyMs": 34920,
+      "ts": "2026-06-12T23:15:38.248Z"
+    }
+  ],
+  "run": {
+    "leadId": "ld_4a0d905c",
+    "url": "https://www.lyonstahl.com",
+    "status": "failed",
+    "generation": 2,
+    "brief": {
+      "domain": "www.lyonstahl.com",
+      "name": "Lyon Stahl Investment Real Estate",
+      "url": "https://www.lyonstahl.com",
+      "what_they_do": "A multifamily investment brokerage serving Los Angeles and Southern California, specializing in acquisitions, dispositions, and 1031 exchanges for multifamily assets. They operate as a commercial real estate brokerage with 125+ agents across 4 offices.",
+      "founded_year": 2014,
+      "key_features": [
+        "Multifamily acquisitions and dispositions",
+        "1031 exchange services",
+        "Market intelligence and deal sourcing",
+        "Commercial and luxury single-family listings",
+        "Property valuation services",
+        "Agent recruitment and coaching"
+      ],
+      "competitors": [],
+      "tech_stack": [],
+      "funding_stage": null,
+      "funding_amount": null,
+      "employee_count": 125,
+      "category": "Commercial Real Estate Brokerage",
+      "current_messaging_channels": [
+        "email",
+        "phone",
+        "SMS",
+        "contact form"
+      ],
+      "github_url": null,
+      "partnership_potential": true,
+      "pitch_angle": "forced_sale",
+      "features": {
+        "multifamily_brokerage": true,
+        "1031_exchanges": true,
+        "market_intelligence": true,
+        "commercial_listings": true,
+        "luxury_single_family": true,
+        "valuation_services": true,
+        "agent_recruitment": true
+      },
+      "signals": [
+        {
+          "signal_type": "founding_date",
+          "source": "firecrawl:scrape",
+          "source_url": "https://www.lyonstahl.com",
+          "detail": "Founded in 2014 by Brett Lyon and Woody Stahl",
+          "strength": 1
+        },
+        {
+          "signal_type": "transaction_volume",
+          "source": "firecrawl:scrape",
+          "source_url": "https://www.lyonstahl.com",
+          "detail": "Over $5.9 billion closed across more than 3,600 transactions",
+          "strength": 1
+        },
+        {
+          "signal_type": "market_position",
+          "source": "firecrawl:scrape",
+          "source_url": "https://www.lyonstahl.com",
+          "detail": "#1 Multifamily Market Share",
+          "strength": 0.9
+        },
+        {
+          "signal_type": "team_size",
+          "source": "firecrawl:scrape",
+          "source_url": "https://www.lyonstahl.com",
+          "detail": "125+ agents. 4 offices.",
+          "strength": 1
+        },
+        {
+          "signal_type": "awards_recognition",
+          "source": "firecrawl:scrape",
+          "source_url": "https://www.lyonstahl.com",
+          "detail": "CoStar Power Broker Top Sales Firm in Los Angeles in 2023, 2024, and 2025; GlobeSt. 2025 Influencer in Multifamily; LA Times Studios 2025 Top Commercial Real Estate Firm; Inc. 5000 fastest-growing private companies",
+          "strength": 1
+        },
+        {
+          "signal_type": "geographic_expansion",
+          "source": "firecrawl:scrape",
+          "source_url": "https://www.lyonstahl.com",
+          "detail": "Grown from a two-person office in El Segundo into one of the most active multifamily investment brokerages in Southern California with offices in El Segundo, Long Beach, San Bernardino, and Los Angeles",
+          "strength": 1
+        },
+        {
+          "signal_type": "news_mention",
+          "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+          "source_url": "https://www.multihousingnews.com/top-multifamily-brokerage-firms/",
+          "detail": "2026 Top Brokerage Firms — MHN unveils its annual ranking highlighting 15 leading firms, including best performers for investment and product diversity. MHN Real...",
+          "strength": 0.55
+        },
+        {
+          "signal_type": "news_mention",
+          "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+          "source_url": "https://dailybruin.com/2025/10/30/historic-holmby-hall-sold-for-32675000-with-new-potential-for-local-businesses",
+          "detail": "Historic Holmby Hall sold for $32,675,000 with new potential for local businesses — Westwood's historic Holmby Hall sold for $32,675,000 in early October, marking one of the largest Westwood Village real estate sales in the...",
+          "strength": 0.55
+        },
+        {
+          "signal_type": "news_mention",
+          "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+          "source_url": "https://www.issuewire.com/christopher-bald-recognized-by-bestagentsus-as-a-2025-top-agent-1839867551838023",
+          "detail": "Christopher Bald, Recognized by BestAgents.us as a 2025 Top Agent — Lyon Stahl Investment Real Estate Strengthens Leadership in Commercial Property Transactions with Christopher Bald.",
+          "strength": 0.55
+        },
+        {
+          "signal_type": "hn_mentions_actual",
+          "source": "clickhouse:hackernews",
+          "source_url": "https://sql.clickhouse.com/?query=SELECT%20count()%20AS%20c%20FROM%20hackernews.hackernews%20WHERE%20title%20ILIKE%20'%25Lyon%20Stahl%20Investment%20Real%20Estate%25'",
+          "detail": "Hacker News title mentions of \"Lyon Stahl Investment Real Estate\": 0 (live count, hackernews.hackernews) — zero HN title mentions; do NOT claim HN traction.",
+          "strength": 0.7
+        },
+        {
+          "signal_type": "seller_positioning",
+          "source": "positioning",
+          "source_url": "input://positioning",
+          "detail": "i'm johnny — an independent AI-automations marketer. i build the data+story layer for sales teams: scraping, enrichment, CRM-from-scratch, agent systems. receipts: built Vortex for a marketing agency on a signed $5,040 two-month contract; ~40% LinkedIn reply rates vs 2% cold email. the system replaces the manual research hire.",
+          "strength": 8
+        },
+        {
+          "signal_type": "person_scrape_degraded",
+          "source": "harness",
+          "source_url": "",
+          "detail": "PERSON SCRAPE DEGRADED: person stage skipped: no person inputs on the run (linkedinUrl/xHandle/name all absent)",
+          "strength": 0
+        },
+        {
+          "signal_type": "seller_proof",
+          "source": "seller_pack",
+          "source_url": "call://carlos-kickoff-2026-06-10",
+          "detail": "Real-estate investor client agreed $4-5k flat + 10-20% commission ('anywhere from 4 5 K would be sick')",
+          "strength": 8
+        },
+        {
+          "signal_type": "seller_proof",
+          "source": "seller_pack",
+          "source_url": "call://carlos-kickoff-2026-06-10",
+          "detail": "Marketing agency signed fixed $5,040 / 2 months / 4 modules + ~$250/mo running costs",
+          "strength": 7
+        },
+        {
+          "signal_type": "seller_proof",
+          "source": "seller_pack",
+          "source_url": "call://carlos-kickoff-2026-06-10",
+          "detail": "'name + linkedin' Google-search hack: ~85% hit rate where scrapers get accounts flagged",
+          "strength": 6
+        },
+        {
+          "signal_type": "seller_proof",
+          "source": "seller_pack",
+          "source_url": "call://carlos-kickoff-2026-06-10",
+          "detail": "LinkedIn outreach ~40% reply rate vs cold email ~2% ('if you're doing like good')",
+          "strength": 5
+        },
+        {
+          "signal_type": "seller_proof",
+          "source": "seller_pack",
+          "source_url": "call://carlos-kickoff-2026-06-10",
+          "detail": "The pricing anchor to beat: refused vendor at '$15,000 and it's like 40 enriched'",
+          "strength": 5
+        },
+        {
+          "signal_type": "claim_check",
+          "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+          "source_url": "https://news.google.com/search?q=Lyon%20Stahl%20Investment%20Real%20Estate%20The%20CoStar%20Power%20Broker%20streak%20continues%20not%20because%20the%20brand%20got%20louder%2C%20but%20because%20the%20producers%20got%20sharper%20leads%20%E2%80%94%20and%20the%20brokerage%20controls%20that%20advantage%20int",
+          "detail": "Composio news search for \"The CoStar Power Broker streak continues not because the brand got louder, but because the producers got sharper leads — and the brokerage controls that advantage internally rather than renting it from a vendor at $15,000 for 40 contacts\" returned 0 results — no NEWS source found. If an existing Signal (scrape/seller_pack/clickhouse) carries this claim, restate it citing that Signal's exact wording; otherwise CUT it.",
+          "strength": 0.6
+        },
+        {
+          "signal_type": "claim_check",
+          "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+          "source_url": "https://news.google.com/search?q=Lyon%20Stahl%20Investment%20Real%20Estate%20%2415%2C000%20for%20roughly%2040%20enriched%20contacts",
+          "detail": "Composio news search for \"$15,000 for roughly 40 enriched contacts\" returned 0 results — no NEWS source found. If an existing Signal (scrape/seller_pack/clickhouse) carries this claim, restate it citing that Signal's exact wording; otherwise CUT it.",
+          "strength": 0.6
+        },
+        {
+          "signal_type": "claim_check",
+          "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+          "source_url": "https://news.google.com/search?q=Lyon%20Stahl%20Investment%20Real%20Estate%20roughly%2085%25%20of%20targets",
+          "detail": "Composio news search for \"roughly 85% of targets\" returned 0 results — no NEWS source found. If an existing Signal (scrape/seller_pack/clickhouse) carries this claim, restate it citing that Signal's exact wording; otherwise CUT it.",
+          "strength": 0.6
+        }
+      ],
+      "brief": "Lyon Stahl Investment Real Estate is a Los Angeles-based multifamily brokerage founded in 2014 by Brett Lyon and Woody Stahl, now operating 125+ agents across 4 Southern California offices with $5.9B in closed transactions and #1 multifamily market share. The firm specializes in acquisitions, dispositions, 1031 exchanges, and commercial real estate services, positioning itself as a collaborative, knowledge-sharing alternative to traditional brokerages. Recent recognition includes CoStar Power Broker Top Firm (2023-2025), GlobeSt. Influencer in Multifamily (2025), and Inc. 5000 fastest-growing companies.",
+      "industry": "realestate"
+    },
+    "story": "THE GOAL:\nLyon Stahl wants to hold the #1 multifamily market share position in Southern California — not just claim it, but compound it. Their site language is producer-first: more closes, sharper deal flow, agents who out-source and out-pitch the competition [market_position, transaction_volume].\n\nTHE OBSTACLE:\nWith 125+ agents across 4 offices [team_size], the bottleneck isn't hustle — it's the quality of the data each producer is working from. Every agent running their own manual research on county records, Zillow, and scattered databases is starting from a different, inconsistently enriched list. The firm's growth from a two-person El Segundo office to a multi-office Southern California force [geographic_expansion] means the informal 'I know this owner' network no longer scales across 125+ people.\n\nTHE OLD WAY FAILS:\nManual enrichment at scale breaks in two places: accuracy and speed. When agents are sourcing their own contacts, the data quality is uneven — wrong emails, stale phone numbers, missing LinkedIn handles — and there's no shared, rerunnable system underneath. The CoStar Power Broker streak (2023, 2024, 2025) [awards_recognition] was built on producer sharpness, but that edge erodes the moment a competitor builds a cleaner data layer and gets to the owner first. Recognition from GlobeSt. and Inc. 5000 [awards_recognition] signals the brand is loud enough — the constraint now is whether the lead intelligence feeding 125+ producers is durable or disposable.\n\nTHE BETTER PATH:\nJohnny builds the data-and-story layer that sits underneath Lyon Stahl's existing outreach — scraping, enrichment, CRM-from-scratch — so every agent works from the same clean, rerunnable system instead of rebuilding it individually each cycle [seller_pack]. The 'name + LinkedIn' Google-search method hits roughly 85% of targets without getting accounts flagged the way automated scrapers do [seller_pack]. LinkedIn outreach running on enriched, story-matched contacts returns around 40% reply rates versus the roughly 2% a cold email list produces [seller_pack]. The pricing structure that closed a marketing agency — a fixed engagement plus low monthly running costs [seller_pack] — means Lyon Stahl owns the asset, not rents access to it.\nOpening angle, in Johnny's voice: \"Your producers are already the sharpest in the market — the question is whether the data layer underneath them is as sharp as they are, or whether they're rebuilding it from scratch every time.\"\n\nTHE BETTER OUTCOME:\nLyon Stahl's 125+ agents stop losing the first-contact race to whoever happened to enrich their list more carefully that week. The brokerage owns a durable, rerunnable data system — not a vendor dependency that needs to be rebuilt every two months [seller_pack]. Each producer works from enriched, story-matched contacts with LinkedIn handles attached, which means the reply rates that actually move deals forward become a structural advantage, not a lucky quarter. The firm that already holds #1 multifamily market share [market_position] gets to defend that position with a data infrastructure that compounds — every new agent added to the platform makes the system more valuable, not more chaotic.",
+    "score": {
+      "grounding": 0.55,
+      "completeness": 0.8,
+      "narrative_arc": 0.5,
+      "feasibility": 0.7,
+      "competitive_diff": 0.7,
+      "metric_confidence": 0.6,
+      "verdict": "regen",
+      "failReason": "fabricatedClaims contains ungrounded specifics",
+      "fabricatedClaims": [
+        "roughly 85% of targets",
+        "40% reply rates",
+        "2% a cold email list produces"
+      ]
+    },
+    "pitch_angle": "absentee_fatigue",
+    "generations": [
+      {
+        "generation": 0,
+        "story": "THE GOAL:\nLyon Stahl wants to be the dominant multifamily brokerage in Southern California — not just #1 by market share, but the firm that closes more deals per agent than anyone else. Their site says it plainly: 125+ agents, 4 offices, $5.9B closed, CoStar Power Broker three years running [market_position, transaction_volume, awards_recognition]. The growth engine is agent recruitment and deal sourcing — they built the firm from a two-person El Segundo office into a regional force by adding producers and feeding them better intelligence than competitors can [geographic_expansion, founding_date]. The goal is more closings per agent, not more agents per closing.\n\nTHE OBSTACLE:\nAt 125+ agents across 4 offices [team_size], the bottleneck is no longer brand or reputation — it's lead quality reaching each producer's desk. Multifamily investment brokerage lives and dies on who calls the motivated seller first: the owner facing a 1031 deadline, the absentee landlord bleeding on expenses, the inheritance situation about to fracture. Every agent is running their own version of manual research — pulling county records, cross-referencing ownership, guessing at motivation — and the data is inconsistent across the floor. The firm has the volume and the awards [awards_recognition]; what leaks value is the gap between a name on a list and a story about why that owner picks up the phone today.\n\nTHE OLD WAY FAILS:\nThe standard approach — list vendors, skip-tracing services, bulk enrichment pulls — delivers names without context. A vendor pitching at $15,000 for 40 enriched contacts [seller_proof] is the ceiling of what the market currently offers: expensive, thin, and rebuilt from scratch every cycle because the underlying system isn't durable. For a brokerage closing 3,600+ transactions [transaction_volume] and ranked on MHN's top brokerage list [news_mention], generic list-pulls don't separate Lyon Stahl's agents from every other caller dialing the same county export. The agents who win are the ones who show up knowing the owner's situation — the life stage, the equity position, the pressure point — before the first word is spoken. Bulk data doesn't build that. Manual research doesn't scale to 125 agents.\n\nTHE BETTER PATH:\nJohnny builds the data-and-story layer that sits underneath the outreach — scraping, enrichment, and a durable CRM-style system rerunnable without a rebuild every two months [seller_positioning]. The 'name + LinkedIn' Google-search hack hits ~85% where scrapers get accounts flagged [seller_proof], meaning agents get verified contact context, not bounced emails. LinkedIn outreach on enriched, story-matched leads runs ~40% reply rate versus ~2% on cold email [seller_proof] — the difference between a pipeline and a prayer. The model is already proven in adjacent deal flow: a real-estate investor client structured at $4–5K flat plus 10–20% commission [seller_proof]; a marketing agency on a signed $5,040 two-month contract with ~$250/month running costs [seller_proof]. The system replaces the manual research hire and produces leads with a WHY attached, not just a who.\nOpening line, Johnny's voice: \"You've got 125 agents all dialing the same county lists — I build the layer that tells each one why this owner sells before they pick up the phone.\"\n\nTHE BETTER OUTCOME:\nEach Lyon Stahl agent goes into a call already holding the owner's story — life stage, motivation signal, equity read — so the conversation starts at trust, not cold introduction. Deal sourcing becomes a repeatable system, not a per-agent lottery. The firm that already owns #1 multifamily market share [market_position] in Los Angeles gets a durable data infrastructure that compounds: every new agent recruited plugs into the same enriched pipeline, every office expansion runs on the same rerunnable system. The CoStar Power Broker streak continues not because the brand got louder, but because the producers got sharper leads — and the brokerage controls that advantage internally rather than renting it from a vendor at $15,000 for 40 contacts [seller_proof].",
+        "score": {
+          "grounding": 0.55,
+          "completeness": 0.8,
+          "narrative_arc": 0.5,
+          "feasibility": 0.7,
+          "competitive_diff": 0.7,
+          "metric_confidence": 0.6,
+          "verdict": "regen",
+          "failReason": "fabricatedClaims contains unmatched factual claims",
+          "fabricatedClaims": [
+            "The CoStar Power Broker streak continues not because the brand got louder, but because the producers got sharper leads — and the brokerage controls that advantage internally rather than renting it from a vendor at $15,000 for 40 contacts"
+          ]
+        },
+        "fabricatedClaims": [
+          "The CoStar Power Broker streak continues not because the brand got louder, but because the producers got sharper leads — and the brokerage controls that advantage internally rather than renting it from a vendor at $15,000 for 40 contacts"
+        ],
+        "costCents": 4,
+        "latencyMs": 29897,
+        "ts": "2026-06-12T23:14:30.408Z"
+      },
+      {
+        "generation": 1,
+        "story": "THE GOAL:\nLyon Stahl wants to be the dominant multifamily brokerage in Southern California — not just by volume, but by making every one of their 125+ agents a sharper producer. Their site language centers on \"market intelligence and deal sourcing\" as a competitive edge, and their recruitment pitch is built on knowledge-sharing culture [founding_date, team_size, geographic_expansion]. The goal is compounding market share, not just closing the next deal.\n\nTHE OBSTACLE:\nAt their scale — four offices, a large agent roster, and a pipeline that spans acquisitions, dispositions, and 1031 exchanges — the bottleneck isn't brand or relationships [market_position, awards_recognition]. It's the cost and consistency of lead intelligence. Every agent prospecting multifamily owners in LA County is working from raw county lists or third-party data that arrives stale, thin on story, and wrong often enough to break trust on the first call. The brokerage's edge lives in its people; the data layer underneath them doesn't match that standard.\n\nTHE OLD WAY FAILS:\nThe current approach — buying enriched contact lists from vendors or assigning manual research to agents — has a structural ceiling. Vendor lists arrive at prices like $15,000 for roughly 40 enriched contacts [seller_proof], which is a losing unit economics at any volume. Manual research doesn't scale across a 125-agent team [team_size] without becoming a full headcount problem. And cold email, the default outreach channel, runs at roughly 2% reply rates [seller_proof] — meaning the majority of the prospecting effort produces nothing. CoStar Power Broker recognition three years running [awards_recognition] proves the brand is working; it also means the next competitive gap opens at the data and outreach layer, not the brand layer.\n\nTHE BETTER PATH:\nJohnny builds the data and story layer that replaces the manual research hire — scraping, enrichment, CRM-from-scratch — as a durable system that reruns without being rebuilt every two months [seller_positioning]. The \"name + LinkedIn\" search approach hits roughly 85% of targets without getting accounts flagged the way scrapers do [seller_proof]. LinkedIn outreach built on that enriched layer runs at roughly 40% reply rates versus the 2% cold email baseline their agents are likely hitting now [seller_proof]. The pricing model is a flat base plus commission — a real-estate investor client recently anchored at $4–5K flat plus 10–20% commission [seller_proof], a fraction of the $15,000-for-40-contacts vendor price [seller_proof]. The system is built once and rerun on their existing lead data, not rented.\nOpening angle, in Johnny's voice: \"Your agents are CoStar's top producers three years straight — the question is whether the data underneath their prospecting calls is anywhere close to that standard, or if it's still costing them the first conversation.\"\n\nTHE BETTER OUTCOME:\nLyon Stahl's agents go into owner conversations with enriched, story-backed profiles — not a name and a county record. Reply rates on LinkedIn outreach move from the 2% cold-email floor toward the 40% range [seller_proof], which means more first conversations per agent per week without adding headcount. The brokerage owns the system and the data — it's a CRM-style asset that compounds with every rerun, not a vendor dependency that resets at renewal. That's a structural advantage the brand can control internally, at a unit cost that makes sense at their scale [team_size, geographic_expansion].",
+        "score": {
+          "grounding": 0.55,
+          "completeness": 0.8,
+          "narrative_arc": 0.5,
+          "feasibility": 0.7,
+          "competitive_diff": 0.7,
+          "metric_confidence": 0.6,
+          "verdict": "regen",
+          "failReason": "fabricatedClaims contains ungrounded factual claims",
+          "fabricatedClaims": [
+            "$15,000 for roughly 40 enriched contacts",
+            "roughly 85% of targets",
+            "reply rates on LinkedIn outreach move from the 2% cold-email floor toward the 40% range"
+          ]
+        },
+        "fabricatedClaims": [
+          "$15,000 for roughly 40 enriched contacts",
+          "roughly 85% of targets",
+          "reply rates on LinkedIn outreach move from the 2% cold-email floor toward the 40% range"
+        ],
+        "costCents": 4,
+        "latencyMs": 27809,
+        "ts": "2026-06-12T23:15:00.207Z"
+      },
+      {
+        "generation": 2,
+        "story": "THE GOAL:\nLyon Stahl wants to hold the #1 multifamily market share position in Southern California — not just claim it, but compound it. Their site language is producer-first: more closes, sharper deal flow, agents who out-source and out-pitch the competition [market_position, transaction_volume].\n\nTHE OBSTACLE:\nWith 125+ agents across 4 offices [team_size], the bottleneck isn't hustle — it's the quality of the data each producer is working from. Every agent running their own manual research on county records, Zillow, and scattered databases is starting from a different, inconsistently enriched list. The firm's growth from a two-person El Segundo office to a multi-office Southern California force [geographic_expansion] means the informal 'I know this owner' network no longer scales across 125+ people.\n\nTHE OLD WAY FAILS:\nManual enrichment at scale breaks in two places: accuracy and speed. When agents are sourcing their own contacts, the data quality is uneven — wrong emails, stale phone numbers, missing LinkedIn handles — and there's no shared, rerunnable system underneath. The CoStar Power Broker streak (2023, 2024, 2025) [awards_recognition] was built on producer sharpness, but that edge erodes the moment a competitor builds a cleaner data layer and gets to the owner first. Recognition from GlobeSt. and Inc. 5000 [awards_recognition] signals the brand is loud enough — the constraint now is whether the lead intelligence feeding 125+ producers is durable or disposable.\n\nTHE BETTER PATH:\nJohnny builds the data-and-story layer that sits underneath Lyon Stahl's existing outreach — scraping, enrichment, CRM-from-scratch — so every agent works from the same clean, rerunnable system instead of rebuilding it individually each cycle [seller_pack]. The 'name + LinkedIn' Google-search method hits roughly 85% of targets without getting accounts flagged the way automated scrapers do [seller_pack]. LinkedIn outreach running on enriched, story-matched contacts returns around 40% reply rates versus the roughly 2% a cold email list produces [seller_pack]. The pricing structure that closed a marketing agency — a fixed engagement plus low monthly running costs [seller_pack] — means Lyon Stahl owns the asset, not rents access to it.\nOpening angle, in Johnny's voice: \"Your producers are already the sharpest in the market — the question is whether the data layer underneath them is as sharp as they are, or whether they're rebuilding it from scratch every time.\"\n\nTHE BETTER OUTCOME:\nLyon Stahl's 125+ agents stop losing the first-contact race to whoever happened to enrich their list more carefully that week. The brokerage owns a durable, rerunnable data system — not a vendor dependency that needs to be rebuilt every two months [seller_pack]. Each producer works from enriched, story-matched contacts with LinkedIn handles attached, which means the reply rates that actually move deals forward become a structural advantage, not a lucky quarter. The firm that already holds #1 multifamily market share [market_position] gets to defend that position with a data infrastructure that compounds — every new agent added to the platform makes the system more valuable, not more chaotic.",
+        "score": {
+          "grounding": 0.55,
+          "completeness": 0.8,
+          "narrative_arc": 0.5,
+          "feasibility": 0.7,
+          "competitive_diff": 0.7,
+          "metric_confidence": 0.6,
+          "verdict": "regen",
+          "failReason": "fabricatedClaims contains ungrounded specifics",
+          "fabricatedClaims": [
+            "roughly 85% of targets",
+            "40% reply rates",
+            "2% a cold email list produces"
+          ]
+        },
+        "fabricatedClaims": [
+          "roughly 85% of targets",
+          "40% reply rates",
+          "2% a cold email list produces"
+        ],
+        "costCents": 4,
+        "latencyMs": 34920,
+        "ts": "2026-06-12T23:15:38.248Z"
+      }
+    ],
+    "costCents": 13,
+    "totalLatencyMs": 106752,
+    "createdAt": "2026-06-12T23:13:51.496Z"
+  },
+  "events": [
+    {
+      "t": 0,
+      "event": {
+        "type": "run_started",
+        "leadId": "ld_4a0d905c",
+        "url": "https://www.lyonstahl.com",
+        "mode": "live",
+        "label": "LIVE"
+      }
+    },
+    {
+      "t": 2,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_4a0d905c",
+        "node": "scrape"
+      }
+    },
+    {
+      "t": 638,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_4a0d905c",
+        "node": "enrich"
+      }
+    },
+    {
+      "t": 8941,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_4a0d905c",
+        "node": "ground"
+      }
+    },
+    {
+      "t": 9014,
+      "event": {
+        "type": "scrape_done",
+        "leadId": "ld_4a0d905c",
+        "brief": {
+          "domain": "www.lyonstahl.com",
+          "name": "Lyon Stahl Investment Real Estate",
+          "url": "https://www.lyonstahl.com",
+          "what_they_do": "A multifamily investment brokerage serving Los Angeles and Southern California, specializing in acquisitions, dispositions, and 1031 exchanges for multifamily assets. They operate as a commercial real estate brokerage with 125+ agents across 4 offices.",
+          "founded_year": 2014,
+          "key_features": [
+            "Multifamily acquisitions and dispositions",
+            "1031 exchange services",
+            "Market intelligence and deal sourcing",
+            "Commercial and luxury single-family listings",
+            "Property valuation services",
+            "Agent recruitment and coaching"
+          ],
+          "competitors": [],
+          "tech_stack": [],
+          "funding_stage": null,
+          "funding_amount": null,
+          "employee_count": 125,
+          "category": "Commercial Real Estate Brokerage",
+          "current_messaging_channels": [
+            "email",
+            "phone",
+            "SMS",
+            "contact form"
+          ],
+          "github_url": null,
+          "partnership_potential": true,
+          "pitch_angle": "forced_sale",
+          "features": {
+            "multifamily_brokerage": true,
+            "1031_exchanges": true,
+            "market_intelligence": true,
+            "commercial_listings": true,
+            "luxury_single_family": true,
+            "valuation_services": true,
+            "agent_recruitment": true
+          },
+          "signals": [
+            {
+              "signal_type": "founding_date",
+              "source": "firecrawl:scrape",
+              "source_url": "https://www.lyonstahl.com",
+              "detail": "Founded in 2014 by Brett Lyon and Woody Stahl",
+              "strength": 1
+            },
+            {
+              "signal_type": "transaction_volume",
+              "source": "firecrawl:scrape",
+              "source_url": "https://www.lyonstahl.com",
+              "detail": "Over $5.9 billion closed across more than 3,600 transactions",
+              "strength": 1
+            },
+            {
+              "signal_type": "market_position",
+              "source": "firecrawl:scrape",
+              "source_url": "https://www.lyonstahl.com",
+              "detail": "#1 Multifamily Market Share",
+              "strength": 0.9
+            },
+            {
+              "signal_type": "team_size",
+              "source": "firecrawl:scrape",
+              "source_url": "https://www.lyonstahl.com",
+              "detail": "125+ agents. 4 offices.",
+              "strength": 1
+            },
+            {
+              "signal_type": "awards_recognition",
+              "source": "firecrawl:scrape",
+              "source_url": "https://www.lyonstahl.com",
+              "detail": "CoStar Power Broker Top Sales Firm in Los Angeles in 2023, 2024, and 2025; GlobeSt. 2025 Influencer in Multifamily; LA Times Studios 2025 Top Commercial Real Estate Firm; Inc. 5000 fastest-growing private companies",
+              "strength": 1
+            },
+            {
+              "signal_type": "geographic_expansion",
+              "source": "firecrawl:scrape",
+              "source_url": "https://www.lyonstahl.com",
+              "detail": "Grown from a two-person office in El Segundo into one of the most active multifamily investment brokerages in Southern California with offices in El Segundo, Long Beach, San Bernardino, and Los Angeles",
+              "strength": 1
+            },
+            {
+              "signal_type": "news_mention",
+              "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+              "source_url": "https://www.multihousingnews.com/top-multifamily-brokerage-firms/",
+              "detail": "2026 Top Brokerage Firms — MHN unveils its annual ranking highlighting 15 leading firms, including best performers for investment and product diversity. MHN Real...",
+              "strength": 0.55
+            },
+            {
+              "signal_type": "news_mention",
+              "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+              "source_url": "https://dailybruin.com/2025/10/30/historic-holmby-hall-sold-for-32675000-with-new-potential-for-local-businesses",
+              "detail": "Historic Holmby Hall sold for $32,675,000 with new potential for local businesses — Westwood's historic Holmby Hall sold for $32,675,000 in early October, marking one of the largest Westwood Village real estate sales in the...",
+              "strength": 0.55
+            },
+            {
+              "signal_type": "news_mention",
+              "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+              "source_url": "https://www.issuewire.com/christopher-bald-recognized-by-bestagentsus-as-a-2025-top-agent-1839867551838023",
+              "detail": "Christopher Bald, Recognized by BestAgents.us as a 2025 Top Agent — Lyon Stahl Investment Real Estate Strengthens Leadership in Commercial Property Transactions with Christopher Bald.",
+              "strength": 0.55
+            },
+            {
+              "signal_type": "hn_mentions_actual",
+              "source": "clickhouse:hackernews",
+              "source_url": "https://sql.clickhouse.com/?query=SELECT%20count()%20AS%20c%20FROM%20hackernews.hackernews%20WHERE%20title%20ILIKE%20'%25Lyon%20Stahl%20Investment%20Real%20Estate%25'",
+              "detail": "Hacker News title mentions of \"Lyon Stahl Investment Real Estate\": 0 (live count, hackernews.hackernews) — zero HN title mentions; do NOT claim HN traction.",
+              "strength": 0.7
+            },
+            {
+              "signal_type": "seller_positioning",
+              "source": "positioning",
+              "source_url": "input://positioning",
+              "detail": "i'm johnny — an independent AI-automations marketer. i build the data+story layer for sales teams: scraping, enrichment, CRM-from-scratch, agent systems. receipts: built Vortex for a marketing agency on a signed $5,040 two-month contract; ~40% LinkedIn reply rates vs 2% cold email. the system replaces the manual research hire.",
+              "strength": 8
+            },
+            {
+              "signal_type": "person_scrape_degraded",
+              "source": "harness",
+              "source_url": "",
+              "detail": "PERSON SCRAPE DEGRADED: person stage skipped: no person inputs on the run (linkedinUrl/xHandle/name all absent)",
+              "strength": 0
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "Real-estate investor client agreed $4-5k flat + 10-20% commission ('anywhere from 4 5 K would be sick')",
+              "strength": 8
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "Marketing agency signed fixed $5,040 / 2 months / 4 modules + ~$250/mo running costs",
+              "strength": 7
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "'name + linkedin' Google-search hack: ~85% hit rate where scrapers get accounts flagged",
+              "strength": 6
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "LinkedIn outreach ~40% reply rate vs cold email ~2% ('if you're doing like good')",
+              "strength": 5
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "The pricing anchor to beat: refused vendor at '$15,000 and it's like 40 enriched'",
+              "strength": 5
+            }
+          ],
+          "brief": "Lyon Stahl Investment Real Estate is a Los Angeles-based multifamily brokerage founded in 2014 by Brett Lyon and Woody Stahl, now operating 125+ agents across 4 Southern California offices with $5.9B in closed transactions and #1 multifamily market share. The firm specializes in acquisitions, dispositions, 1031 exchanges, and commercial real estate services, positioning itself as a collaborative, knowledge-sharing alternative to traditional brokerages. Recent recognition includes CoStar Power Broker Top Firm (2023-2025), GlobeSt. Influencer in Multifamily (2025), and Inc. 5000 fastest-growing companies.",
+          "industry": "realestate"
+        }
+      }
+    },
+    {
+      "t": 9015,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_4a0d905c",
+        "node": "draft"
+      }
+    },
+    {
+      "t": 35946,
+      "event": {
+        "type": "draft_done",
+        "leadId": "ld_4a0d905c",
+        "generation": 0,
+        "story": "THE GOAL:\nLyon Stahl wants to be the dominant multifamily brokerage in Southern California — not just #1 by market share, but the firm that closes more deals per agent than anyone else. Their site says it plainly: 125+ agents, 4 offices, $5.9B closed, CoStar Power Broker three years running [market_position, transaction_volume, awards_recognition]. The growth engine is agent recruitment and deal sourcing — they built the firm from a two-person El Segundo office into a regional force by adding producers and feeding them better intelligence than competitors can [geographic_expansion, founding_date]. The goal is more closings per agent, not more agents per closing.\n\nTHE OBSTACLE:\nAt 125+ agents across 4 offices [team_size], the bottleneck is no longer brand or reputation — it's lead quality reaching each producer's desk. Multifamily investment brokerage lives and dies on who calls the motivated seller first: the owner facing a 1031 deadline, the absentee landlord bleeding on expenses, the inheritance situation about to fracture. Every agent is running their own version of manual research — pulling county records, cross-referencing ownership, guessing at motivation — and the data is inconsistent across the floor. The firm has the volume and the awards [awards_recognition]; what leaks value is the gap between a name on a list and a story about why that owner picks up the phone today.\n\nTHE OLD WAY FAILS:\nThe standard approach — list vendors, skip-tracing services, bulk enrichment pulls — delivers names without context. A vendor pitching at $15,000 for 40 enriched contacts [seller_proof] is the ceiling of what the market currently offers: expensive, thin, and rebuilt from scratch every cycle because the underlying system isn't durable. For a brokerage closing 3,600+ transactions [transaction_volume] and ranked on MHN's top brokerage list [news_mention], generic list-pulls don't separate Lyon Stahl's agents from every other caller dialing the same county export. The agents who win are the ones who show up knowing the owner's situation — the life stage, the equity position, the pressure point — before the first word is spoken. Bulk data doesn't build that. Manual research doesn't scale to 125 agents.\n\nTHE BETTER PATH:\nJohnny builds the data-and-story layer that sits underneath the outreach — scraping, enrichment, and a durable CRM-style system rerunnable without a rebuild every two months [seller_positioning]. The 'name + LinkedIn' Google-search hack hits ~85% where scrapers get accounts flagged [seller_proof], meaning agents get verified contact context, not bounced emails. LinkedIn outreach on enriched, story-matched leads runs ~40% reply rate versus ~2% on cold email [seller_proof] — the difference between a pipeline and a prayer. The model is already proven in adjacent deal flow: a real-estate investor client structured at $4–5K flat plus 10–20% commission [seller_proof]; a marketing agency on a signed $5,040 two-month contract with ~$250/month running costs [seller_proof]. The system replaces the manual research hire and produces leads with a WHY attached, not just a who.\nOpening line, Johnny's voice: \"You've got 125 agents all dialing the same county lists — I build the layer that tells each one why this owner sells before they pick up the phone.\"\n\nTHE BETTER OUTCOME:\nEach Lyon Stahl agent goes into a call already holding the owner's story — life stage, motivation signal, equity read — so the conversation starts at trust, not cold introduction. Deal sourcing becomes a repeatable system, not a per-agent lottery. The firm that already owns #1 multifamily market share [market_position] in Los Angeles gets a durable data infrastructure that compounds: every new agent recruited plugs into the same enriched pipeline, every office expansion runs on the same rerunnable system. The CoStar Power Broker streak continues not because the brand got louder, but because the producers got sharper leads — and the brokerage controls that advantage internally rather than renting it from a vendor at $15,000 for 40 contacts [seller_proof].",
+        "pitch_angle": "absentee_fatigue"
+      }
+    },
+    {
+      "t": 35947,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_4a0d905c",
+        "node": "judge"
+      }
+    },
+    {
+      "t": 38911,
+      "event": {
+        "type": "score_done",
+        "leadId": "ld_4a0d905c",
+        "generation": 0,
+        "score": {
+          "grounding": 0.55,
+          "completeness": 0.8,
+          "narrative_arc": 0.5,
+          "feasibility": 0.7,
+          "competitive_diff": 0.7,
+          "metric_confidence": 0.6,
+          "verdict": "regen",
+          "failReason": "fabricatedClaims contains unmatched factual claims",
+          "fabricatedClaims": [
+            "The CoStar Power Broker streak continues not because the brand got louder, but because the producers got sharper leads — and the brokerage controls that advantage internally rather than renting it from a vendor at $15,000 for 40 contacts"
+          ]
+        }
+      }
+    },
+    {
+      "t": 38912,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_4a0d905c",
+        "node": "reenrich"
+      }
+    },
+    {
+      "t": 40902,
+      "event": {
+        "type": "reenrich",
+        "leadId": "ld_4a0d905c",
+        "generation": 0,
+        "reason": "fabricatedClaims contains unmatched factual claims"
+      }
+    },
+    {
+      "t": 40902,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_4a0d905c",
+        "node": "draft"
+      }
+    },
+    {
+      "t": 64631,
+      "event": {
+        "type": "draft_done",
+        "leadId": "ld_4a0d905c",
+        "generation": 1,
+        "story": "THE GOAL:\nLyon Stahl wants to be the dominant multifamily brokerage in Southern California — not just by volume, but by making every one of their 125+ agents a sharper producer. Their site language centers on \"market intelligence and deal sourcing\" as a competitive edge, and their recruitment pitch is built on knowledge-sharing culture [founding_date, team_size, geographic_expansion]. The goal is compounding market share, not just closing the next deal.\n\nTHE OBSTACLE:\nAt their scale — four offices, a large agent roster, and a pipeline that spans acquisitions, dispositions, and 1031 exchanges — the bottleneck isn't brand or relationships [market_position, awards_recognition]. It's the cost and consistency of lead intelligence. Every agent prospecting multifamily owners in LA County is working from raw county lists or third-party data that arrives stale, thin on story, and wrong often enough to break trust on the first call. The brokerage's edge lives in its people; the data layer underneath them doesn't match that standard.\n\nTHE OLD WAY FAILS:\nThe current approach — buying enriched contact lists from vendors or assigning manual research to agents — has a structural ceiling. Vendor lists arrive at prices like $15,000 for roughly 40 enriched contacts [seller_proof], which is a losing unit economics at any volume. Manual research doesn't scale across a 125-agent team [team_size] without becoming a full headcount problem. And cold email, the default outreach channel, runs at roughly 2% reply rates [seller_proof] — meaning the majority of the prospecting effort produces nothing. CoStar Power Broker recognition three years running [awards_recognition] proves the brand is working; it also means the next competitive gap opens at the data and outreach layer, not the brand layer.\n\nTHE BETTER PATH:\nJohnny builds the data and story layer that replaces the manual research hire — scraping, enrichment, CRM-from-scratch — as a durable system that reruns without being rebuilt every two months [seller_positioning]. The \"name + LinkedIn\" search approach hits roughly 85% of targets without getting accounts flagged the way scrapers do [seller_proof]. LinkedIn outreach built on that enriched layer runs at roughly 40% reply rates versus the 2% cold email baseline their agents are likely hitting now [seller_proof]. The pricing model is a flat base plus commission — a real-estate investor client recently anchored at $4–5K flat plus 10–20% commission [seller_proof], a fraction of the $15,000-for-40-contacts vendor price [seller_proof]. The system is built once and rerun on their existing lead data, not rented.\nOpening angle, in Johnny's voice: \"Your agents are CoStar's top producers three years straight — the question is whether the data underneath their prospecting calls is anywhere close to that standard, or if it's still costing them the first conversation.\"\n\nTHE BETTER OUTCOME:\nLyon Stahl's agents go into owner conversations with enriched, story-backed profiles — not a name and a county record. Reply rates on LinkedIn outreach move from the 2% cold-email floor toward the 40% range [seller_proof], which means more first conversations per agent per week without adding headcount. The brokerage owns the system and the data — it's a CRM-style asset that compounds with every rerun, not a vendor dependency that resets at renewal. That's a structural advantage the brand can control internally, at a unit cost that makes sense at their scale [team_size, geographic_expansion].",
+        "pitch_angle": "absentee_fatigue"
+      }
+    },
+    {
+      "t": 64632,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_4a0d905c",
+        "node": "judge"
+      }
+    },
+    {
+      "t": 68711,
+      "event": {
+        "type": "score_done",
+        "leadId": "ld_4a0d905c",
+        "generation": 1,
+        "score": {
+          "grounding": 0.55,
+          "completeness": 0.8,
+          "narrative_arc": 0.5,
+          "feasibility": 0.7,
+          "competitive_diff": 0.7,
+          "metric_confidence": 0.6,
+          "verdict": "regen",
+          "failReason": "fabricatedClaims contains ungrounded factual claims",
+          "fabricatedClaims": [
+            "$15,000 for roughly 40 enriched contacts",
+            "roughly 85% of targets",
+            "reply rates on LinkedIn outreach move from the 2% cold-email floor toward the 40% range"
+          ]
+        }
+      }
+    },
+    {
+      "t": 68712,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_4a0d905c",
+        "node": "reenrich"
+      }
+    },
+    {
+      "t": 71831,
+      "event": {
+        "type": "reenrich",
+        "leadId": "ld_4a0d905c",
+        "generation": 1,
+        "reason": "fabricatedClaims contains ungrounded factual claims"
+      }
+    },
+    {
+      "t": 71833,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_4a0d905c",
+        "node": "draft"
+      }
+    },
+    {
+      "t": 94724,
+      "event": {
+        "type": "draft_done",
+        "leadId": "ld_4a0d905c",
+        "generation": 2,
+        "story": "THE GOAL:\nLyon Stahl wants to hold the #1 multifamily market share position in Southern California — not just claim it, but compound it. Their site language is producer-first: more closes, sharper deal flow, agents who out-source and out-pitch the competition [market_position, transaction_volume].\n\nTHE OBSTACLE:\nWith 125+ agents across 4 offices [team_size], the bottleneck isn't hustle — it's the quality of the data each producer is working from. Every agent running their own manual research on county records, Zillow, and scattered databases is starting from a different, inconsistently enriched list. The firm's growth from a two-person El Segundo office to a multi-office Southern California force [geographic_expansion] means the informal 'I know this owner' network no longer scales across 125+ people.\n\nTHE OLD WAY FAILS:\nManual enrichment at scale breaks in two places: accuracy and speed. When agents are sourcing their own contacts, the data quality is uneven — wrong emails, stale phone numbers, missing LinkedIn handles — and there's no shared, rerunnable system underneath. The CoStar Power Broker streak (2023, 2024, 2025) [awards_recognition] was built on producer sharpness, but that edge erodes the moment a competitor builds a cleaner data layer and gets to the owner first. Recognition from GlobeSt. and Inc. 5000 [awards_recognition] signals the brand is loud enough — the constraint now is whether the lead intelligence feeding 125+ producers is durable or disposable.\n\nTHE BETTER PATH:\nJohnny builds the data-and-story layer that sits underneath Lyon Stahl's existing outreach — scraping, enrichment, CRM-from-scratch — so every agent works from the same clean, rerunnable system instead of rebuilding it individually each cycle [seller_pack]. The 'name + LinkedIn' Google-search method hits roughly 85% of targets without getting accounts flagged the way automated scrapers do [seller_pack]. LinkedIn outreach running on enriched, story-matched contacts returns around 40% reply rates versus the roughly 2% a cold email list produces [seller_pack]. The pricing structure that closed a marketing agency — a fixed engagement plus low monthly running costs [seller_pack] — means Lyon Stahl owns the asset, not rents access to it.\nOpening angle, in Johnny's voice: \"Your producers are already the sharpest in the market — the question is whether the data layer underneath them is as sharp as they are, or whether they're rebuilding it from scratch every time.\"\n\nTHE BETTER OUTCOME:\nLyon Stahl's 125+ agents stop losing the first-contact race to whoever happened to enrich their list more carefully that week. The brokerage owns a durable, rerunnable data system — not a vendor dependency that needs to be rebuilt every two months [seller_pack]. Each producer works from enriched, story-matched contacts with LinkedIn handles attached, which means the reply rates that actually move deals forward become a structural advantage, not a lucky quarter. The firm that already holds #1 multifamily market share [market_position] gets to defend that position with a data infrastructure that compounds — every new agent added to the platform makes the system more valuable, not more chaotic.",
+        "pitch_angle": "absentee_fatigue"
+      }
+    },
+    {
+      "t": 94724,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_4a0d905c",
+        "node": "judge"
+      }
+    },
+    {
+      "t": 106751,
+      "event": {
+        "type": "score_done",
+        "leadId": "ld_4a0d905c",
+        "generation": 2,
+        "score": {
+          "grounding": 0.55,
+          "completeness": 0.8,
+          "narrative_arc": 0.5,
+          "feasibility": 0.7,
+          "competitive_diff": 0.7,
+          "metric_confidence": 0.6,
+          "verdict": "regen",
+          "failReason": "fabricatedClaims contains ungrounded specifics",
+          "fabricatedClaims": [
+            "roughly 85% of targets",
+            "40% reply rates",
+            "2% a cold email list produces"
+          ]
+        }
+      }
+    },
+    {
+      "t": 106752,
+      "event": {
+        "type": "failed",
+        "leadId": "ld_4a0d905c",
+        "stage": "judge",
+        "error": "grounding failed after 3 generations (fail-CLOSED, refusing to ship): fabricatedClaims contains ungrounded specifics"
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "_planted": "now pays Linq five figures a month for iMessage delivery",
+  "_planted_note": "ONE plausible-but-unsourced claim lives in what_they_do prose with NO matching Signal (SOTARE R7). The judge corpus is signals[] ONLY, so the catch provably fires. zCompanyBrief.parse strips _-prefixed keys at the node boundary. NOTE: data/leads/lindy.ai.json (no .brief) is the RAW SCRAPE CACHE written by the live Firecrawl path — different shape, do not confuse.",
+  "industry": "gtm",
+  "provenance": "fixture · facts trace to data/leads/source/lindy.ai.md (photon-gtm research) · deterministic failover brief for the live gtm spine",
+  "domain": "lindy.ai",
+  "name": "Lindy",
+  "url": "https://lindy.ai",
+  "what_they_do": "No-code AI agent platform: inbox, scheduling, voice, workflows across 5,000+ integrations. Users text their Lindy assistant 24/7 via iMessage/SMS, email, or Slack. Founded 2023 by Flo Crivello, ~$50M total (Series A), ~37 employees, $5.1M ARR 2024. Uses Linq for iMessage and now pays Linq five figures a month for iMessage delivery.",
+  "founded_year": 2023,
+  "key_features": ["no-code AI agents", "inbox + scheduling + voice workflows", "5,000+ integrations", "text your assistant 24/7 via iMessage/SMS"],
+  "competitors": [],
+  "tech_stack": ["TypeScript", "Node.js", "React", "Next.js", "GraphQL", "Python"],
+  "funding_stage": "Series A",
+  "funding_amount": "$50M total",
+  "employee_count": 37,
+  "category": "already_imessage",
+  "current_messaging_channels": ["imessage", "sms", "email", "slack"],
+  "github_url": null,
+  "partnership_potential": false,
+  "pitch_angle": "upgrade_from_sms",
+  "features": { "imessage_first_class": true, "uses_linq": true, "built_own_imessage_infra": true },
+  "signals": [
+    { "signal_type": "competitor_usage", "source": "website", "source_url": "https://www.lindy.ai/blog/imessage-api-three-rewrites-one-apple-ban-and-what-actually-works", "detail": "Lindy's own blog confirms they use Linq for iMessage with SMS fallback. Previously ran a Mac Mini in Las Vegas with Swift daemon before three rewrites.", "strength": 10 },
+    { "signal_type": "imessage_explicit", "source": "website", "source_url": "https://www.lindy.ai/", "detail": "iMessage listed as first-class channel; product markets 'text your AI assistant 24/7' via iMessage", "strength": 10 },
+    { "signal_type": "github_code", "source": "website", "source_url": "https://www.lindy.ai/blog/imessage-api-three-rewrites-one-apple-ban-and-what-actually-works", "detail": "Built custom iMessage infrastructure (Swift daemon monitoring chat.db, Private Frameworks injection) — exactly Photon's open-source architecture. Eventually gave up and moved to Linq API.", "strength": 9 },
+    { "signal_type": "funding_event", "source": "news", "source_url": "https://tracxn.com/d/companies/lindy", "detail": "Raised $50M total including Series A; investors include Menlo, Battery, Coatue, Tiger", "strength": 6 },
+    { "signal_type": "convai_hiring_signals", "source": "job_posting", "source_url": "https://careers.lindy.ai/", "detail": "Hiring Full Stack, Staff Engineer, Data Engineer — TypeScript/Node stack matches imessage-kit", "strength": 6 }
+  ],
+  "brief": "Textbook target: AI agent platform where iMessage is first-class, already paying Linq, publicly documented three failed rewrites incl. the exact Swift daemon + chat.db architecture Photon open-sourced. Founder-to-founder SDK adoption at 37 people."
+}

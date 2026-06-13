@@ -1,0 +1,500 @@
+{
+  "leadId": "ld_80de1e51",
+  "url": "https://experiencenve.com",
+  "industry": "marketing",
+  "recordedAt": "2026-06-12T23:17:06.017Z",
+  "stubMode": "0",
+  "events": [
+    {
+      "t": 0,
+      "event": {
+        "type": "run_started",
+        "leadId": "ld_80de1e51",
+        "url": "https://experiencenve.com",
+        "mode": "live",
+        "label": "LIVE"
+      }
+    },
+    {
+      "t": 1,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_80de1e51",
+        "node": "scrape"
+      }
+    },
+    {
+      "t": 604,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_80de1e51",
+        "node": "enrich"
+      }
+    },
+    {
+      "t": 7892,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_80de1e51",
+        "node": "ground"
+      }
+    },
+    {
+      "t": 8055,
+      "event": {
+        "type": "scrape_done",
+        "leadId": "ld_80de1e51",
+        "brief": {
+          "domain": "experiencenve.com",
+          "name": "NVE Experience Agency",
+          "url": "https://experiencenve.com",
+          "what_they_do": "A creative marketing agency that creates transformative brand experiences and events for major consumer brands. They specialize in experiential marketing, event production, content, and communications strategy.",
+          "founded_year": 2005,
+          "key_features": [
+            "Experiential marketing campaigns",
+            "Event production",
+            "Marketing strategy",
+            "Content creation",
+            "Communications",
+            "Brand experience design"
+          ],
+          "competitors": [
+            "Wistia",
+            "Eventbrite",
+            "Experiential marketing agencies"
+          ],
+          "tech_stack": [],
+          "funding_stage": null,
+          "funding_amount": null,
+          "employee_count": null,
+          "category": "experiential-marketing-agency",
+          "current_messaging_channels": [
+            "email",
+            "tiktok",
+            "facebook",
+            "instagram",
+            "linkedin",
+            "pinterest"
+          ],
+          "github_url": null,
+          "partnership_potential": true,
+          "pitch_angle": "positioning",
+          "features": {
+            "event_production": true,
+            "experiential_marketing": true,
+            "content_creation": true,
+            "marketing_strategy": true,
+            "communications": true,
+            "brand_strategy": true
+          },
+          "signals": [
+            {
+              "signal_type": "founding_year",
+              "source": "firecrawl:scrape",
+              "source_url": "https://experiencenve.com",
+              "detail": "Since 2005",
+              "strength": 1
+            },
+            {
+              "signal_type": "value_proposition",
+              "source": "firecrawl:scrape",
+              "source_url": "https://experiencenve.com",
+              "detail": "We are a creative marketing agency helping brands cultivate deeper, more meaningful relationships with their customers.",
+              "strength": 0.95
+            },
+            {
+              "signal_type": "service_offerings",
+              "source": "firecrawl:scrape",
+              "source_url": "https://experiencenve.com",
+              "detail": "Services include Marketing Strategy, Experiential, Event Production, Content, and Communications",
+              "strength": 0.95
+            },
+            {
+              "signal_type": "client_roster",
+              "source": "firecrawl:scrape",
+              "source_url": "https://experiencenve.com",
+              "detail": "Major clients include Disney, Netflix, NBC, Diageo, Pinterest, Alphabet/Waymo, HBO Max, Captain Morgan, Revolve, and BARK",
+              "strength": 0.95
+            },
+            {
+              "signal_type": "mission_statement",
+              "source": "firecrawl:scrape",
+              "source_url": "https://experiencenve.com",
+              "detail": "Our cross-disciplinary experts create transformative brand experiences that position clients at the center of culture, amplify their truth and authenticate their values.",
+              "strength": 0.9
+            },
+            {
+              "signal_type": "company_culture",
+              "source": "firecrawl:scrape",
+              "source_url": "https://experiencenve.com",
+              "detail": "Collectively embodying our mantra, the Polished Hustle, we embrace every endeavor with grit and grace.",
+              "strength": 0.85
+            },
+            {
+              "signal_type": "news_mention",
+              "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+              "source_url": "https://www.einnews.com/pr_news/918302591/nike-brand-marketing-veteran-justin-biskin-joins-nve-experience-agency-to-lead-sports-marketing",
+              "detail": "Nike Brand Marketing Veteran Justin Biskin Joins NVE Experience Agency to Lead Sports Marketing — NVE taps Biskin to accelerate sports practice, guiding brands to earn cultural relevance through transformative experiential marketing.",
+              "strength": 0.55
+            },
+            {
+              "signal_type": "news_mention",
+              "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+              "source_url": "https://www.odwyerpr.com/story/public/24864/2026-06-09/move-fgs-global-names-florry-head-singapore.html",
+              "detail": "PR News | On the Move: FGS Global Names Florry Head of Singapore - Tue., Jun. 9, 2026 — FGS Global brings on Harry Florry as head of Singapore and Andrew Yeo as global policy partner Asia. Florry has been with FGS since 2021,...",
+              "strength": 0.55
+            },
+            {
+              "signal_type": "news_mention",
+              "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+              "source_url": "https://www.campaignlive.com/article/agency-spotlight-nve-experience-agency-moves-experience-upstream/1953820",
+              "detail": "Agency Spotlight: NVE Experience Agency moves experience ‘upstream’ — The agency doubled revenue in key verticals and saw B2B growth surge 175% as it expanded its global footprint and high-level client roster.",
+              "strength": 0.55
+            },
+            {
+              "signal_type": "hn_mentions_actual",
+              "source": "clickhouse:hackernews",
+              "source_url": "https://sql.clickhouse.com/?query=SELECT%20count()%20AS%20c%20FROM%20hackernews.hackernews%20WHERE%20title%20ILIKE%20'%25NVE%20Experience%20Agency%25'",
+              "detail": "Hacker News title mentions of \"NVE Experience Agency\": 0 (live count, hackernews.hackernews) — zero HN title mentions; do NOT claim HN traction.",
+              "strength": 0.7
+            },
+            {
+              "signal_type": "seller_positioning",
+              "source": "positioning",
+              "source_url": "input://positioning",
+              "detail": "i'm johnny — an independent AI-automations marketer. i build the data+story layer for sales teams: scraping, enrichment, CRM-from-scratch, agent systems. receipts: built Vortex for a marketing agency on a signed $5,040 two-month contract; ~40% LinkedIn reply rates vs 2% cold email. the system replaces the manual research hire.",
+              "strength": 8
+            },
+            {
+              "signal_type": "person_scrape_degraded",
+              "source": "harness",
+              "source_url": "",
+              "detail": "PERSON SCRAPE DEGRADED: person stage skipped: no person inputs on the run (linkedinUrl/xHandle/name all absent)",
+              "strength": 0
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://aiden-call-2026-05-28",
+              "detail": "Vortex (experiential agency): signed fixed $5,040 / 2 months / 4 modules",
+              "strength": 8
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://aiden-call-2026-05-28",
+              "detail": "Photon build: 2 months @ ~20 hr/wk",
+              "strength": 7
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://aiden-call-2026-05-28",
+              "detail": "LinkedIn ~40% reply rate vs cold email ~2% — the stat that landed ('Aiden bought it')",
+              "strength": 6
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://aiden-call-2026-05-28",
+              "detail": "'there are like all these little markers that would indicate that somebody has a budget to spend'",
+              "strength": 5
+            }
+          ],
+          "brief": "NVE Experience Agency is an established creative marketing firm founded in 2005 that specializes in creating transformative brand experiences through experiential marketing, event production, and strategic communications. They work with major Fortune 500 and entertainment brands (Netflix, Disney, NBC, Diageo, Alphabet) to design immersive cultural moments and campaigns. The agency positions itself as a cross-disciplinary team that helps brands cultivate deeper customer relationships and position themselves at the center of culture.",
+          "industry": "marketing"
+        }
+      }
+    },
+    {
+      "t": 8056,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_80de1e51",
+        "node": "draft"
+      }
+    },
+    {
+      "t": 34064,
+      "event": {
+        "type": "draft_done",
+        "leadId": "ld_80de1e51",
+        "generation": 0,
+        "story": "THE GOAL:\nNVE wants to own the center of culture for the world's biggest brands — Disney, Netflix, Diageo, Alphabet — by creating transformative experiential moments that 'amplify their truth and authenticate their values' [value_proposition, mission_statement]. The recent hire of a Nike brand marketing veteran to lead a dedicated sports practice signals they're not coasting on 20 years of reputation; they're actively expanding into new verticals and chasing the next tier of cultural relevance [news_mention: Justin Biskin hire]. Revenue doubled in key verticals, B2B growth surged 175% [news_mention: campaignlive] — NVE is in growth mode, which means the pipeline has to keep pace with the ambition.\n\nTHE OBSTACLE:\nYou're essentially running a full-service production house with a consulting brain on top — strategy, experiential design, event production, content, and comms all under one roof [service_offerings]. That shape is genuinely rare. But the same cross-disciplinary complexity that makes NVE irreplaceable for a Netflix activation is exactly what makes systematic new-business development hard. When you're building immersive cultural moments at that scale, the 'Polished Hustle' [company_culture] gets consumed by delivery. The pipeline question — who's the next Disney, who's the next Diageo — lives in someone's head, not in a system. And with a newly launched sports practice that needs to prove itself fast [news_mention: Biskin], the pressure to find the right brand partners at the right moment is real.\n\nTHE OLD WAY FAILS:\nAt NVE's level, the old way is relationships and reputation — and for 20 years, that worked [founding_year]. But 'earned relevance' as a growth strategy has a ceiling: it's geography-bound, it's founder- and senior-team-dependent, and it doesn't scale into new verticals on demand. The sports practice isn't going to build its client roster by waiting for inbound. The B2B surge [news_mention: campaignlive] suggests there's a whole universe of brand-side buyers — procurement leads, CMOs at challenger brands, newly funded consumer companies — who would pay for what NVE does but will never find NVE through the existing relationship graph. Reputation gets you renewals. Signal-driven outreach gets you the next Netflix before your competitor does.\n\nTHE BETTER PATH:\nThis is exactly the problem Johnny solved for Vortex — another experiential agency — on a signed $5,040 two-month engagement [seller_proof: Vortex contract]. The system works like this: scrape for the little markers that indicate budget and timing — a brand just raised a Series B, a CPG just got into Whole Foods, a sports property just signed a new sponsor — then build the name-in-a-box outreach that lands at ~40% LinkedIn reply rate versus the 2% you'd get from cold email [seller_proof: LinkedIn stat]. The founder or the new sports practice lead still owns the relationship; the system just makes sure they're in the room at the right moment, with the right signal, not six months after the budget was already allocated [seller_positioning]. The outreach angle: 'You're literally running a full production company with a consulting brain — the sports practice is the new vertical, and I build the signal layer that finds the right brand at the right moment before they've already picked someone else.'\n\nTHE BETTER OUTCOME:\nNVE's sports practice has a live pipeline of brands showing budget signals — new sponsorships signed, funding rounds closed, cultural moments in flight — before the competition even knows they're in market. The senior team stops being the only antenna for new business and starts being the closers for deals the system already warmed. The cross-disciplinary model that makes NVE irreplaceable gets matched by an outbound motion that's just as precise — so the next Disney-scale client isn't a lucky referral, it's a predictable result.",
+        "pitch_angle": "positioning"
+      }
+    },
+    {
+      "t": 34064,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_80de1e51",
+        "node": "judge"
+      }
+    },
+    {
+      "t": 49385,
+      "event": {
+        "type": "score_done",
+        "leadId": "ld_80de1e51",
+        "generation": 0,
+        "score": {
+          "grounding": 0.8,
+          "completeness": 0.85,
+          "narrative_arc": 0.8,
+          "feasibility": 0.8,
+          "competitive_diff": 0.85,
+          "metric_confidence": 0.8,
+          "verdict": "emit",
+          "failReason": null,
+          "fabricatedClaims": []
+        }
+      }
+    },
+    {
+      "t": 49387,
+      "event": {
+        "type": "gate",
+        "leadId": "ld_80de1e51",
+        "story": "THE GOAL:\nNVE wants to own the center of culture for the world's biggest brands — Disney, Netflix, Diageo, Alphabet — by creating transformative experiential moments that 'amplify their truth and authenticate their values' [value_proposition, mission_statement]. The recent hire of a Nike brand marketing veteran to lead a dedicated sports practice signals they're not coasting on 20 years of reputation; they're actively expanding into new verticals and chasing the next tier of cultural relevance [news_mention: Justin Biskin hire]. Revenue doubled in key verticals, B2B growth surged 175% [news_mention: campaignlive] — NVE is in growth mode, which means the pipeline has to keep pace with the ambition.\n\nTHE OBSTACLE:\nYou're essentially running a full-service production house with a consulting brain on top — strategy, experiential design, event production, content, and comms all under one roof [service_offerings]. That shape is genuinely rare. But the same cross-disciplinary complexity that makes NVE irreplaceable for a Netflix activation is exactly what makes systematic new-business development hard. When you're building immersive cultural moments at that scale, the 'Polished Hustle' [company_culture] gets consumed by delivery. The pipeline question — who's the next Disney, who's the next Diageo — lives in someone's head, not in a system. And with a newly launched sports practice that needs to prove itself fast [news_mention: Biskin], the pressure to find the right brand partners at the right moment is real.\n\nTHE OLD WAY FAILS:\nAt NVE's level, the old way is relationships and reputation — and for 20 years, that worked [founding_year]. But 'earned relevance' as a growth strategy has a ceiling: it's geography-bound, it's founder- and senior-team-dependent, and it doesn't scale into new verticals on demand. The sports practice isn't going to build its client roster by waiting for inbound. The B2B surge [news_mention: campaignlive] suggests there's a whole universe of brand-side buyers — procurement leads, CMOs at challenger brands, newly funded consumer companies — who would pay for what NVE does but will never find NVE through the existing relationship graph. Reputation gets you renewals. Signal-driven outreach gets you the next Netflix before your competitor does.\n\nTHE BETTER PATH:\nThis is exactly the problem Johnny solved for Vortex — another experiential agency — on a signed $5,040 two-month engagement [seller_proof: Vortex contract]. The system works like this: scrape for the little markers that indicate budget and timing — a brand just raised a Series B, a CPG just got into Whole Foods, a sports property just signed a new sponsor — then build the name-in-a-box outreach that lands at ~40% LinkedIn reply rate versus the 2% you'd get from cold email [seller_proof: LinkedIn stat]. The founder or the new sports practice lead still owns the relationship; the system just makes sure they're in the room at the right moment, with the right signal, not six months after the budget was already allocated [seller_positioning]. The outreach angle: 'You're literally running a full production company with a consulting brain — the sports practice is the new vertical, and I build the signal layer that finds the right brand at the right moment before they've already picked someone else.'\n\nTHE BETTER OUTCOME:\nNVE's sports practice has a live pipeline of brands showing budget signals — new sponsorships signed, funding rounds closed, cultural moments in flight — before the competition even knows they're in market. The senior team stops being the only antenna for new business and starts being the closers for deals the system already warmed. The cross-disciplinary model that makes NVE irreplaceable gets matched by an outbound motion that's just as precise — so the next Disney-scale client isn't a lucky referral, it's a predictable result.",
+        "score": {
+          "grounding": 0.8,
+          "completeness": 0.85,
+          "narrative_arc": 0.8,
+          "feasibility": 0.8,
+          "competitive_diff": 0.85,
+          "metric_confidence": 0.8,
+          "verdict": "emit",
+          "failReason": null,
+          "fabricatedClaims": []
+        }
+      }
+    },
+    {
+      "t": 191403,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_80de1e51",
+        "node": "archive"
+      }
+    },
+    {
+      "t": 191587,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_80de1e51",
+        "node": "render"
+      }
+    },
+    {
+      "t": 194504,
+      "event": {
+        "type": "done",
+        "leadId": "ld_80de1e51",
+        "run": {
+          "leadId": "ld_80de1e51",
+          "url": "https://experiencenve.com",
+          "status": "done",
+          "generation": 0,
+          "brief": {
+            "domain": "experiencenve.com",
+            "name": "NVE Experience Agency",
+            "url": "https://experiencenve.com",
+            "what_they_do": "A creative marketing agency that creates transformative brand experiences and events for major consumer brands. They specialize in experiential marketing, event production, content, and communications strategy.",
+            "founded_year": 2005,
+            "key_features": [
+              "Experiential marketing campaigns",
+              "Event production",
+              "Marketing strategy",
+              "Content creation",
+              "Communications",
+              "Brand experience design"
+            ],
+            "competitors": [
+              "Wistia",
+              "Eventbrite",
+              "Experiential marketing agencies"
+            ],
+            "tech_stack": [],
+            "funding_stage": null,
+            "funding_amount": null,
+            "employee_count": null,
+            "category": "experiential-marketing-agency",
+            "current_messaging_channels": [
+              "email",
+              "tiktok",
+              "facebook",
+              "instagram",
+              "linkedin",
+              "pinterest"
+            ],
+            "github_url": null,
+            "partnership_potential": true,
+            "pitch_angle": "positioning",
+            "features": {
+              "event_production": true,
+              "experiential_marketing": true,
+              "content_creation": true,
+              "marketing_strategy": true,
+              "communications": true,
+              "brand_strategy": true
+            },
+            "signals": [
+              {
+                "signal_type": "founding_year",
+                "source": "firecrawl:scrape",
+                "source_url": "https://experiencenve.com",
+                "detail": "Since 2005",
+                "strength": 1
+              },
+              {
+                "signal_type": "value_proposition",
+                "source": "firecrawl:scrape",
+                "source_url": "https://experiencenve.com",
+                "detail": "We are a creative marketing agency helping brands cultivate deeper, more meaningful relationships with their customers.",
+                "strength": 0.95
+              },
+              {
+                "signal_type": "service_offerings",
+                "source": "firecrawl:scrape",
+                "source_url": "https://experiencenve.com",
+                "detail": "Services include Marketing Strategy, Experiential, Event Production, Content, and Communications",
+                "strength": 0.95
+              },
+              {
+                "signal_type": "client_roster",
+                "source": "firecrawl:scrape",
+                "source_url": "https://experiencenve.com",
+                "detail": "Major clients include Disney, Netflix, NBC, Diageo, Pinterest, Alphabet/Waymo, HBO Max, Captain Morgan, Revolve, and BARK",
+                "strength": 0.95
+              },
+              {
+                "signal_type": "mission_statement",
+                "source": "firecrawl:scrape",
+                "source_url": "https://experiencenve.com",
+                "detail": "Our cross-disciplinary experts create transformative brand experiences that position clients at the center of culture, amplify their truth and authenticate their values.",
+                "strength": 0.9
+              },
+              {
+                "signal_type": "company_culture",
+                "source": "firecrawl:scrape",
+                "source_url": "https://experiencenve.com",
+                "detail": "Collectively embodying our mantra, the Polished Hustle, we embrace every endeavor with grit and grace.",
+                "strength": 0.85
+              },
+              {
+                "signal_type": "news_mention",
+                "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+                "source_url": "https://www.einnews.com/pr_news/918302591/nike-brand-marketing-veteran-justin-biskin-joins-nve-experience-agency-to-lead-sports-marketing",
+                "detail": "Nike Brand Marketing Veteran Justin Biskin Joins NVE Experience Agency to Lead Sports Marketing — NVE taps Biskin to accelerate sports practice, guiding brands to earn cultural relevance through transformative experiential marketing.",
+                "strength": 0.55
+              },
+              {
+                "signal_type": "news_mention",
+                "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+                "source_url": "https://www.odwyerpr.com/story/public/24864/2026-06-09/move-fgs-global-names-florry-head-singapore.html",
+                "detail": "PR News | On the Move: FGS Global Names Florry Head of Singapore - Tue., Jun. 9, 2026 — FGS Global brings on Harry Florry as head of Singapore and Andrew Yeo as global policy partner Asia. Florry has been with FGS since 2021,...",
+                "strength": 0.55
+              },
+              {
+                "signal_type": "news_mention",
+                "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+                "source_url": "https://www.campaignlive.com/article/agency-spotlight-nve-experience-agency-moves-experience-upstream/1953820",
+                "detail": "Agency Spotlight: NVE Experience Agency moves experience ‘upstream’ — The agency doubled revenue in key verticals and saw B2B growth surge 175% as it expanded its global footprint and high-level client roster.",
+                "strength": 0.55
+              },
+              {
+                "signal_type": "hn_mentions_actual",
+                "source": "clickhouse:hackernews",
+                "source_url": "https://sql.clickhouse.com/?query=SELECT%20count()%20AS%20c%20FROM%20hackernews.hackernews%20WHERE%20title%20ILIKE%20'%25NVE%20Experience%20Agency%25'",
+                "detail": "Hacker News title mentions of \"NVE Experience Agency\": 0 (live count, hackernews.hackernews) — zero HN title mentions; do NOT claim HN traction.",
+                "strength": 0.7
+              },
+              {
+                "signal_type": "seller_positioning",
+                "source": "positioning",
+                "source_url": "input://positioning",
+                "detail": "i'm johnny — an independent AI-automations marketer. i build the data+story layer for sales teams: scraping, enrichment, CRM-from-scratch, agent systems. receipts: built Vortex for a marketing agency on a signed $5,040 two-month contract; ~40% LinkedIn reply rates vs 2% cold email. the system replaces the manual research hire.",
+                "strength": 8
+              },
+              {
+                "signal_type": "person_scrape_degraded",
+                "source": "harness",
+                "source_url": "",
+                "detail": "PERSON SCRAPE DEGRADED: person stage skipped: no person inputs on the run (linkedinUrl/xHandle/name all absent)",
+                "strength": 0
+              },
+              {
+                "signal_type": "seller_proof",
+                "source": "seller_pack",
+                "source_url": "call://aiden-call-2026-05-28",
+                "detail": "Vortex (experiential agency): signed fixed $5,040 / 2 months / 4 modules",
+                "strength": 8
+              },
+              {
+                "signal_type": "seller_proof",
+                "source": "seller_pack",
+                "source_url": "call://aiden-call-2026-05-28",
+                "detail": "Photon build: 2 months @ ~20 hr/wk",
+                "strength": 7
+              },
+              {
+                "signal_type": "seller_proof",
+                "source": "seller_pack",
+                "source_url": "call://aiden-call-2026-05-28",
+                "detail": "LinkedIn ~40% reply rate vs cold email ~2% — the stat that landed ('Aiden bought it')",
+                "strength": 6
+              },
+              {
+                "signal_type": "seller_proof",
+                "source": "seller_pack",
+                "source_url": "call://aiden-call-2026-05-28",
+                "detail": "'there are like all these little markers that would indicate that somebody has a budget to spend'",
+                "strength": 5
+              }
+            ],
+            "brief": "NVE Experience Agency is an established creative marketing firm founded in 2005 that specializes in creating transformative brand experiences through experiential marketing, event production, and strategic communications. They work with major Fortune 500 and entertainment brands (Netflix, Disney, NBC, Diageo, Alphabet) to design immersive cultural moments and campaigns. The agency positions itself as a cross-disciplinary team that helps brands cultivate deeper customer relationships and position themselves at the center of culture.",
+            "industry": "marketing"
+          },
+          "story": "THE GOAL:\nNVE wants to own the center of culture for the world's biggest brands — Disney, Netflix, Diageo, Alphabet — by creating transformative experiential moments that 'amplify their truth and authenticate their values' [value_proposition, mission_statement]. The recent hire of a Nike brand marketing veteran to lead a dedicated sports practice signals they're not coasting on 20 years of reputation; they're actively expanding into new verticals and chasing the next tier of cultural relevance [news_mention: Justin Biskin hire]. Revenue doubled in key verticals, B2B growth surged 175% [news_mention: campaignlive] — NVE is in growth mode, which means the pipeline has to keep pace with the ambition.\n\nTHE OBSTACLE:\nYou're essentially running a full-service production house with a consulting brain on top — strategy, experiential design, event production, content, and comms all under one roof [service_offerings]. That shape is genuinely rare. But the same cross-disciplinary complexity that makes NVE irreplaceable for a Netflix activation is exactly what makes systematic new-business development hard. When you're building immersive cultural moments at that scale, the 'Polished Hustle' [company_culture] gets consumed by delivery. The pipeline question — who's the next Disney, who's the next Diageo — lives in someone's head, not in a system. And with a newly launched sports practice that needs to prove itself fast [news_mention: Biskin], the pressure to find the right brand partners at the right moment is real.\n\nTHE OLD WAY FAILS:\nAt NVE's level, the old way is relationships and reputation — and for 20 years, that worked [founding_year]. But 'earned relevance' as a growth strategy has a ceiling: it's geography-bound, it's founder- and senior-team-dependent, and it doesn't scale into new verticals on demand. The sports practice isn't going to build its client roster by waiting for inbound. The B2B surge [news_mention: campaignlive] suggests there's a whole universe of brand-side buyers — procurement leads, CMOs at challenger brands, newly funded consumer companies — who would pay for what NVE does but will never find NVE through the existing relationship graph. Reputation gets you renewals. Signal-driven outreach gets you the next Netflix before your competitor does.\n\nTHE BETTER PATH:\nThis is exactly the problem Johnny solved for Vortex — another experiential agency — on a signed $5,040 two-month engagement [seller_proof: Vortex contract]. The system works like this: scrape for the little markers that indicate budget and timing — a brand just raised a Series B, a CPG just got into Whole Foods, a sports property just signed a new sponsor — then build the name-in-a-box outreach that lands at ~40% LinkedIn reply rate versus the 2% you'd get from cold email [seller_proof: LinkedIn stat]. The founder or the new sports practice lead still owns the relationship; the system just makes sure they're in the room at the right moment, with the right signal, not six months after the budget was already allocated [seller_positioning]. The outreach angle: 'You're literally running a full production company with a consulting brain — the sports practice is the new vertical, and I build the signal layer that finds the right brand at the right moment before they've already picked someone else.'\n\nTHE BETTER OUTCOME:\nNVE's sports practice has a live pipeline of brands showing budget signals — new sponsorships signed, funding rounds closed, cultural moments in flight — before the competition even knows they're in market. The senior team stops being the only antenna for new business and starts being the closers for deals the system already warmed. The cross-disciplinary model that makes NVE irreplaceable gets matched by an outbound motion that's just as precise — so the next Disney-scale client isn't a lucky referral, it's a predictable result.",
+          "score": {
+            "grounding": 0.8,
+            "completeness": 0.85,
+            "narrative_arc": 0.8,
+            "feasibility": 0.8,
+            "competitive_diff": 0.85,
+            "metric_confidence": 0.8,
+            "verdict": "emit",
+            "failReason": null,
+            "fabricatedClaims": []
+          },
+          "pitch_angle": "positioning",
+          "generations": [
+            {
+              "generation": 0,
+              "story": "THE GOAL:\nNVE wants to own the center of culture for the world's biggest brands — Disney, Netflix, Diageo, Alphabet — by creating transformative experiential moments that 'amplify their truth and authenticate their values' [value_proposition, mission_statement]. The recent hire of a Nike brand marketing veteran to lead a dedicated sports practice signals they're not coasting on 20 years of reputation; they're actively expanding into new verticals and chasing the next tier of cultural relevance [news_mention: Justin Biskin hire]. Revenue doubled in key verticals, B2B growth surged 175% [news_mention: campaignlive] — NVE is in growth mode, which means the pipeline has to keep pace with the ambition.\n\nTHE OBSTACLE:\nYou're essentially running a full-service production house with a consulting brain on top — strategy, experiential design, event production, content, and comms all under one roof [service_offerings]. That shape is genuinely rare. But the same cross-disciplinary complexity that makes NVE irreplaceable for a Netflix activation is exactly what makes systematic new-business development hard. When you're building immersive cultural moments at that scale, the 'Polished Hustle' [company_culture] gets consumed by delivery. The pipeline question — who's the next Disney, who's the next Diageo — lives in someone's head, not in a system. And with a newly launched sports practice that needs to prove itself fast [news_mention: Biskin], the pressure to find the right brand partners at the right moment is real.\n\nTHE OLD WAY FAILS:\nAt NVE's level, the old way is relationships and reputation — and for 20 years, that worked [founding_year]. But 'earned relevance' as a growth strategy has a ceiling: it's geography-bound, it's founder- and senior-team-dependent, and it doesn't scale into new verticals on demand. The sports practice isn't going to build its client roster by waiting for inbound. The B2B surge [news_mention: campaignlive] suggests there's a whole universe of brand-side buyers — procurement leads, CMOs at challenger brands, newly funded consumer companies — who would pay for what NVE does but will never find NVE through the existing relationship graph. Reputation gets you renewals. Signal-driven outreach gets you the next Netflix before your competitor does.\n\nTHE BETTER PATH:\nThis is exactly the problem Johnny solved for Vortex — another experiential agency — on a signed $5,040 two-month engagement [seller_proof: Vortex contract]. The system works like this: scrape for the little markers that indicate budget and timing — a brand just raised a Series B, a CPG just got into Whole Foods, a sports property just signed a new sponsor — then build the name-in-a-box outreach that lands at ~40% LinkedIn reply rate versus the 2% you'd get from cold email [seller_proof: LinkedIn stat]. The founder or the new sports practice lead still owns the relationship; the system just makes sure they're in the room at the right moment, with the right signal, not six months after the budget was already allocated [seller_positioning]. The outreach angle: 'You're literally running a full production company with a consulting brain — the sports practice is the new vertical, and I build the signal layer that finds the right brand at the right moment before they've already picked someone else.'\n\nTHE BETTER OUTCOME:\nNVE's sports practice has a live pipeline of brands showing budget signals — new sponsorships signed, funding rounds closed, cultural moments in flight — before the competition even knows they're in market. The senior team stops being the only antenna for new business and starts being the closers for deals the system already warmed. The cross-disciplinary model that makes NVE irreplaceable gets matched by an outbound motion that's just as precise — so the next Disney-scale client isn't a lucky referral, it's a predictable result.",
+              "score": {
+                "grounding": 0.8,
+                "completeness": 0.85,
+                "narrative_arc": 0.8,
+                "feasibility": 0.8,
+                "competitive_diff": 0.85,
+                "metric_confidence": 0.8,
+                "verdict": "emit",
+                "failReason": null,
+                "fabricatedClaims": []
+              },
+              "fabricatedClaims": [],
+              "costCents": 4,
+              "latencyMs": 41331,
+              "ts": "2026-06-12T23:14:40.899Z"
+            }
+          ],
+          "costCents": 7,
+          "totalLatencyMs": 194504,
+          "createdAt": "2026-06-12T23:13:51.513Z"
+        }
+      }
+    }
+  ]
+}

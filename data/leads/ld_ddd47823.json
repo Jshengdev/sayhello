@@ -1,0 +1,52 @@
+{
+  "leadId": "ld_ddd47823",
+  "url": "nve",
+  "industry": "realestate",
+  "recordedAt": "2026-06-12T23:23:29.719Z",
+  "brief": null,
+  "signals": [],
+  "generations": [],
+  "run": {
+    "leadId": "ld_ddd47823",
+    "url": "nve",
+    "status": "failed",
+    "generation": 0,
+    "brief": null,
+    "story": null,
+    "score": null,
+    "pitch_angle": null,
+    "generations": [],
+    "costCents": 0,
+    "totalLatencyMs": 454,
+    "createdAt": "2026-06-12T23:23:29.264Z"
+  },
+  "events": [
+    {
+      "t": 0,
+      "event": {
+        "type": "run_started",
+        "leadId": "ld_ddd47823",
+        "url": "nve",
+        "mode": "live",
+        "label": "LIVE"
+      }
+    },
+    {
+      "t": 1,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_ddd47823",
+        "node": "scrape"
+      }
+    },
+    {
+      "t": 454,
+      "event": {
+        "type": "failed",
+        "leadId": "ld_ddd47823",
+        "stage": "scrape",
+        "error": "[firecrawl] scrape failed AND no cache at data/leads/nve.json: [firecrawl] scrape https://nve -> 400 URL must have a valid top-level domain or be a valid path"
+      }
+    }
+  ]
+}

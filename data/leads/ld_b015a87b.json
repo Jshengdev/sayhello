@@ -1,0 +1,729 @@
+{
+  "leadId": "ld_b015a87b",
+  "url": "https://www.compass.com",
+  "industry": "realestate",
+  "recordedAt": "2026-06-12T21:54:33.175Z",
+  "brief": {
+    "domain": "www.compass.com",
+    "name": "Compass",
+    "url": "https://www.compass.com",
+    "what_they_do": "Compass is a real estate platform that helps users buy, rent, and sell properties with access to exclusive listings and agent services. The platform provides property search, neighborhood guides, mortgage preapproval tools, and home improvement concierge services.",
+    "founded_year": null,
+    "key_features": [
+      "Exclusive listings before market release",
+      "Property search by address, city, neighborhood, zip, agent, or MLS",
+      "Compass Concierge for home improvement services",
+      "Mortgage preapproval via Rocket Mortgage integration",
+      "Neighborhood guides and market data",
+      "Agent connection and scheduling"
+    ],
+    "competitors": [
+      "Zillow",
+      "Redfin",
+      "Trulia",
+      "RE/MAX"
+    ],
+    "tech_stack": [],
+    "funding_stage": null,
+    "funding_amount": null,
+    "employee_count": null,
+    "category": "real-estate",
+    "current_messaging_channels": [],
+    "github_url": null,
+    "partnership_potential": true,
+    "pitch_angle": "forced_sale",
+    "features": {
+      "buy_listings": true,
+      "rent_listings": true,
+      "sell_listings": true,
+      "exclusive_listings": true,
+      "agent_directory": true,
+      "neighborhood_guides": true,
+      "mortgage_preapproval": true,
+      "home_improvement_concierge": true,
+      "property_search": true,
+      "mls_integration": true
+    },
+    "signals": [
+      {
+        "signal_type": "exclusive_inventory",
+        "source": "firecrawl:scrape",
+        "source_url": "https://www.compass.com",
+        "detail": "Compass Exclusives section states 'Be the first to browse exclusive listings before they hit the market' with 5,200+ private homes available",
+        "strength": 0.95
+      },
+      {
+        "signal_type": "service_offering",
+        "source": "firecrawl:scrape",
+        "source_url": "https://www.compass.com",
+        "detail": "Compass Concierge 'helps you sell your home faster and for more money by covering the cost of home improvement services — zero due until closing'",
+        "strength": 0.9
+      },
+      {
+        "signal_type": "geographic_coverage",
+        "source": "firecrawl:scrape",
+        "source_url": "https://www.compass.com",
+        "detail": "Operates across 20+ states including California, New York, Florida, Texas, and major metropolitan areas like Manhattan, Los Angeles, San Francisco, and Washington DC",
+        "strength": 0.85
+      },
+      {
+        "signal_type": "financial_partnership",
+        "source": "firecrawl:scrape",
+        "source_url": "https://www.compass.com",
+        "detail": "Integrated mortgage preapproval via Rocket Mortgage partnership with messaging 'Know your buying power with a preapproval and custom rate in minutes'",
+        "strength": 0.9
+      },
+      {
+        "signal_type": "news_mention",
+        "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+        "source_url": "https://www.nytimes.com/2026/06/06/realestate/zillow-compass-real-estate-consolidation.html",
+        "detail": "Real Estate Giants Compass and Zillow Fight Over the Future of the Market — Both companies face lawsuits and antitrust inquiries as they attempt to control the experience of home buying.",
+        "strength": 0.55
+      },
+      {
+        "signal_type": "news_mention",
+        "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+        "source_url": "https://www.realestatenews.com/2026/06/11/washingtons-new-private-listings-law-purposefully-vague",
+        "detail": "Washington’s new private listings law ‘purposefully vague’ — The real estate marketing law, which took effect June 11, would seem to prohibit Compass Private Exclusives — but the brokerage interprets...",
+        "strength": 0.55
+      },
+      {
+        "signal_type": "news_mention",
+        "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+        "source_url": "https://therealdeal.com/national/2026/06/09/what-happens-if-compass-quits-rebny/",
+        "detail": "Housing Notes: With an 80% Manhattan market share, what happens if Compass quits REBNY? — We are excited to announce that Jonathan Miller, who has long authored the most authoritative report on the residential real estate market,...",
+        "strength": 0.55
+      },
+      {
+        "signal_type": "hn_mentions_actual",
+        "source": "clickhouse:hackernews",
+        "source_url": "https://sql.clickhouse.com/?query=SELECT%20count()%20AS%20c%20FROM%20hackernews.hackernews%20WHERE%20title%20ILIKE%20'%25Compass%25'",
+        "detail": "Hacker News title mentions of \"Compass\": 863 (live count, hackernews.hackernews) — real public-builder attention exists.",
+        "strength": 0.7
+      },
+      {
+        "signal_type": "person_identity",
+        "source": "heyreach",
+        "source_url": "https://www.linkedin.com/in/johnny--sheng",
+        "detail": "LinkedIn profile: Johnny Sheng",
+        "strength": 0.8
+      },
+      {
+        "signal_type": "person_location",
+        "source": "heyreach",
+        "source_url": "https://www.linkedin.com/in/johnny--sheng",
+        "detail": "Based in Arcadia, California, United States",
+        "strength": 0.7
+      },
+      {
+        "signal_type": "person_about",
+        "source": "heyreach",
+        "source_url": "https://www.linkedin.com/in/johnny--sheng",
+        "detail": "LinkedIn About (verbatim): ai @ Photon | arts tech biz @ Iovine and Young Academy",
+        "strength": 0.75
+      },
+      {
+        "signal_type": "person_scrape_degraded",
+        "source": "harness",
+        "source_url": "",
+        "detail": "PERSON SCRAPE DEGRADED: x: no xHandle on run input · sixtyfour: [sixtyfour] non-200 response: POST https://api.sixtyfour.ai/people-intelligence → 401 Unauthorized. body={\"detail\":\"Inva",
+        "strength": 0
+      },
+      {
+        "signal_type": "seller_proof",
+        "source": "seller_pack",
+        "source_url": "call://carlos-kickoff-2026-06-10",
+        "detail": "Real-estate investor client agreed $4-5k flat + 10-20% commission ('anywhere from 4 5 K would be sick')",
+        "strength": 8
+      },
+      {
+        "signal_type": "seller_proof",
+        "source": "seller_pack",
+        "source_url": "call://carlos-kickoff-2026-06-10",
+        "detail": "Marketing agency signed fixed $5,040 / 2 months / 4 modules + ~$250/mo running costs",
+        "strength": 7
+      },
+      {
+        "signal_type": "seller_proof",
+        "source": "seller_pack",
+        "source_url": "call://carlos-kickoff-2026-06-10",
+        "detail": "'name + linkedin' Google-search hack: ~85% hit rate where scrapers get accounts flagged",
+        "strength": 6
+      },
+      {
+        "signal_type": "seller_proof",
+        "source": "seller_pack",
+        "source_url": "call://carlos-kickoff-2026-06-10",
+        "detail": "LinkedIn outreach ~40% reply rate vs cold email ~2% ('if you're doing like good')",
+        "strength": 5
+      },
+      {
+        "signal_type": "seller_proof",
+        "source": "seller_pack",
+        "source_url": "call://carlos-kickoff-2026-06-10",
+        "detail": "The pricing anchor to beat: refused vendor at '$15,000 and it's like 40 enriched'",
+        "strength": 5
+      }
+    ],
+    "brief": "Compass is a national real estate platform offering buy, rent, and sell services with a focus on premium markets and exclusive inventory. The platform differentiates through Compass Exclusives (5,200+ private listings), Compass Concierge (pre-closing home improvement financing), and integrated mortgage tools via Rocket Mortgage. Strong geographic presence across high-value markets including NYC, LA, Miami, and DC with neighborhood-specific guides and agent networks.",
+    "industry": "realestate",
+    "person": {
+      "name": "Johnny Sheng",
+      "linkedinUrl": "https://www.linkedin.com/in/johnny--sheng/",
+      "xHandle": null,
+      "headline": null,
+      "company": null,
+      "title": null,
+      "location": "Arcadia, California, United States",
+      "summary": "ai @ Photon | arts tech biz @ Iovine and Young Academy",
+      "provenance": "cache:data/leads/person-www-linkedin-com-in-johnny-sheng.json (2026-06-12T21:39:54.815Z)"
+    }
+  },
+  "signals": [
+    {
+      "signal_type": "exclusive_inventory",
+      "source": "firecrawl:scrape",
+      "source_url": "https://www.compass.com",
+      "detail": "Compass Exclusives section states 'Be the first to browse exclusive listings before they hit the market' with 5,200+ private homes available",
+      "strength": 0.95
+    },
+    {
+      "signal_type": "service_offering",
+      "source": "firecrawl:scrape",
+      "source_url": "https://www.compass.com",
+      "detail": "Compass Concierge 'helps you sell your home faster and for more money by covering the cost of home improvement services — zero due until closing'",
+      "strength": 0.9
+    },
+    {
+      "signal_type": "geographic_coverage",
+      "source": "firecrawl:scrape",
+      "source_url": "https://www.compass.com",
+      "detail": "Operates across 20+ states including California, New York, Florida, Texas, and major metropolitan areas like Manhattan, Los Angeles, San Francisco, and Washington DC",
+      "strength": 0.85
+    },
+    {
+      "signal_type": "financial_partnership",
+      "source": "firecrawl:scrape",
+      "source_url": "https://www.compass.com",
+      "detail": "Integrated mortgage preapproval via Rocket Mortgage partnership with messaging 'Know your buying power with a preapproval and custom rate in minutes'",
+      "strength": 0.9
+    },
+    {
+      "signal_type": "news_mention",
+      "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+      "source_url": "https://www.nytimes.com/2026/06/06/realestate/zillow-compass-real-estate-consolidation.html",
+      "detail": "Real Estate Giants Compass and Zillow Fight Over the Future of the Market — Both companies face lawsuits and antitrust inquiries as they attempt to control the experience of home buying.",
+      "strength": 0.55
+    },
+    {
+      "signal_type": "news_mention",
+      "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+      "source_url": "https://www.realestatenews.com/2026/06/11/washingtons-new-private-listings-law-purposefully-vague",
+      "detail": "Washington’s new private listings law ‘purposefully vague’ — The real estate marketing law, which took effect June 11, would seem to prohibit Compass Private Exclusives — but the brokerage interprets...",
+      "strength": 0.55
+    },
+    {
+      "signal_type": "news_mention",
+      "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+      "source_url": "https://therealdeal.com/national/2026/06/09/what-happens-if-compass-quits-rebny/",
+      "detail": "Housing Notes: With an 80% Manhattan market share, what happens if Compass quits REBNY? — We are excited to announce that Jonathan Miller, who has long authored the most authoritative report on the residential real estate market,...",
+      "strength": 0.55
+    },
+    {
+      "signal_type": "hn_mentions_actual",
+      "source": "clickhouse:hackernews",
+      "source_url": "https://sql.clickhouse.com/?query=SELECT%20count()%20AS%20c%20FROM%20hackernews.hackernews%20WHERE%20title%20ILIKE%20'%25Compass%25'",
+      "detail": "Hacker News title mentions of \"Compass\": 863 (live count, hackernews.hackernews) — real public-builder attention exists.",
+      "strength": 0.7
+    },
+    {
+      "signal_type": "person_identity",
+      "source": "heyreach",
+      "source_url": "https://www.linkedin.com/in/johnny--sheng",
+      "detail": "LinkedIn profile: Johnny Sheng",
+      "strength": 0.8
+    },
+    {
+      "signal_type": "person_location",
+      "source": "heyreach",
+      "source_url": "https://www.linkedin.com/in/johnny--sheng",
+      "detail": "Based in Arcadia, California, United States",
+      "strength": 0.7
+    },
+    {
+      "signal_type": "person_about",
+      "source": "heyreach",
+      "source_url": "https://www.linkedin.com/in/johnny--sheng",
+      "detail": "LinkedIn About (verbatim): ai @ Photon | arts tech biz @ Iovine and Young Academy",
+      "strength": 0.75
+    },
+    {
+      "signal_type": "person_scrape_degraded",
+      "source": "harness",
+      "source_url": "",
+      "detail": "PERSON SCRAPE DEGRADED: x: no xHandle on run input · sixtyfour: [sixtyfour] non-200 response: POST https://api.sixtyfour.ai/people-intelligence → 401 Unauthorized. body={\"detail\":\"Inva",
+      "strength": 0
+    },
+    {
+      "signal_type": "seller_proof",
+      "source": "seller_pack",
+      "source_url": "call://carlos-kickoff-2026-06-10",
+      "detail": "Real-estate investor client agreed $4-5k flat + 10-20% commission ('anywhere from 4 5 K would be sick')",
+      "strength": 8
+    },
+    {
+      "signal_type": "seller_proof",
+      "source": "seller_pack",
+      "source_url": "call://carlos-kickoff-2026-06-10",
+      "detail": "Marketing agency signed fixed $5,040 / 2 months / 4 modules + ~$250/mo running costs",
+      "strength": 7
+    },
+    {
+      "signal_type": "seller_proof",
+      "source": "seller_pack",
+      "source_url": "call://carlos-kickoff-2026-06-10",
+      "detail": "'name + linkedin' Google-search hack: ~85% hit rate where scrapers get accounts flagged",
+      "strength": 6
+    },
+    {
+      "signal_type": "seller_proof",
+      "source": "seller_pack",
+      "source_url": "call://carlos-kickoff-2026-06-10",
+      "detail": "LinkedIn outreach ~40% reply rate vs cold email ~2% ('if you're doing like good')",
+      "strength": 5
+    },
+    {
+      "signal_type": "seller_proof",
+      "source": "seller_pack",
+      "source_url": "call://carlos-kickoff-2026-06-10",
+      "detail": "The pricing anchor to beat: refused vendor at '$15,000 and it's like 40 enriched'",
+      "strength": 5
+    }
+  ],
+  "generations": [],
+  "run": {
+    "leadId": "ld_b015a87b",
+    "url": "https://www.compass.com",
+    "status": "failed",
+    "generation": 0,
+    "brief": {
+      "domain": "www.compass.com",
+      "name": "Compass",
+      "url": "https://www.compass.com",
+      "what_they_do": "Compass is a real estate platform that helps users buy, rent, and sell properties with access to exclusive listings and agent services. The platform provides property search, neighborhood guides, mortgage preapproval tools, and home improvement concierge services.",
+      "founded_year": null,
+      "key_features": [
+        "Exclusive listings before market release",
+        "Property search by address, city, neighborhood, zip, agent, or MLS",
+        "Compass Concierge for home improvement services",
+        "Mortgage preapproval via Rocket Mortgage integration",
+        "Neighborhood guides and market data",
+        "Agent connection and scheduling"
+      ],
+      "competitors": [
+        "Zillow",
+        "Redfin",
+        "Trulia",
+        "RE/MAX"
+      ],
+      "tech_stack": [],
+      "funding_stage": null,
+      "funding_amount": null,
+      "employee_count": null,
+      "category": "real-estate",
+      "current_messaging_channels": [],
+      "github_url": null,
+      "partnership_potential": true,
+      "pitch_angle": "forced_sale",
+      "features": {
+        "buy_listings": true,
+        "rent_listings": true,
+        "sell_listings": true,
+        "exclusive_listings": true,
+        "agent_directory": true,
+        "neighborhood_guides": true,
+        "mortgage_preapproval": true,
+        "home_improvement_concierge": true,
+        "property_search": true,
+        "mls_integration": true
+      },
+      "signals": [
+        {
+          "signal_type": "exclusive_inventory",
+          "source": "firecrawl:scrape",
+          "source_url": "https://www.compass.com",
+          "detail": "Compass Exclusives section states 'Be the first to browse exclusive listings before they hit the market' with 5,200+ private homes available",
+          "strength": 0.95
+        },
+        {
+          "signal_type": "service_offering",
+          "source": "firecrawl:scrape",
+          "source_url": "https://www.compass.com",
+          "detail": "Compass Concierge 'helps you sell your home faster and for more money by covering the cost of home improvement services — zero due until closing'",
+          "strength": 0.9
+        },
+        {
+          "signal_type": "geographic_coverage",
+          "source": "firecrawl:scrape",
+          "source_url": "https://www.compass.com",
+          "detail": "Operates across 20+ states including California, New York, Florida, Texas, and major metropolitan areas like Manhattan, Los Angeles, San Francisco, and Washington DC",
+          "strength": 0.85
+        },
+        {
+          "signal_type": "financial_partnership",
+          "source": "firecrawl:scrape",
+          "source_url": "https://www.compass.com",
+          "detail": "Integrated mortgage preapproval via Rocket Mortgage partnership with messaging 'Know your buying power with a preapproval and custom rate in minutes'",
+          "strength": 0.9
+        },
+        {
+          "signal_type": "news_mention",
+          "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+          "source_url": "https://www.nytimes.com/2026/06/06/realestate/zillow-compass-real-estate-consolidation.html",
+          "detail": "Real Estate Giants Compass and Zillow Fight Over the Future of the Market — Both companies face lawsuits and antitrust inquiries as they attempt to control the experience of home buying.",
+          "strength": 0.55
+        },
+        {
+          "signal_type": "news_mention",
+          "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+          "source_url": "https://www.realestatenews.com/2026/06/11/washingtons-new-private-listings-law-purposefully-vague",
+          "detail": "Washington’s new private listings law ‘purposefully vague’ — The real estate marketing law, which took effect June 11, would seem to prohibit Compass Private Exclusives — but the brokerage interprets...",
+          "strength": 0.55
+        },
+        {
+          "signal_type": "news_mention",
+          "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+          "source_url": "https://therealdeal.com/national/2026/06/09/what-happens-if-compass-quits-rebny/",
+          "detail": "Housing Notes: With an 80% Manhattan market share, what happens if Compass quits REBNY? — We are excited to announce that Jonathan Miller, who has long authored the most authoritative report on the residential real estate market,...",
+          "strength": 0.55
+        },
+        {
+          "signal_type": "hn_mentions_actual",
+          "source": "clickhouse:hackernews",
+          "source_url": "https://sql.clickhouse.com/?query=SELECT%20count()%20AS%20c%20FROM%20hackernews.hackernews%20WHERE%20title%20ILIKE%20'%25Compass%25'",
+          "detail": "Hacker News title mentions of \"Compass\": 863 (live count, hackernews.hackernews) — real public-builder attention exists.",
+          "strength": 0.7
+        },
+        {
+          "signal_type": "person_identity",
+          "source": "heyreach",
+          "source_url": "https://www.linkedin.com/in/johnny--sheng",
+          "detail": "LinkedIn profile: Johnny Sheng",
+          "strength": 0.8
+        },
+        {
+          "signal_type": "person_location",
+          "source": "heyreach",
+          "source_url": "https://www.linkedin.com/in/johnny--sheng",
+          "detail": "Based in Arcadia, California, United States",
+          "strength": 0.7
+        },
+        {
+          "signal_type": "person_about",
+          "source": "heyreach",
+          "source_url": "https://www.linkedin.com/in/johnny--sheng",
+          "detail": "LinkedIn About (verbatim): ai @ Photon | arts tech biz @ Iovine and Young Academy",
+          "strength": 0.75
+        },
+        {
+          "signal_type": "person_scrape_degraded",
+          "source": "harness",
+          "source_url": "",
+          "detail": "PERSON SCRAPE DEGRADED: x: no xHandle on run input · sixtyfour: [sixtyfour] non-200 response: POST https://api.sixtyfour.ai/people-intelligence → 401 Unauthorized. body={\"detail\":\"Inva",
+          "strength": 0
+        },
+        {
+          "signal_type": "seller_proof",
+          "source": "seller_pack",
+          "source_url": "call://carlos-kickoff-2026-06-10",
+          "detail": "Real-estate investor client agreed $4-5k flat + 10-20% commission ('anywhere from 4 5 K would be sick')",
+          "strength": 8
+        },
+        {
+          "signal_type": "seller_proof",
+          "source": "seller_pack",
+          "source_url": "call://carlos-kickoff-2026-06-10",
+          "detail": "Marketing agency signed fixed $5,040 / 2 months / 4 modules + ~$250/mo running costs",
+          "strength": 7
+        },
+        {
+          "signal_type": "seller_proof",
+          "source": "seller_pack",
+          "source_url": "call://carlos-kickoff-2026-06-10",
+          "detail": "'name + linkedin' Google-search hack: ~85% hit rate where scrapers get accounts flagged",
+          "strength": 6
+        },
+        {
+          "signal_type": "seller_proof",
+          "source": "seller_pack",
+          "source_url": "call://carlos-kickoff-2026-06-10",
+          "detail": "LinkedIn outreach ~40% reply rate vs cold email ~2% ('if you're doing like good')",
+          "strength": 5
+        },
+        {
+          "signal_type": "seller_proof",
+          "source": "seller_pack",
+          "source_url": "call://carlos-kickoff-2026-06-10",
+          "detail": "The pricing anchor to beat: refused vendor at '$15,000 and it's like 40 enriched'",
+          "strength": 5
+        }
+      ],
+      "brief": "Compass is a national real estate platform offering buy, rent, and sell services with a focus on premium markets and exclusive inventory. The platform differentiates through Compass Exclusives (5,200+ private listings), Compass Concierge (pre-closing home improvement financing), and integrated mortgage tools via Rocket Mortgage. Strong geographic presence across high-value markets including NYC, LA, Miami, and DC with neighborhood-specific guides and agent networks.",
+      "industry": "realestate",
+      "person": {
+        "name": "Johnny Sheng",
+        "linkedinUrl": "https://www.linkedin.com/in/johnny--sheng/",
+        "xHandle": null,
+        "headline": null,
+        "company": null,
+        "title": null,
+        "location": "Arcadia, California, United States",
+        "summary": "ai @ Photon | arts tech biz @ Iovine and Young Academy",
+        "provenance": "cache:data/leads/person-www-linkedin-com-in-johnny-sheng.json (2026-06-12T21:39:54.815Z)"
+      }
+    },
+    "story": null,
+    "score": null,
+    "pitch_angle": null,
+    "generations": [],
+    "costCents": 4,
+    "totalLatencyMs": 35026,
+    "createdAt": "2026-06-12T21:53:58.146Z"
+  },
+  "events": [
+    {
+      "t": 0,
+      "event": {
+        "type": "run_started",
+        "leadId": "ld_b015a87b",
+        "url": "https://www.compass.com",
+        "mode": "live",
+        "label": "LIVE"
+      }
+    },
+    {
+      "t": 1,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_b015a87b",
+        "node": "scrape"
+      }
+    },
+    {
+      "t": 568,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_b015a87b",
+        "node": "enrich"
+      }
+    },
+    {
+      "t": 8626,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_b015a87b",
+        "node": "ground"
+      }
+    },
+    {
+      "t": 8864,
+      "event": {
+        "type": "scrape_done",
+        "leadId": "ld_b015a87b",
+        "brief": {
+          "domain": "www.compass.com",
+          "name": "Compass",
+          "url": "https://www.compass.com",
+          "what_they_do": "Compass is a real estate platform that helps users buy, rent, and sell properties with access to exclusive listings and agent services. The platform provides property search, neighborhood guides, mortgage preapproval tools, and home improvement concierge services.",
+          "founded_year": null,
+          "key_features": [
+            "Exclusive listings before market release",
+            "Property search by address, city, neighborhood, zip, agent, or MLS",
+            "Compass Concierge for home improvement services",
+            "Mortgage preapproval via Rocket Mortgage integration",
+            "Neighborhood guides and market data",
+            "Agent connection and scheduling"
+          ],
+          "competitors": [
+            "Zillow",
+            "Redfin",
+            "Trulia",
+            "RE/MAX"
+          ],
+          "tech_stack": [],
+          "funding_stage": null,
+          "funding_amount": null,
+          "employee_count": null,
+          "category": "real-estate",
+          "current_messaging_channels": [],
+          "github_url": null,
+          "partnership_potential": true,
+          "pitch_angle": "forced_sale",
+          "features": {
+            "buy_listings": true,
+            "rent_listings": true,
+            "sell_listings": true,
+            "exclusive_listings": true,
+            "agent_directory": true,
+            "neighborhood_guides": true,
+            "mortgage_preapproval": true,
+            "home_improvement_concierge": true,
+            "property_search": true,
+            "mls_integration": true
+          },
+          "signals": [
+            {
+              "signal_type": "exclusive_inventory",
+              "source": "firecrawl:scrape",
+              "source_url": "https://www.compass.com",
+              "detail": "Compass Exclusives section states 'Be the first to browse exclusive listings before they hit the market' with 5,200+ private homes available",
+              "strength": 0.95
+            },
+            {
+              "signal_type": "service_offering",
+              "source": "firecrawl:scrape",
+              "source_url": "https://www.compass.com",
+              "detail": "Compass Concierge 'helps you sell your home faster and for more money by covering the cost of home improvement services — zero due until closing'",
+              "strength": 0.9
+            },
+            {
+              "signal_type": "geographic_coverage",
+              "source": "firecrawl:scrape",
+              "source_url": "https://www.compass.com",
+              "detail": "Operates across 20+ states including California, New York, Florida, Texas, and major metropolitan areas like Manhattan, Los Angeles, San Francisco, and Washington DC",
+              "strength": 0.85
+            },
+            {
+              "signal_type": "financial_partnership",
+              "source": "firecrawl:scrape",
+              "source_url": "https://www.compass.com",
+              "detail": "Integrated mortgage preapproval via Rocket Mortgage partnership with messaging 'Know your buying power with a preapproval and custom rate in minutes'",
+              "strength": 0.9
+            },
+            {
+              "signal_type": "news_mention",
+              "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+              "source_url": "https://www.nytimes.com/2026/06/06/realestate/zillow-compass-real-estate-consolidation.html",
+              "detail": "Real Estate Giants Compass and Zillow Fight Over the Future of the Market — Both companies face lawsuits and antitrust inquiries as they attempt to control the experience of home buying.",
+              "strength": 0.55
+            },
+            {
+              "signal_type": "news_mention",
+              "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+              "source_url": "https://www.realestatenews.com/2026/06/11/washingtons-new-private-listings-law-purposefully-vague",
+              "detail": "Washington’s new private listings law ‘purposefully vague’ — The real estate marketing law, which took effect June 11, would seem to prohibit Compass Private Exclusives — but the brokerage interprets...",
+              "strength": 0.55
+            },
+            {
+              "signal_type": "news_mention",
+              "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+              "source_url": "https://therealdeal.com/national/2026/06/09/what-happens-if-compass-quits-rebny/",
+              "detail": "Housing Notes: With an 80% Manhattan market share, what happens if Compass quits REBNY? — We are excited to announce that Jonathan Miller, who has long authored the most authoritative report on the residential real estate market,...",
+              "strength": 0.55
+            },
+            {
+              "signal_type": "hn_mentions_actual",
+              "source": "clickhouse:hackernews",
+              "source_url": "https://sql.clickhouse.com/?query=SELECT%20count()%20AS%20c%20FROM%20hackernews.hackernews%20WHERE%20title%20ILIKE%20'%25Compass%25'",
+              "detail": "Hacker News title mentions of \"Compass\": 863 (live count, hackernews.hackernews) — real public-builder attention exists.",
+              "strength": 0.7
+            },
+            {
+              "signal_type": "person_identity",
+              "source": "heyreach",
+              "source_url": "https://www.linkedin.com/in/johnny--sheng",
+              "detail": "LinkedIn profile: Johnny Sheng",
+              "strength": 0.8
+            },
+            {
+              "signal_type": "person_location",
+              "source": "heyreach",
+              "source_url": "https://www.linkedin.com/in/johnny--sheng",
+              "detail": "Based in Arcadia, California, United States",
+              "strength": 0.7
+            },
+            {
+              "signal_type": "person_about",
+              "source": "heyreach",
+              "source_url": "https://www.linkedin.com/in/johnny--sheng",
+              "detail": "LinkedIn About (verbatim): ai @ Photon | arts tech biz @ Iovine and Young Academy",
+              "strength": 0.75
+            },
+            {
+              "signal_type": "person_scrape_degraded",
+              "source": "harness",
+              "source_url": "",
+              "detail": "PERSON SCRAPE DEGRADED: x: no xHandle on run input · sixtyfour: [sixtyfour] non-200 response: POST https://api.sixtyfour.ai/people-intelligence → 401 Unauthorized. body={\"detail\":\"Inva",
+              "strength": 0
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "Real-estate investor client agreed $4-5k flat + 10-20% commission ('anywhere from 4 5 K would be sick')",
+              "strength": 8
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "Marketing agency signed fixed $5,040 / 2 months / 4 modules + ~$250/mo running costs",
+              "strength": 7
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "'name + linkedin' Google-search hack: ~85% hit rate where scrapers get accounts flagged",
+              "strength": 6
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "LinkedIn outreach ~40% reply rate vs cold email ~2% ('if you're doing like good')",
+              "strength": 5
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "call://carlos-kickoff-2026-06-10",
+              "detail": "The pricing anchor to beat: refused vendor at '$15,000 and it's like 40 enriched'",
+              "strength": 5
+            }
+          ],
+          "brief": "Compass is a national real estate platform offering buy, rent, and sell services with a focus on premium markets and exclusive inventory. The platform differentiates through Compass Exclusives (5,200+ private listings), Compass Concierge (pre-closing home improvement financing), and integrated mortgage tools via Rocket Mortgage. Strong geographic presence across high-value markets including NYC, LA, Miami, and DC with neighborhood-specific guides and agent networks.",
+          "industry": "realestate",
+          "person": {
+            "name": "Johnny Sheng",
+            "linkedinUrl": "https://www.linkedin.com/in/johnny--sheng/",
+            "xHandle": null,
+            "headline": null,
+            "company": null,
+            "title": null,
+            "location": "Arcadia, California, United States",
+            "summary": "ai @ Photon | arts tech biz @ Iovine and Young Academy",
+            "provenance": "cache:data/leads/person-www-linkedin-com-in-johnny-sheng.json (2026-06-12T21:39:54.815Z)"
+          }
+        }
+      }
+    },
+    {
+      "t": 8865,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_b015a87b",
+        "node": "draft"
+      }
+    },
+    {
+      "t": 35027,
+      "event": {
+        "type": "failed",
+        "leadId": "ld_b015a87b",
+        "stage": "draft",
+        "error": "[drafter] FATAL: failed to parse JSON from completion: ```json\n{\n  \"story\": \"THE GOAL:\\nCompass wants to be the platform that wins the transaction — not just the search. Their own site says it plainly: 'Be the first to browse exclusive listings before the"
+      }
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sayhello — the story</title>
+<style>
+  :root{
+    --page:#f5f5f2; --raised:#fbfbf8; --canvas:#f1f1ee; --recessed:#e7e7e3;
+    --ink:#262323; --live:#6e2bff;
+    --mono: ui-monospace, "IBM Plex Mono", Menlo, monospace;
+    --sans: "Onest", system-ui, -apple-system, sans-serif;
+    --ring: inset 0 0 0 1px #fff, 0 0 0 1px rgba(17,17,17,.06), 0 1px 2px rgba(17,17,17,.04), 0 10px 30px rgba(17,17,17,.05);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--ink);font-family:var(--sans);
+       line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto;padding:56px 22px 120px}
+  .kick{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,35,35,.45);margin-bottom:18px}
+  h1{font-weight:480;font-size:40px;letter-spacing:-.8px;margin:0 0 10px;line-height:1.05}
+  h1 .em{color:var(--live)}
+  .tag{color:rgba(38,35,35,.6);font-size:18px;margin:0 0 8px}
+  .purpose{color:rgba(38,35,35,.55);font-size:16px;margin:0 0 40px;font-style:italic}
+  h2{font-weight:480;font-size:13px;font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase;
+     color:rgba(38,35,35,.5);margin:52px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--recessed)}
+  p{font-size:17px;margin:0 0 18px;color:rgba(38,35,35,.88)}
+  p.lead{font-size:19px;color:var(--ink)}
+  .big{font-size:22px;font-weight:450;letter-spacing:-.3px;color:var(--ink);margin:26px 0}
+  .ofloreadd{margin:22px 0;padding-left:0;list-style:none}
+  .ofloreadd li{font-size:18px;padding:7px 0;color:var(--ink)}
+  .ofloreadd li:before{content:"›";color:var(--live);margin-right:12px;font-family:var(--mono)}
+  .ofloreadd li.no{color:rgba(38,35,35,.55)}
+  .ofloreadd li.no:before{content:"✕";color:rgba(38,35,35,.3);font-size:14px}
+  .vs{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:22px 0;border-radius:14px;overflow:hidden;box-shadow:var(--ring)}
+  .vs > div{padding:18px 20px}
+  .vs .them{background:var(--recessed)}
+  .vs .us{background:var(--raised)}
+  .vs h3{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px}
+  .vs .them h3{color:rgba(38,35,35,.5)}
+  .vs .us h3{color:var(--live)}
+  .vs ul{margin:0;padding-left:0;list-style:none}
+  .vs li{font-size:15px;padding:5px 0;color:rgba(38,35,35,.85)}
+  .vs .them li{color:rgba(38,35,35,.55)}
+  .suite{margin:18px 0;padding:0;list-style:none}
+  .suite li{font-size:17px;padding:9px 0;border-bottom:1px solid var(--recessed)}
+  .suite li:last-child{border-bottom:none}
+  .suite b{color:var(--ink);font-weight:500}
+  .suite .role{font-family:var(--mono);font-size:12px;color:var(--live);text-transform:uppercase;letter-spacing:.06em;margin-left:8px}
+  .flow{font-family:var(--mono);font-size:14px;line-height:2;color:rgba(38,35,35,.8);background:var(--canvas);border-radius:12px;padding:18px 20px;margin:18px 0}
+  .flow b{color:var(--live)}
+  .pull{font-size:24px;font-weight:450;letter-spacing:-.4px;color:var(--ink);margin:34px 0;padding-left:18px;border-left:2px solid var(--live)}
+  .small{font-family:var(--mono);font-size:12px;color:rgba(38,35,35,.45);margin-top:48px;border-top:1px solid var(--recessed);padding-top:18px}
+  em{font-style:italic;color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="kick">sayhello · the story</div>
+  <h1>before you <span class="em">say hello</span>,<br>know their story.</h1>
+  <p class="tag">AI should augment go-to-market. GTM agents, AI SDRs, whatever you call them — they should augment relationships, not replace them.</p>
+  <p class="purpose">Before you say hello, sayhello enriches the story behind every lead, so you reach out already knowing who they are.</p>
+
+  <h2>what everyone thinks GTM is</h2>
+  <p class="lead">Everyone thinks go-to-market means one thing. Harvest more data. Get more leads. Blast more messages. Automate the spam. Generate your list, target your ICP, spin up a personalized message for each one.</p>
+  <p>That's why your inbox is always full of "Hi {firstName}, love what you're doing" with no soul behind it. It sounds like it could fit. But really it's just a machine that filled in a couple of details and called it personalized.</p>
+  <p class="big">That's not connection.</p>
+  <p>I don't think go-to-market should try to do relationship building <em>without</em> people. That's the whole mistake. People confused volume with the relationship. The playbook: buy a list, create some fields, spin up personalized prose, send thousands of them, scrape everything about every individual, collect all that data, and harvest.</p>
+  <p>But if everybody does this, inboxes only get stricter. Reply rates only fall. And people's desire for an actual connection only gets higher.</p>
+  <p class="pull">So how do you build around that, when the game changes from volume to understanding? From information to a story?</p>
+
+  <h2>this is why we built sayhello</h2>
+  <p class="lead">The work you do before you say hello, so the first hello actually lands.</p>
+  <p>Here's the line it all rests on:</p>
+  <ul class="ofloreadd">
+    <li>You can offload the research.</li>
+    <li>You can offload the thinking.</li>
+    <li class="no">You cannot offload the understanding.</li>
+    <li class="no">You cannot offload the feeling.</li>
+  </ul>
+  <p>The number one lesson in sales is that people buy from people who get them. Only a human can sit where somebody actually is, recognize the moment they're in, and feel what to say. That's the part that closes. That's the part that secures the deal.</p>
+
+  <h2>what it does</h2>
+  <p>So we built a swarm of agents to go out into the open web and gather the real story of a person and their company. Their mission. Their purpose. A deep read of what they're actually interacting with right now.</p>
+  <p>The agents bring back the pieces. <b>You put the puzzle together. You make the call.</b> Your agents never send a thing on their own, and everything they bring back is guarded by strong validation before you ever see it.</p>
+  <p class="big">AI does the 90% that scales. You keep the 10% that actually matters, the part that's human.</p>
+  <p>That's our honest use of scraping. Not to harvest people at scale. To understand someone well enough to talk to them like a person.</p>
+
+  <h2>what makes us different</h2>
+  <div class="vs">
+    <div class="them">
+      <h3>traditional AI GTM</h3>
+      <ul>
+        <li>Scrapes to <b>harvest</b> — more rows, more sends.</li>
+        <li>"Personalized" = a name in a template.</li>
+        <li>Trusts whatever the model writes.</li>
+        <li>Optimizes for volume and open rates.</li>
+        <li>The agent sends. You hope it's right.</li>
+        <li>A black box. No idea why it said that.</li>
+        <li>One-shot. Forgets the lead instantly.</li>
+      </ul>
+    </div>
+    <div class="us">
+      <h3>sayhello</h3>
+      <ul>
+        <li>Scrapes to <b>understand</b> — one real story.</li>
+        <li>Personal = the actual situation they're in.</li>
+        <li>A held-out critic kills any unproven claim.</li>
+        <li>Optimizes for one true thing to say.</li>
+        <li>You send. The agent hands you the truth.</li>
+        <li>Every step traced. You can see the receipts.</li>
+        <li>Remembers. The relationship builds over time.</li>
+      </ul>
+    </div>
+  </div>
+  <p>Everyone else uses AI to <em>do the outreach for you</em>. We use it to <em>help you understand the person</em> so the outreach is yours. Same tools, opposite intent.</p>
+
+  <h2>how it works</h2>
+  <div class="flow">
+    <b>scrape</b> the company → <b>scrape</b> the person (LinkedIn · X · enrichment, in parallel)<br>
+    → <b>ground</b> every fact against real public data<br>
+    → <b>draft</b> the story + the outreach angle<br>
+    → <b>judge</b> · a held-out critic on a <em>different</em> model flags anything unsourced as FABRICATED<br>
+    → <b>re-ground</b> and rewrite until it's true → <b>you approve</b> → it renders live
+  </div>
+  <p>You watch it happen as a spiral that goes from guessing to grounded.</p>
+
+  <h2>why we built it this way</h2>
+  <p>We did the research on where AI actually breaks. A model left to check its own work will tell you you're absolutely right. It can't catch its own confident lie, and it'll happily invent the one detail that makes a story sing. That's the lie that blows up the second you hit send.</p>
+  <p>So the writer and the judge are different models. Grounding is fail-closed: no source means fabricated, not "probably fine." And the human stays in the seat, always. This comes straight from my research lab, SOTARE: <em>two eyes, always. Machines prove, humans mean.</em> Never let a model grade its own homework.</p>
+
+  <h2>why it takes the whole suite</h2>
+  <p>We're putting an agent on the open internet to research real people. That only works if every piece is clean, governed, and traceable. So this isn't a single API, it's a suite built together:</p>
+  <ul class="suite">
+    <li><b>Guild</b> <span class="role">governs it</span></li>
+    <li><b>OpenUI</b> <span class="role">shows it</span></li>
+    <li><b>ClickHouse</b> <span class="role">proves it</span></li>
+    <li><b>Langfuse</b> <span class="role">traces it</span></li>
+    <li><b>Composio</b> <span class="role">enriches it</span></li>
+    <li><b>Render</b> <span class="role">ships it</span></li>
+    <li><b>Airbyte</b> <span class="role">remembers it</span></li>
+  </ul>
+  <p>Plus the people intelligence underneath: an open web scrape (Firecrawl), identity and signal (HeyReach · X · SixtyFour), and the held-out critic on a separate model (OpenRouter). Built together so the scraping is never the enemy.</p>
+
+  <h2>the honest intention</h2>
+  <p class="big">Web search and public data are never the problem. Intent is.</p>
+  <p>Without the right intent, data can be used a hundred ways, and the same data that powers spam can power understanding. We're choosing that angle. We use it to enrich your CRM, your Notion, with the actual stories and missions of the people you want to reach. A real glimpse into who they are and what they're building. So you know their story, in order to build for them.</p>
+
+  <div class="small">sayhello · built with openrouter · firecrawl · heyreach · sixtyfour · composio · clickhouse · langfuse · thesys-c1/openui · render · airbyte · next.js · gsap · p5.js</div>
+</div>
+</body>
+</html>

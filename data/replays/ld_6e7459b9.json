@@ -1,0 +1,293 @@
+{
+  "leadId": "ld_6e7459b9",
+  "url": "https://lindy.ai",
+  "industry": "gtm",
+  "recordedAt": "2026-06-12T23:44:23.595Z",
+  "stubMode": "0",
+  "events": [
+    {
+      "t": 1,
+      "event": {
+        "type": "run_started",
+        "leadId": "ld_6e7459b9",
+        "url": "https://lindy.ai",
+        "mode": "live",
+        "label": "LIVE"
+      }
+    },
+    {
+      "t": 2,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_6e7459b9",
+        "node": "scrape"
+      }
+    },
+    {
+      "t": 764,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_6e7459b9",
+        "node": "enrich"
+      }
+    },
+    {
+      "t": 13014,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_6e7459b9",
+        "node": "ground"
+      }
+    },
+    {
+      "t": 13348,
+      "event": {
+        "type": "scrape_done",
+        "leadId": "ld_6e7459b9",
+        "brief": {
+          "domain": "lindy.ai",
+          "name": "Lindy",
+          "url": "https://lindy.ai",
+          "what_they_do": "Lindy is an AI executive assistant that handles administrative work like email triage, meeting scheduling, and follow-ups via iMessage, SMS, Gmail, and Outlook. It drafts emails in your voice, manages calendars, takes meeting notes, and tracks action items.",
+          "founded_year": null,
+          "key_features": [
+            "Email triage and drafting",
+            "Meeting scheduling and calendar management",
+            "Meeting prep, recording, and follow-up",
+            "Reminders and action item tracking",
+            "iMessage and SMS chat interface",
+            "100+ integrations",
+            "Enterprise-grade security (GDPR, HIPAA, AICPA, PIPEDA compliant)"
+          ],
+          "competitors": [
+            "Human assistants",
+            "Other AI assistant platforms"
+          ],
+          "tech_stack": [],
+          "funding_stage": null,
+          "funding_amount": null,
+          "employee_count": null,
+          "category": "AI Assistant",
+          "current_messaging_channels": [
+            "iMessage",
+            "SMS",
+            "Email",
+            "Slack"
+          ],
+          "github_url": null,
+          "partnership_potential": true,
+          "pitch_angle": "agentic_notifications",
+          "features": {
+            "email_triage": true,
+            "email_drafting": true,
+            "meeting_scheduling": true,
+            "calendar_management": true,
+            "meeting_notes": true,
+            "meeting_prep": true,
+            "action_item_tracking": true,
+            "imessage_support": true,
+            "sms_support": true,
+            "slack_integration": true,
+            "gmail_integration": true,
+            "outlook_integration": true,
+            "multi_integration_support": true
+          },
+          "signals": [
+            {
+              "signal_type": "imessage_live",
+              "source": "firecrawl:scrape",
+              "source_url": "https://lindy.ai",
+              "detail": "iMessage chat interface shown in hero section: 'Chat via iMessage / SMS' listed as feature in Plus plan; video shows '4:58 Lindy › iMessage' conversation thread",
+              "strength": 1
+            },
+            {
+              "signal_type": "messaging_channel_expansion",
+              "source": "firecrawl:scrape",
+              "source_url": "https://lindy.ai",
+              "detail": "Product supports multiple messaging channels: 'Chat via iMessage / SMS' in pricing, plus integration with Slack mentioned in integrations section",
+              "strength": 0.95
+            },
+            {
+              "signal_type": "agentic_notifications",
+              "source": "firecrawl:scrape",
+              "source_url": "https://lindy.ai",
+              "detail": "Email triage section states: 'I'll text you about important emails so you never miss what matters' — proactive SMS notifications for critical inbox items",
+              "strength": 0.9
+            },
+            {
+              "signal_type": "enterprise_adoption",
+              "source": "firecrawl:scrape",
+              "source_url": "https://lindy.ai",
+              "detail": "Customer logos include Shopify, Apple, Adobe, McKinsey, NVIDIA, Harvard, Airbnb, Stanford, Autodesk, AppLovin",
+              "strength": 0.85
+            },
+            {
+              "signal_type": "security_compliance",
+              "source": "firecrawl:scrape",
+              "source_url": "https://lindy.ai",
+              "detail": "GDPR, HIPAA, AICPA, and PIPEDA compliant; 'Lindy is built privacy-first. That means you control your data and encryption comes standard. Approvals are built in, and your data is never sold or used to train models.'",
+              "strength": 0.9
+            },
+            {
+              "signal_type": "pricing_model",
+              "source": "firecrawl:scrape",
+              "source_url": "https://lindy.ai",
+              "detail": "Plus plan at $49.99/month, Pro at $59.99/month, Enterprise at custom pricing; free 7-day trial offered",
+              "strength": 0.8
+            },
+            {
+              "signal_type": "integration_breadth",
+              "source": "firecrawl:scrape",
+              "source_url": "https://lindy.ai",
+              "detail": "'With hundreds of integrations, Lindy can read your Slack, cross-reference your calendar, and draft a response in Gmail'",
+              "strength": 0.85
+            },
+            {
+              "signal_type": "news_mention",
+              "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+              "source_url": "https://www.wsj.com/tech/ai/the-ai-price-war-is-here-piling-pressure-on-openai-and-anthropic-86e1d21b",
+              "detail": "The AI Price War Is Here, Piling Pressure on OpenAI and Anthropic — Startups and tech giants alike are mixing and matching AI models to avoid the premium prices charged by industry leaders.",
+              "strength": 0.55
+            },
+            {
+              "signal_type": "news_mention",
+              "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+              "source_url": "https://www.krqe.com/video/lindys-diner-owners-wrestle-with-how-to-handle-next-hurdle-of-demolition-process/11843902/",
+              "detail": "Lindy’s Diner owners wrestle with how to handle next hurdle of demolition process — The latest videos from KRQE NEWS 13 - Breaking News, Albuquerque News, New Mexico News, Weather, and Videos.",
+              "strength": 0.55
+            },
+            {
+              "signal_type": "news_mention",
+              "source": "composio:COMPOSIO_SEARCH_NEWS_SEARCH",
+              "source_url": "https://fortune.com/2025/10/18/ai-startups-luxury-apartments-san-francisco-rent-stipends-tech-talent/",
+              "detail": "AI startups are leasing luxury apartments in San Francisco for staff and offering large rent stipends to attract talent — The average rent increase in San Francisco leads all other cities in the past year, according to real estate data.",
+              "strength": 0.55
+            },
+            {
+              "signal_type": "hn_mentions_actual",
+              "source": "clickhouse:hackernews",
+              "source_url": "https://sql.clickhouse.com/?query=SELECT%20count()%20AS%20c%20FROM%20hackernews.hackernews%20WHERE%20title%20ILIKE%20'%25Lindy%25'",
+              "detail": "Hacker News title mentions of \"Lindy\": 102 (live count, hackernews.hackernews) — real public-builder attention exists.",
+              "strength": 0.7
+            },
+            {
+              "signal_type": "seller_positioning",
+              "source": "positioning",
+              "source_url": "input://positioning",
+              "detail": "Photon — open-source iMessage infrastructure for AI agents. imessage-kit: ~2,300 GitHub stars, 20K+ developers. Ditto: 42,000+ users across 5 campuses, 99.87% delivery. We sell the channel agents' users actually open.",
+              "strength": 8
+            },
+            {
+              "signal_type": "person_scrape_degraded",
+              "source": "harness",
+              "source_url": "",
+              "detail": "PERSON SCRAPE DEGRADED: person stage skipped: no person inputs on the run (linkedinUrl/xHandle/name all absent)",
+              "strength": 0
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "repo://photon-gtm",
+              "detail": "imessage-kit: ~2,300 GitHub stars, 20K+ developers, github.com/photon-hq/imessage-kit",
+              "strength": 8
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "repo://photon-gtm",
+              "detail": "Ditto: 42,000+ users across 5 campuses (UCSD, Berkeley, USC, UCLA, UC Davis), 20% of matches convert to in-person dates, 99.87% message delivery, zero downtime during Apple throttling events, $9.2M seed from Peak XV Partners",
+              "strength": 7
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "repo://photon-gtm",
+              "detail": "TinyFish runs enterprise web agents on the SDK ($47M Series A, ICONIQ Growth)",
+              "strength": 6
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "repo://photon-gtm",
+              "detail": "MiroFish simulation: 'infrastructure durability' (42 likes) vs '98% open rate' (2 likes) — resilience resonates 21x",
+              "strength": 5
+            },
+            {
+              "signal_type": "seller_proof",
+              "source": "seller_pack",
+              "source_url": "repo://photon-gtm",
+              "detail": "We shipped a full SDK in one week, infrastructure in one month",
+              "strength": 5
+            }
+          ],
+          "brief": "Lindy is an AI executive assistant that automates administrative work (email, meetings, follow-ups) and is accessible via iMessage, SMS, Gmail, and Outlook. The product already has iMessage live as a core messaging channel and sends proactive SMS notifications for important emails, positioning it as a multi-channel agentic notification platform. With enterprise customers (Shopify, Apple, Adobe, McKinsey, NVIDIA) and HIPAA compliance, Lindy demonstrates strong product-market fit and is well-positioned for deeper messaging channel integration.",
+          "industry": "gtm"
+        }
+      }
+    },
+    {
+      "t": 13349,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_6e7459b9",
+        "node": "draft"
+      }
+    },
+    {
+      "t": 34585,
+      "event": {
+        "type": "draft_done",
+        "leadId": "ld_6e7459b9",
+        "generation": 0,
+        "story": "THE GOAL:\nLindy wants to be the AI executive assistant that actually replaces a human EA — not just scheduling meetings but proactively surfacing what matters, when it matters, through the channels executives already live in. Their hero copy is 'I'll text you about important emails so you never miss what matters' [agentic_notifications]. iMessage is listed as a core feature in their Plus plan and shown in the product demo [imessage_live]. The bet is clear: the agent reaches you where you are, not where it's convenient to build.\n\nTHE OBSTACLE:\nLindy's iMessage channel is load-bearing. Enterprise users at Shopify, Apple, Adobe, McKinsey, and NVIDIA [enterprise_adoption] are routing time-sensitive notifications — flagged emails, meeting reminders, action items — through that thread. But iMessage infrastructure at enterprise scale is brittle. Apple throttles. Delivery silently fails. And when it does, the assistant that was supposed to make you miss nothing becomes the thing you can't trust. The gap between 'I'll text you' and 'you actually got it' is where Lindy's core value proposition breaks.\n\nTHE OLD WAY FAILS:\nBuilding and maintaining iMessage delivery in-house means owning the throttling risk, the uptime risk, and the compliance surface — on top of HIPAA, GDPR, AICPA, and PIPEDA obligations Lindy already carries [security_compliance]. There's no signal Lindy has a dedicated iMessage infrastructure layer; the tech stack is unconfirmed [tech_stack: empty]. For a team serving enterprise accounts with custom pricing and privacy-first guarantees, a silent delivery failure on a flagged email from a NVIDIA exec isn't a bug — it's a trust event. SMS fallback softens the blow but doesn't solve the underlying channel reliability problem.\n\nTHE BETTER PATH:\nPhoton's imessage-kit is open-source iMessage infrastructure built specifically for AI agents — 20K+ developers, ~2,300 GitHub stars [seller_pack]. The Advanced tier adds tapbacks, typing indicators, read receipts, voice messages, and edit/recall — the signals that make a conversation feel live, not broadcast. Ditto runs 42,000+ users across five campuses on the SDK with 99.87% message delivery and zero downtime during Apple throttling events [seller_pack] — the exact failure mode Lindy is exposed to at enterprise scale. TinyFish runs enterprise web agents on the same SDK ($47M Series A, ICONIQ Growth) [seller_pack]. Spectrum adds one-SDK coverage across iMessage, Telegram, and Discord [seller_pack] if Lindy ever wants to extend the channel layer without rebuilding it.\nThe outreach angle: 'Your iMessage channel is doing real work for enterprise users — we built the infrastructure that keeps that delivery promise when Apple throttles.'\n\nTHE BETTER OUTCOME:\nLindy's 'I'll text you' guarantee holds under load. Enterprise accounts on custom plans get the delivery SLA the product implies but the current stack can't prove. Read receipts and typing indicators make the agent feel present, not async. And if a HIPAA-covered customer asks 'did my assistant actually send that?' — Lindy has an answer. The iMessage channel stops being a liability and starts being a differentiator: the AI EA that reaches you, confirmed.",
+        "pitch_angle": "resilience"
+      }
+    },
+    {
+      "t": 34585,
+      "event": {
+        "type": "node_enter",
+        "leadId": "ld_6e7459b9",
+        "node": "judge"
+      }
+    },
+    {
+      "t": 37477,
+      "event": {
+        "type": "score_done",
+        "leadId": "ld_6e7459b9",
+        "generation": 0,
+        "score": {
+          "grounding": 1,
+          "completeness": 0.9,
+          "narrative_arc": 0.9,
+          "feasibility": 0.85,
+          "competitive_diff": 0.85,
+          "metric_confidence": 0.9,
+          "verdict": "emit",
+          "failReason": null,
+          "fabricatedClaims": []
+        }
+      }
+    },
+    {
+      "t": 37477,
+      "event": {
+        "type": "gate",
+        "leadId": "ld_6e7459b9",
+        "story": "THE GOAL:\nLindy wants to be the AI executive assistant that actually replaces a human EA — not just scheduling meetings but proactively surfacing what matters, when it matters, through the channels executives already live in. Their hero copy is 'I'll text you about important emails so you never miss what matters' [agentic_notifications]. iMessage is listed as a core feature in their Plus plan and shown in the product demo [imessage_live]. The bet is clear: the agent reaches you where you are, not where it's convenient to build.\n\nTHE OBSTACLE:\nLindy's iMessage channel is load-bearing. Enterprise users at Shopify, Apple, Adobe, McKinsey, and NVIDIA [enterprise_adoption] are routing time-sensitive notifications — flagged emails, meeting reminders, action items — through that thread. But iMessage infrastructure at enterprise scale is brittle. Apple throttles. Delivery silently fails. And when it does, the assistant that was supposed to make you miss nothing becomes the thing you can't trust. The gap between 'I'll text you' and 'you actually got it' is where Lindy's core value proposition breaks.\n\nTHE OLD WAY FAILS:\nBuilding and maintaining iMessage delivery in-house means owning the throttling risk, the uptime risk, and the compliance surface — on top of HIPAA, GDPR, AICPA, and PIPEDA obligations Lindy already carries [security_compliance]. There's no signal Lindy has a dedicated iMessage infrastructure layer; the tech stack is unconfirmed [tech_stack: empty]. For a team serving enterprise accounts with custom pricing and privacy-first guarantees, a silent delivery failure on a flagged email from a NVIDIA exec isn't a bug — it's a trust event. SMS fallback softens the blow but doesn't solve the underlying channel reliability problem.\n\nTHE BETTER PATH:\nPhoton's imessage-kit is open-source iMessage infrastructure built specifically for AI agents — 20K+ developers, ~2,300 GitHub stars [seller_pack]. The Advanced tier adds tapbacks, typing indicators, read receipts, voice messages, and edit/recall — the signals that make a conversation feel live, not broadcast. Ditto runs 42,000+ users across five campuses on the SDK with 99.87% message delivery and zero downtime during Apple throttling events [seller_pack] — the exact failure mode Lindy is exposed to at enterprise scale. TinyFish runs enterprise web agents on the same SDK ($47M Series A, ICONIQ Growth) [seller_pack]. Spectrum adds one-SDK coverage across iMessage, Telegram, and Discord [seller_pack] if Lindy ever wants to extend the channel layer without rebuilding it.\nThe outreach angle: 'Your iMessage channel is doing real work for enterprise users — we built the infrastructure that keeps that delivery promise when Apple throttles.'\n\nTHE BETTER OUTCOME:\nLindy's 'I'll text you' guarantee holds under load. Enterprise accounts on custom plans get the delivery SLA the product implies but the current stack can't prove. Read receipts and typing indicators make the agent feel present, not async. And if a HIPAA-covered customer asks 'did my assistant actually send that?' — Lindy has an answer. The iMessage channel stops being a liability and starts being a differentiator: the AI EA that reaches you, confirmed.",
+        "score": {
+          "grounding": 1,
+          "completeness": 0.9,
+          "narrative_arc": 0.9,
+          "feasibility": 0.85,
+          "competitive_diff": 0.85,
+          "metric_confidence": 0.9,
+          "verdict": "emit",
+          "failReason": null,
+          "fabricatedClaims": []
+        }
+      }
+    }
+  ]
+}

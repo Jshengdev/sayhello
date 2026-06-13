@@ -1,0 +1,135 @@
+{
+  "_planted": "closed 14 properties in the last 12 months",
+  "_planted_note": "TWO plausible-but-unsourced claim classes ride the what_they_do prose ONLY (the 14-closings count + the ~10k-row CSV); NO signal carries a transaction count or a row count (real corpus scale ≈ 4 properties / '$30 to 40 thousand' total commission). Judge corpus = signals[] ONLY — keep that boundary or the catch dies.",
+  "industry": "realestate",
+  "provenance": "fixture · authored verbatim from the Carlos discovery-call corpus, dressed as scraped public-record/web provenance (guided, not faked)",
+  "domain": null,
+  "name": "RE-1 — boutique off-market acquisitions team (LA)  // JOHNNY-EDITABLE name/handle",
+  "url": "fixture://re-1-offmarket-team",
+  "what_they_do": "Founder-led team (2-5) doing off-market / distressed acquisitions in predetermined key areas of LA. Just completed a major project cycle and closed 14 properties in the last 12 months. Researches owners manually (title runs, BeenVerified-style lookups, driving-for-dollars). Holds a raw ~10k-row county data CSV. No CRM or automation tooling. Wants to expand to other cities.",
+  "founded_year": null,
+  "key_features": [],
+  "competitors": [],
+  "tech_stack": [],
+  "funding_stage": null,
+  "funding_amount": null,
+  "employee_count": null,
+  "category": "re_investor_brokerage",
+  "current_messaging_channels": [],
+  "github_url": null,
+  "partnership_potential": false,
+  "pitch_angle": "forced_sale",
+  "features": {},
+  "person": {
+    "name": "Carlos R.",
+    "linkedinUrl": null,
+    "xHandle": null,
+    "headline": "Principal — off-market residential acquisitions, South LA",
+    "company": "RE-1 — boutique off-market acquisitions team (LA)",
+    "title": "Principal / Acquisitions Lead",
+    "location": "Los Angeles, CA",
+    "summary": "People-record composite: age band 25-34; leads acquisitions for a founder-led crew of three; buying off-market distressed SFRs in predetermined South LA key areas since 2019; address history entirely inside the farm corridor; stated goal: run the same motion in other cities.",
+    "provenance": "fixture · person record authored from the Carlos discovery-call corpus, dressed as people-record provenance (guided, not faked)"
+  },
+  "signals": [
+    {
+      "signal_type": "pipeline_gap",
+      "source": "podcast_transcript",
+      "source_url": "https://offmarketla.show/episodes/41/transcript#t=18m22s",
+      "detail": "\"we finally sold everything on it. So right now I have like no houses\" — the principal, on closing out the spring portfolio (ep. 41, 'Off-Market LA') ⟶ what this means: an empty book the week after a full selldown is the single best moment to sell sourcing infrastructure — restock speed IS the business now, and every idle week is carry with no upside.",
+      "strength": 9
+    },
+    {
+      "signal_type": "title_transfer",
+      "source": "county_recorder",
+      "source_url": "https://recorder.lacounty.gov/grantor-grantee/results?name=KEY+AREA+HOMES+LLC&doctype=GD",
+      "detail": "Grantor-grantee index: the team's LLC appears as grantor on a cluster of grant deeds recorded this spring — Hyde Park, Westmont, Vermont Knolls — most recent recording May 2026, and no new acquisition deeds recorded since ⟶ what this means: the public record confirms a full selldown freshly completed — cash-heavy, inventory-empty, the exact stage where sourcing speed gets bought rather than built.",
+      "strength": 8
+    },
+    {
+      "signal_type": "manual_research",
+      "source": "instagram",
+      "source_url": "https://www.instagram.com/p/DHk2xQwPz3a/",
+      "detail": "IG caption over a windshield photo: \"The way that we've typically found distressed properties is straight up just driving\" ⟶ what this means: deal flow is bounded by one man's windshield hours — a motion that physically cannot follow the team to a second city, which is why the expansion question is really a data-layer question.",
+      "strength": 8
+    },
+    {
+      "signal_type": "target_profile",
+      "source": "county_assessor",
+      "source_url": "https://assessor.lacounty.gov/parcel/6032-009-011",
+      "detail": "Parcel detail page, one row from their farm area: last ownership change 1998; homeowners' + senior exemption on file; no permits pulled since 1986 ⟶ what this means: this is the predictable-transition owner Carlos finds by car — decades of tenure plus a senior exemption is a life-stage signal sitting free in public records, and the county file they already hold is full of rows exactly like it.",
+      "strength": 7
+    },
+    {
+      "signal_type": "data_pain",
+      "source": "forum_post",
+      "source_url": "https://www.biggerpockets.com/forums/93/topics/skip-tracing-accuracy-la-county",
+      "detail": "Forum post by the principal, thread on skip-trace accuracy for county-list mailers: \"Our email thing has been like consistently 30% wrong\" ⟶ what this means: every outreach wave burns trust on dead contacts — at 30% wrong the team needs verification before volume, not more rows.",
+      "strength": 9
+    },
+    {
+      "signal_type": "stale_source_data",
+      "source": "county_data_portal",
+      "source_url": "https://data.lacounty.gov/datasets/secured-basic-roll/about",
+      "detail": "Dataset page for the secured-roll extract their list is pulled from: \"ownership reflects deeds recorded through June 2025; updated annually\" ⟶ what this means: their raw list is stale at the source by up to a year — owners die, divorce, and deed-transfer between refreshes, so liveness has to be checked at contact time, not list-build time.",
+      "strength": 7
+    },
+    {
+      "signal_type": "vendor_refusal",
+      "source": "forum_post",
+      "source_url": "https://www.biggerpockets.com/forums/93/topics/skip-tracing-accuracy-la-county#reply-6",
+      "detail": "Same thread, the principal on a data vendor's quote: \"fifteen thousand dollars and it's like 40 enriched... this is just way too much so... we'll stick doing it manually\" ⟶ what this means: the objection is per-record vendor pricing, not enrichment itself — a flat-fee system the team owns clears the exact bar the vendor failed, and the anchor to beat is already public.",
+      "strength": 8
+    },
+    {
+      "signal_type": "team_positioning",
+      "source": "team_site",
+      "source_url": "https://keyareahomesla.com/about-us",
+      "detail": "About page: \"We buy as-is in the neighborhoods we know block by block — no agents, no fees, cash close on your timeline.\" Crew listed: the principal plus two, with rotating contractors ⟶ what this means: trust-first neighborhood positioning is the moat — the system has to feed this human voice with better owner stories, never replace it (the patty, not the tomato and lettuce).",
+      "strength": 7
+    },
+    {
+      "signal_type": "exit_comp",
+      "source": "listing_page",
+      "source_url": "https://www.zillow.com/homedetails/Hyde-Park-Los-Angeles-CA-90043/20764063_zpid/",
+      "detail": "Sold listing, Hyde Park SFR: \"SOLD 05/2026 — $604,000. Fully renovated, new roof, new systems.\" ⟶ what this means: they exit retail-clean at mid-market prices, so the margin is made at acquisition — owner-story research is the profit center and the rehab is just execution.",
+      "strength": 6
+    },
+    {
+      "signal_type": "market_pressure",
+      "source": "market_report",
+      "source_url": "https://www.attomdata.com/news/market-trends/foreclosures/q1-2026-foreclosure-report-los-angeles/",
+      "detail": "Q1-2026 county market brief: notices of default in South LA submarkets up ~18% year over year; pre-foreclosure inventory building ⟶ what this means: the forced-sale supply they specialize in is rising on their home turf exactly while their pipeline sits at zero — the race is owner-identification speed, and whoever reads the records first gets the door.",
+      "strength": 6
+    },
+    {
+      "signal_type": "expansion_intent",
+      "source": "podcast_transcript",
+      "source_url": "https://offmarketla.show/episodes/41/transcript#t=42m05s",
+      "detail": "\"either we need to hire someone else on the team or i could get... like an assistant... the goal is is to start moving to other cities\" — same episode, on what comes next ⟶ what this means: he has already framed the decision as hire-vs-system — the pitch competes with a junior researcher's salary, and the system wins because it is the only version of that hire that can be in two cities at once.",
+      "strength": 8
+    },
+    {
+      "signal_type": "person_record",
+      "source": "person_record",
+      "source_url": "https://www.beenverified.com/people/carlos-r/los-angeles-ca/",
+      "detail": "People-record composite: Carlos R., Los Angeles CA, age band 25-34; associated entity: the team's LLC; address history entirely within the 90043/90047 corridor ⟶ what this means: a young principal whose whole address history sits inside his own farm area — a conviction-stage operator buying where he grew up, which makes the expansion ambition a capability gap, not a vision gap.",
+      "strength": 7
+    },
+    {
+      "signal_type": "person_tenure",
+      "source": "team_site_bio",
+      "source_url": "https://keyareahomesla.com/about-us#carlos",
+      "detail": "About-page bio: \"Carlos leads acquisitions — he's walked every block of our key areas and has been buying here since 2019.\" ⟶ what this means: years of block-level pattern memory is the team's real asset — the move is to encode his read (deed history, exemptions, life stage) into a system instead of hiring a second him.",
+      "strength": 7
+    },
+    {
+      "signal_type": "person_market_focus",
+      "source": "event_page",
+      "source_url": "https://www.meetup.com/los-angeles-rei/events/308442197/",
+      "detail": "Speaker blurb: \"Carlos R. — principal at a South LA acquisitions outfit; buys off-market distressed SFRs in predetermined key areas; building toward multi-city.\" ⟶ what this means: 'predetermined key areas' said in public means the targeting discipline already exists — what is missing is the data layer that lets the same discipline run in a city he can't drive.",
+      "strength": 6
+    }
+  ],
+  "brief": "Carlos-shaped primary, now record-deep: pipeline gap confirmed by the recorder's grant-deed trail + manual windshield sourcing + 30%-wrong contact data on a stale county roll + refused $15k vendor + city-expansion ambition framed as hire-vs-system. Person layer: young principal, farm-area native, acquisitions lead since 2019. The system replaces the hire."
+}
